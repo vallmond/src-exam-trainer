@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question-container {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .answer-option {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        .answer-option:hover {
+            background-color: #f0f0f0;
+        }
+        .answer-option input {
+            margin-right: 10px;
+        }
+        .answer-option label {
+            cursor: pointer;
+        }
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .results {
+            margin-top: 30px;
+        }
+        .results-question {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #4CAF50;
+        }
+        .selected-answer {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .progress {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exam Questions</h1>
+    
+    <div id="progress" class="progress">
+        Question <span id="current-question">1</span> of <span id="total-questions">20</span>
+    </div>
+    
+    <div id="question-container" class="question-container">
+        <!-- Questions will be loaded here -->
+    </div>
+    
+    <div class="controls">
+        <button id="prev-btn" disabled>Previous</button>
+        <button id="next-btn">Next</button>
+        <button id="finish-btn" class="hidden">Finish Exam</button>
+    </div>
+    
+    <div id="results" class="results hidden">
+        <h2>Exam Results</h2>
+        <div id="results-container">
+            <!-- Results will be loaded here -->
+        </div>
+        <button id="restart-btn">Restart Exam</button>
+    </div>
+    
+    <script>
+        // Global variables
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        
+        // Load questions from JSON file
+        async function loadQuestions() {
+            try {
+                const response = await fetch('exam_questions.json');
+                const allQuestions = await response.json();
+                
+                // Shuffle and get 20 random questions
+                questions = getRandomQuestions(allQuestions, 20);
+                
+                // Initialize user answers array with empty values
+                userAnswers = Array(questions.length).fill(null);
+                
+                // Display the first question
+                displayQuestion(currentQuestionIndex);
+            } catch (error) {
+                console.error('Error loading questions:', error);
+                document.getElementById('question-container').innerHTML = 
+                    '<p>Error loading questions. Please try again later.</p>';
+            }
+        }
+        
+        // Get random questions from the array
+        function getRandomQuestions(allQuestions, count) {
+            const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+        
+        // Display a question
+        function displayQuestion(index) {
+            const question = questions[index];
+            const container = document.getElementById('question-container');
+            
+            // Update progress
+            document.getElementById('current-question').textContent = index + 1;
+            
+            // Create HTML for the question
+            let html = `
+                <div class="question">
+                    <span>${index + 1}. ${question.question}</span>
+                </div>
+                <div class="answers">
+            `;
+            
+            // Add answer options
+            question.answers.forEach((answer, answerIndex) => {
+                const isChecked = userAnswers[index] === answer.option ? 'checked' : '';
+                html += `
+                    <div class="answer-option">
+                        <input type="radio" id="answer-${answerIndex}" name="question-${index}" value="${answer.option}" ${isChecked}>
+                        <label for="answer-${answerIndex}">${answer.option}. ${answer.text}</label>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            container.innerHTML = html;
+            
+            // Add event listeners to radio buttons
+            const radioButtons = container.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    userAnswers[index] = e.target.value;
+                });
+            });
+            
+            // Update button states
+            updateButtonStates();
+        }
+        
+        // Update the states of the navigation buttons
+        function updateButtonStates() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const finishBtn = document.getElementById('finish-btn');
+            
+            // Previous button
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            // Next button
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.classList.add('hidden');
+                finishBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                finishBtn.classList.add('hidden');
+            }
+        }
+        
+        // Show results
+        function showResults() {
+            const questionContainer = document.getElementById('question-container');
+            const resultsSection = document.getElementById('results');
+            const resultsContainer = document.getElementById('results-container');
+            const progressSection = document.getElementById('progress');
+            const controls = document.querySelector('.controls');
+            
+            // Hide questions and show results
+            questionContainer.classList.add('hidden');
+            progressSection.classList.add('hidden');
+            controls.classList.add('hidden');
+            resultsSection.classList.remove('hidden');
+            
+            // Create HTML for results
+            let html = '';
+            
+            questions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                
+                html += `
+                    <div class="results-question">
+                        <div class="question">
+                            <span>${index + 1}. ${question.question}</span>
+                        </div>
+                        <div class="answers">
+                `;
+                
+                // Add answer options with highlighting for selected answer
+                question.answers.forEach(answer => {
+                    const isSelected = userAnswer === answer.option;
+                    const selectedClass = isSelected ? 'selected-answer' : '';
+                    
+                    html += `
+                        <div class="answer-option ${selectedClass}">
+                            ${answer.option}. ${answer.text}
+                            ${isSelected ? ' (Selected)' : ''}
+                        </div>
+                    `;
+                });
+                
+                html += '</div></div>';
+            });
+            
+            resultsContainer.innerHTML = html;
+        }
+        
+        // Handle keyboard input for selecting answers (A, B, C)
+        function handleKeyboardInput(e) {
+            // Only process if we're viewing questions (not results)
+            if (document.getElementById('results').classList.contains('hidden')) {
+                const key = e.key.toLowerCase();
+                
+                // Handle A, B, C keys for answer selection
+                if (['a', 'b', 'c'].includes(key)) {
+                    const option = key.toUpperCase();
+                    const radioSelector = `input[value="${option}"]`;
+                    const radioButton = document.querySelector(radioSelector);
+                    
+                    if (radioButton) {
+                        radioButton.checked = true;
+                        userAnswers[currentQuestionIndex] = option;
+                        
+                        // Visual feedback
+                        const label = radioButton.nextElementSibling;
+                        label.style.fontWeight = 'bold';
+                        setTimeout(() => { label.style.fontWeight = 'normal'; }, 200);
+                    }
+                }
+                
+                // Handle arrow keys for navigation
+                if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    displayQuestion(currentQuestionIndex);
+                } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    displayQuestion(currentQuestionIndex);
+                }
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load questions
+            loadQuestions();
+            
+            // Add keyboard event listener
+            document.addEventListener('keydown', handleKeyboardInput);
+            
+            // Previous button
+            document.getElementById('prev-btn').addEventListener('click', () => {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    displayQuestion(currentQuestionIndex);
+                }
+            });
+            
+            // Next button
+            document.getElementById('next-btn').addEventListener('click', () => {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    displayQuestion(currentQuestionIndex);
+                }
+            });
+            
+            // Finish button
+            document.getElementById('finish-btn').addEventListener('click', () => {
+                showResults();
+            });
+            
+            // Restart button
+            document.getElementById('restart-btn').addEventListener('click', () => {
+                // Reset state
+                currentQuestionIndex = 0;
+                userAnswers = Array(questions.length).fill(null);
+                
+                // Show questions again
+                const questionContainer = document.getElementById('question-container');
+                const resultsSection = document.getElementById('results');
+                const progressSection = document.getElementById('progress');
+                const controls = document.querySelector('.controls');
+                
+                questionContainer.classList.remove('hidden');
+                progressSection.classList.remove('hidden');
+                controls.classList.remove('hidden');
+                resultsSection.classList.add('hidden');
+                
+                // Display first question
+                displayQuestion(currentQuestionIndex);
+            });
+        });
+    </script>
+</body>
+</html>
