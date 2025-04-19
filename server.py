@@ -5,12 +5,17 @@ Simple HTTP server to serve the exam web application.
 import http.server
 import socketserver
 import os
+import shutil
 
 # Set the port
 PORT = 8000
 
 # Change to the directory containing the files
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+# Rename the HTML file to index.html so it's served by default
+shutil.copy('index_with_categories.html', 'index.html')
+print("Updated index.html to serve the exam application")
 
 # Create the HTTP server
 Handler = http.server.SimpleHTTPRequestHandler

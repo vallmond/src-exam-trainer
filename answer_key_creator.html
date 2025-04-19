@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Key Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question-container {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .category {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border-radius: 3px;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .answer-option {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        .answer-option:hover {
+            background-color: #f0f0f0;
+        }
+        .answer-option input {
+            margin-right: 10px;
+        }
+        .answer-option label {
+            cursor: pointer;
+        }
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .progress {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .category-filter {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .setting-row {
+            margin-bottom: 10px;
+        }
+        .category-filter select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .start-btn {
+            width: 100%;
+            margin-top: 10px;
+            background-color: #2196F3;
+        }
+        .start-btn:hover {
+            background-color: #0b7dda;
+        }
+        .download-btn {
+            background-color: #ff9800;
+        }
+        .download-btn:hover {
+            background-color: #e68a00;
+        }
+        .hidden {
+            display: none;
+        }
+        .completion-status {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        .status-bar {
+            height: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .status-progress {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        .summary {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .category-summary {
+            margin-bottom: 10px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Answer Key Creator</h1>
+    
+    <div id="intro" class="category-filter">
+        <h2>Create an Answer Key</h2>
+        <p>This tool will help you create a correct_answers.json file by going through all questions in their original order.</p>
+        <p>For each question, select what you believe is the correct answer (A, B, or C).</p>
+        <p>You can use keyboard shortcuts (A, B, C) to select answers and arrow keys to navigate.</p>
+        <p>When you're done, you can download the complete answer key file.</p>
+        
+        <div class="setting-row">
+            <label for="category-select">Start with Category:</label>
+            <select id="category-select">
+                <option value="all">All Categories (in order)</option>
+                <!-- Categories will be loaded here -->
+            </select>
+        </div>
+        
+        <button id="start-btn" class="start-btn">Start Creating Answer Key</button>
+    </div>
+    
+    <div id="main-content" class="hidden">
+        <div class="progress">
+            Question <span id="current-question">1</span> of <span id="total-questions">351</span>
+        </div>
+        
+        <div class="completion-status">
+            Completion: <span id="completion-percent">0%</span>
+            <div class="status-bar">
+                <div id="status-progress" class="status-progress"></div>
+            </div>
+            <div id="export-container" class="hidden" style="margin-top: 10px; text-align: right;">
+                <button id="export-anytime-btn" class="download-btn" style="padding: 5px 10px; font-size: 14px;">Export Current Progress</button>
+            </div>
+        </div>
+        
+        <div id="question-container" class="question-container">
+            <!-- Questions will be loaded here -->
+        </div>
+        
+        <div class="controls">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn">Next</button>
+            <button id="finish-btn" class="hidden">Finish</button>
+        </div>
+    </div>
+    
+    <div id="summary" class="hidden">
+        <h2>Answer Key Complete</h2>
+        
+        <div class="summary">
+            <p>You have created an answer key for <span id="total-answered">0</span> questions.</p>
+            <div id="category-summaries"></div>
+        </div>
+        
+        <button id="download-btn" class="download-btn">Download correct_answers.json</button>
+        <button id="restart-btn">Start Over</button>
+    </div>
+    
+    <div class="footer">
+        <p>This tool creates a correct_answers.json file in the format required for the exam application.</p>
+    </div>
+    
+    <script>
+        // Embedded exam questions data
+        const allQuestionsData = 
+        // This will be replaced with the actual JSON data
+        [{"id":1,"number":"1","category":"REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ","question":"Zgodnie z kolejnością pierwszeństwa łączności:","answers":[{"option":"A","text":"łączność ostrzegawcza ma pierwszeństwo przed łącznością pilną"},{"option":"B","text":"łączność ostrzegawcza ma pierwszeństwo przed łącznością publiczną"},{"option":"C","text":"łączność pilna ma pierwszeństwo przed łącznością w niebezpieczeństwie"}]}];
+        
+        // Global variables
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        let categories = [];
+        let selectedCategory = 'all';
+        
+        // Initialize the application
+        function initializeApp() {
+            // Sort questions by ID to ensure they're in the original order
+            questions = [...allQuestionsData].sort((a, b) => a.id - b.id);
+            
+            // Extract unique categories
+            categories = [...new Set(questions.map(q => q.category))];
+            
+            // Populate category dropdown
+            const categorySelect = document.getElementById('category-select');
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category.split('\n')[0]; // Use first line of category as display text
+                categorySelect.appendChild(option);
+            });
+            
+            // Set up event listeners
+            document.getElementById('start-btn').addEventListener('click', startCreatingAnswerKey);
+            document.getElementById('prev-btn').addEventListener('click', goToPreviousQuestion);
+            document.getElementById('next-btn').addEventListener('click', goToNextQuestion);
+            document.getElementById('finish-btn').addEventListener('click', showSummary);
+            document.getElementById('download-btn').addEventListener('click', downloadAnswerKey);
+            document.getElementById('export-anytime-btn').addEventListener('click', downloadAnswerKey);
+            document.getElementById('restart-btn').addEventListener('click', restartApp);
+            
+            // Add keyboard event listener
+            document.addEventListener('keydown', handleKeyboardInput);
+        }
+        
+        // Start creating the answer key
+        function startCreatingAnswerKey() {
+            selectedCategory = document.getElementById('category-select').value;
+            
+            // Filter questions by category if needed
+            if (selectedCategory !== 'all') {
+                questions = questions.filter(q => q.category === selectedCategory);
+            }
+            
+            // Initialize user answers object
+            userAnswers = {};
+            
+            // Update total questions count
+            document.getElementById('total-questions').textContent = questions.length;
+            
+            // Hide intro and show main content
+            document.getElementById('intro').classList.add('hidden');
+            document.getElementById('main-content').classList.remove('hidden');
+            
+            // Display the first question
+            currentQuestionIndex = 0;
+            displayQuestion(currentQuestionIndex);
+        }
+        
+        // Display a question
+        function displayQuestion(index) {
+            const question = questions[index];
+            const container = document.getElementById('question-container');
+            
+            // Update progress
+            document.getElementById('current-question').textContent = index + 1;
+            updateCompletionStatus();
+            
+            // Create HTML for the question
+            let html = `
+                <div class="category">
+                    <span>${question.category.split('\n')[0]}</span>
+                </div>
+                <div class="question">
+                    <span>${question.number}. ${question.question}</span>
+                </div>
+                <div class="answers">
+            `;
+            
+            // Add answer options
+            question.answers.forEach((answer, answerIndex) => {
+                const isChecked = userAnswers[question.id] === answer.option ? 'checked' : '';
+                html += `
+                    <div class="answer-option">
+                        <input type="radio" id="answer-${answerIndex}" name="question-${question.id}" value="${answer.option}" ${isChecked}>
+                        <label for="answer-${answerIndex}">${answer.option}. ${answer.text}</label>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            container.innerHTML = html;
+            
+            // Add event listeners to radio buttons
+            const radioButtons = container.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    userAnswers[question.id] = e.target.value;
+                    updateCompletionStatus();
+                });
+            });
+            
+            // Update button states
+            updateButtonStates();
+        }
+        
+        // Update the completion status
+        function updateCompletionStatus() {
+            const totalAnswered = Object.keys(userAnswers).length;
+            const totalQuestions = questions.length;
+            const completionPercent = Math.round((totalAnswered / totalQuestions) * 100);
+            
+            document.getElementById('completion-percent').textContent = `${completionPercent}%`;
+            document.getElementById('status-progress').style.width = `${completionPercent}%`;
+            
+            // Show export button after at least one answer is provided
+            if (totalAnswered > 0) {
+                document.getElementById('export-container').classList.remove('hidden');
+            }
+        }
+        
+        // Update the states of the navigation buttons
+        function updateButtonStates() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const finishBtn = document.getElementById('finish-btn');
+            
+            // Previous button
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            // Next/Finish button
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.classList.add('hidden');
+                finishBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                finishBtn.classList.add('hidden');
+            }
+        }
+        
+        // Go to the previous question
+        function goToPreviousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion(currentQuestionIndex);
+            }
+        }
+        
+        // Go to the next question
+        function goToNextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion(currentQuestionIndex);
+            }
+        }
+        
+        // Show the summary
+        function showSummary() {
+            // Hide main content and show summary
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('summary').classList.remove('hidden');
+            
+            // Update total answered
+            const totalAnswered = Object.keys(userAnswers).length;
+            document.getElementById('total-answered').textContent = totalAnswered;
+            
+            // Create category summaries
+            const categorySummaries = document.getElementById('category-summaries');
+            categorySummaries.innerHTML = '';
+            
+            const categoryCounts = {};
+            questions.forEach(question => {
+                const category = question.category;
+                if (!categoryCounts[category]) {
+                    categoryCounts[category] = {
+                        total: 0,
+                        answered: 0
+                    };
+                }
+                
+                categoryCounts[category].total++;
+                if (userAnswers[question.id]) {
+                    categoryCounts[category].answered++;
+                }
+            });
+            
+            Object.keys(categoryCounts).forEach(category => {
+                const count = categoryCounts[category];
+                const categoryName = category.split('\n')[0];
+                const percent = Math.round((count.answered / count.total) * 100);
+                
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category-summary';
+                categoryDiv.innerHTML = `
+                    <strong>${categoryName}:</strong> ${count.answered}/${count.total} (${percent}%)
+                `;
+                
+                categorySummaries.appendChild(categoryDiv);
+            });
+        }
+        
+        // Download the answer key
+        function downloadAnswerKey() {
+            // Create the answer key data
+            const answerKey = [];
+            
+            // Get all questions from the original data
+            const allQuestions = [...allQuestionsData].sort((a, b) => a.id - b.id);
+            
+            allQuestions.forEach(question => {
+                // Only include questions that have an answer
+                if (userAnswers[question.id]) {
+                    answerKey.push({
+                        id: question.id,
+                        number: question.number,
+                        category: question.category,
+                        correct_option: userAnswers[question.id]
+                    });
+                }
+            });
+            
+            // Create a JSON blob
+            const jsonData = JSON.stringify(answerKey, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            
+            // Create a download link
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'correct_answers.json';
+            document.body.appendChild(a);
+            a.click();
+            
+            // Clean up
+            setTimeout(() => {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 0);
+        }
+        
+        // Restart the application
+        function restartApp() {
+            // Reset variables
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            
+            // Show intro and hide other sections
+            document.getElementById('intro').classList.remove('hidden');
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('summary').classList.add('hidden');
+        }
+        
+        // Handle keyboard input
+        function handleKeyboardInput(e) {
+            // Only process if we're viewing questions
+            if (!document.getElementById('main-content').classList.contains('hidden')) {
+                const key = e.key.toLowerCase();
+                
+                // Handle A, B, C keys for answer selection
+                if (['a', 'b', 'c'].includes(key)) {
+                    const option = key.toUpperCase();
+                    const radioSelector = `input[value="${option}"]`;
+                    const radioButton = document.querySelector(radioSelector);
+                    
+                    if (radioButton) {
+                        radioButton.checked = true;
+                        const questionId = questions[currentQuestionIndex].id;
+                        userAnswers[questionId] = option;
+                        updateCompletionStatus();
+                        
+                        // Visual feedback
+                        const label = radioButton.nextElementSibling;
+                        label.style.fontWeight = 'bold';
+                        setTimeout(() => { label.style.fontWeight = 'normal'; }, 200);
+                    }
+                }
+                
+                // Handle arrow keys for navigation
+                if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                    goToPreviousQuestion();
+                } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                    goToNextQuestion();
+                }
+            }
+        }
+        
+        // Initialize the application when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializeApp);
+    </script>
+</body>
+</html>

@@ -110,11 +110,23 @@
             background-color: #f5f5f5;
             border-radius: 5px;
         }
+        .setting-row {
+            margin-bottom: 10px;
+        }
         .category-filter select {
             width: 100%;
             padding: 8px;
             border-radius: 4px;
             border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .start-btn {
+            width: 100%;
+            margin-top: 10px;
+            background-color: #2196F3;
+        }
+        .start-btn:hover {
+            background-color: #0b7dda;
         }
         .progress {
             margin-bottom: 20px;
@@ -128,12 +140,27 @@
 <body>
     <h1>Exam Questions with Categories</h1>
     
-    <div id="category-filter" class="category-filter">
-        <label for="category-select">Select Category:</label>
-        <select id="category-select">
-            <option value="all">All Categories</option>
-            <!-- Categories will be loaded here -->
-        </select>
+    <div id="exam-settings" class="category-filter">
+        <div class="setting-row">
+            <label for="category-select">Select Category:</label>
+            <select id="category-select">
+                <option value="all">All Categories</option>
+                <!-- Categories will be loaded here -->
+            </select>
+        </div>
+        <div class="setting-row">
+            <label for="question-count">Number of Questions:</label>
+            <select id="question-count">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20" selected>20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="all">All Available</option>
+            </select>
+        </div>
+        <button id="start-exam-btn" class="start-btn">Start Exam</button>
     </div>
     
     <div id="progress" class="progress">
@@ -168,6 +195,8 @@
         let correctAnswersMap = {};
         let categories = [];
         let selectedCategory = 'all';
+        let questionCount = 20;
+        let examStarted = false;
         
         // Load questions and correct answers from JSON files
         async function loadData() {
@@ -198,14 +227,28 @@
                     categorySelect.appendChild(option);
                 });
                 
-                // Set up category filter event listener
-                categorySelect.addEventListener('change', (e) => {
-                    selectedCategory = e.target.value;
+                // Set up event listeners for exam settings
+                document.getElementById('start-exam-btn').addEventListener('click', () => {
+                    selectedCategory = document.getElementById('category-select').value;
+                    
+                    const countSelect = document.getElementById('question-count');
+                    const countValue = countSelect.value;
+                    questionCount = countValue === 'all' ? Number.MAX_SAFE_INTEGER : parseInt(countValue);
+                    
+                    // Hide settings and show exam
+                    document.getElementById('exam-settings').style.display = 'none';
+                    document.getElementById('question-container').classList.remove('hidden');
+                    document.getElementById('progress').classList.remove('hidden');
+                    document.querySelector('.controls').classList.remove('hidden');
+                    
+                    examStarted = true;
                     resetExam();
                 });
                 
-                // Initialize the exam
-                resetExam();
+                // Hide question container until exam starts
+                document.getElementById('question-container').classList.add('hidden');
+                document.getElementById('progress').classList.add('hidden');
+                document.querySelector('.controls').classList.add('hidden');
             } catch (error) {
                 console.error('Error loading data:', error);
                 document.getElementById('question-container').innerHTML = 
@@ -213,15 +256,17 @@
             }
         }
         
-        // Reset the exam with the current category filter
+        // Reset the exam with the current category filter and question count
         function resetExam() {
+            if (!examStarted) return;
+            
             // Filter questions by category if needed
             const filteredQuestions = selectedCategory === 'all' 
                 ? allQuestions 
                 : allQuestions.filter(q => q.category === selectedCategory);
             
-            // Shuffle and get 20 random questions (or all if less than 20)
-            const count = Math.min(filteredQuestions.length, 20);
+            // Shuffle and get the requested number of random questions (or all if less than requested)
+            const count = Math.min(filteredQuestions.length, questionCount);
             questions = getRandomQuestions(filteredQuestions, count);
             
             // Initialize user answers array with empty values
@@ -490,7 +535,15 @@
             });
             
             // Restart button
-            document.getElementById('restart-btn').addEventListener('click', resetExam);
+            document.getElementById('restart-btn').addEventListener('click', () => {
+                // Show settings screen again
+                document.getElementById('exam-settings').style.display = 'block';
+                document.getElementById('question-container').classList.add('hidden');
+                document.getElementById('progress').classList.add('hidden');
+                document.querySelector('.controls').classList.add('hidden');
+                document.getElementById('results').classList.add('hidden');
+                examStarted = false;
+            });
         });
     </script>
 </body>
