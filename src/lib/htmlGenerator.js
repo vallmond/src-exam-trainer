@@ -137,10 +137,51 @@ function generateStyles() {
     }
     
     /* Controls styles */
-    .controls {
+    .controls, .button-group {
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
+    }
+    
+    .statistics-category {
+        margin-bottom: 30px;
+    }
+    
+    .statistics-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    .statistics-table th, .statistics-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    .statistics-table th {
+        background-color: #f2f2f2;
+    }
+    
+    .statistics-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    .statistics-table tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+    .success-rate-high {
+        color: #27ae60;
+        font-weight: bold;
+    }
+    
+    .success-rate-medium {
+        color: #f39c12;
+    }
+    
+    .success-rate-low {
+        color: #e74c3c;
     }
     
     /* Progress bar styles */
@@ -341,7 +382,10 @@ function generateHtmlStructure(appVersion) {
                 </label>
             </div>
             
-            <button id="start-btn">Start Exam</button>
+            <div class="button-group">
+                <button id="start-btn">Start Exam</button>
+                <button id="stats-btn">View Statistics</button>
+            </div>
         </div>
         
         <!-- Question Display -->
@@ -369,6 +413,15 @@ function generateHtmlStructure(appVersion) {
             <div class="controls">
                 <button id="restart-btn">Restart</button>
                 <button id="export-btn">Export as PDF</button>
+            </div>
+        </div>
+        
+        <!-- Statistics -->
+        <div id="statistics" class="hidden">
+            <h2>Question Statistics</h2>
+            <div id="statistics-container"></div>
+            <div class="controls">
+                <button id="back-to-main-btn">Back to Main</button>
             </div>
         </div>
     </div>

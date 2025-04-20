@@ -47,6 +47,8 @@ function generateExamScript(data, appVersion) {
         document.getElementById('finish-btn').addEventListener('click', showResults);
         document.getElementById('restart-btn').addEventListener('click', restartExam);
         document.getElementById('export-btn').addEventListener('click', exportResultsAsPDF);
+        document.getElementById('stats-btn').addEventListener('click', showStatistics);
+        document.getElementById('back-to-main-btn').addEventListener('click', backToMain);
         
         // Add keyboard event listener
         document.addEventListener('keydown', handleKeyboardInput);
@@ -81,7 +83,14 @@ function generateExamScript(data, appVersion) {
         document.getElementById('progress').classList.add('hidden');
         document.querySelector('.controls').classList.add('hidden');
         document.getElementById('results').classList.add('hidden');
+        document.getElementById('statistics').classList.add('hidden');
         examStarted = false;
+    }
+    
+    function backToMain() {
+        // Go back to the main screen
+        document.getElementById('exam-settings').style.display = 'block';
+        document.getElementById('statistics').classList.add('hidden');
     }
     
     function loadQuestionHistory() {
@@ -527,6 +536,105 @@ function generateExamScript(data, appVersion) {
     function translateToRussian(text) {
         // Return the translation if available, otherwise return the original text
         return translations[text] || text;
+    }
+    
+    function showStatistics() {
+        // Hide main screen and show statistics
+        document.getElementById('exam-settings').style.display = 'none';
+        document.getElementById('results').classList.add('hidden');
+        document.getElementById('statistics').classList.remove('hidden');
+        
+        // Generate statistics content
+        generateStatistics();
+    }
+    
+    function generateStatistics() {
+        const statisticsContainer = document.getElementById('statistics-container');
+        
+        // Group questions by category
+        const questionsByCategory = {};
+        allQuestionsData.forEach(question => {
+            const categoryName = question.category.split('\\n')[0];
+            if (!questionsByCategory[categoryName]) {
+                questionsByCategory[categoryName] = [];
+            }
+            questionsByCategory[categoryName].push(question);
+        });
+        
+        // Load question history
+        let history = {};
+        try {
+            const savedHistory = localStorage.getItem('examQuestionHistory');
+            if (savedHistory) {
+                history = JSON.parse(savedHistory);
+            }
+        } catch (e) {
+            console.log('Could not load question history:', e);
+        }
+        
+        // Generate HTML for statistics
+        let html = '';
+        
+        // Add overall statistics
+        const totalQuestions = allQuestionsData.length;
+        const answeredQuestions = Object.keys(history).length;
+        const masteredQuestions = Object.values(history).filter(h => 
+            h.correct >= 3 && (h.correct / h.total) >= 0.8
+        ).length;
+        
+        html += '<div class="overall-stats">'
+            + '<h3>Overall Progress</h3>'
+            + '<p>Total Questions: ' + totalQuestions + '</p>'
+            + '<p>Questions Attempted: ' + answeredQuestions + ' (' + Math.round((answeredQuestions / totalQuestions) * 100) + '%)</p>'
+            + '<p>Questions Mastered: ' + masteredQuestions + ' (' + Math.round((masteredQuestions / totalQuestions) * 100) + '%)</p>'
+            + '</div>';
+        
+        // Generate statistics for each category
+        Object.keys(questionsByCategory).sort().forEach(category => {
+            const questions = questionsByCategory[category];
+            
+            html += '<div class="statistics-category"><h3>' + category + '</h3>';
+            html += '<table class="statistics-table">'
+                + '<thead>'
+                + '<tr>'
+                + '<th>Question</th>'
+                + '<th>Attempts</th>'
+                + '<th>Correct</th>'
+                + '<th>Success Rate</th>'
+                + '</tr>'
+                + '</thead>'
+                + '<tbody>';
+            
+            questions.forEach(question => {
+                const questionHistory = history[question.id] || { correct: 0, incorrect: 0, total: 0 };
+                const attempts = questionHistory.total;
+                const correct = questionHistory.correct;
+                const successRate = attempts > 0 ? Math.round((correct / attempts) * 100) : 0;
+                
+                // Determine success rate class
+                let successRateClass = '';
+                if (attempts > 0) {
+                    if (successRate >= 80) {
+                        successRateClass = 'success-rate-high';
+                    } else if (successRate >= 50) {
+                        successRateClass = 'success-rate-medium';
+                    } else {
+                        successRateClass = 'success-rate-low';
+                    }
+                }
+                
+                html += '<tr>'
+                    + '<td>' + question.question + '</td>'
+                    + '<td>' + attempts + '</td>'
+                    + '<td>' + correct + '</td>'
+                    + '<td class="' + successRateClass + '">' + successRate + '%</td>'
+                    + '</tr>';
+            });
+            
+            html += '</tbody></table></div>';
+        });
+        
+        statisticsContainer.innerHTML = html;
     }
   `;
 }
