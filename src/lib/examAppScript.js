@@ -224,26 +224,47 @@ function generateExamScript(data, appVersion) {
         const weightedQuestions = allQuestions.map(question => {
             const history = questionHistory[question.id] || { correct: 0, incorrect: 0, total: 0 };
             
-            // Calculate weight - higher for incorrect answers, lower for correct ones
-            let weight = 1; // Default weight
+            // Calculate weight based on question history
+            let weight = 1; // Default weight for questions with no history
             
             if (history.total > 0) {
-                // If question was answered incorrectly more often, increase its weight
-                if (history.incorrect > history.correct) {
-                    weight = 1.5 + (history.incorrect / history.total);
-                } 
-                // If question was answered correctly more often, decrease its weight
-                else if (history.correct > history.incorrect) {
-                    weight = 0.5 - (history.correct / (2 * history.total));
-                    // Ensure minimum weight
-                    weight = Math.max(weight, 0.1);
+                // Calculate success rate (percentage of correct answers)
+                const successRate = history.correct / history.total;
+                
+                // Calculate recency factor (how recently the question was answered incorrectly)
+                // This will be higher if the question was recently answered incorrectly
+                const recentlyIncorrect = history.incorrect > 0;
+                const recencyFactor = recentlyIncorrect ? 1.5 : 1;
+                
+                // Calculate mastery level
+                // A question is considered mastered if it has been answered correctly at least 3 times
+                // and has a success rate of at least 80%
+                const isMastered = history.correct >= 3 && successRate >= 0.8;
+                
+                if (isMastered) {
+                    // Mastered questions get lower weight
+                    weight = 0.3;
+                } else if (history.incorrect > history.correct) {
+                    // Questions with more incorrect than correct answers get higher weight
+                    // The more incorrect answers, the higher the weight
+                    weight = 2.0 + (history.incorrect / history.total);
+                } else if (history.correct > history.incorrect && !isMastered) {
+                    // Questions that are being learned but not yet mastered
+                    // get a moderate weight that decreases as success rate increases
+                    weight = 1.0 - (successRate * 0.5);
                 }
+                
+                // Apply recency factor to give higher weight to recently incorrect questions
+                weight *= recencyFactor;
+                
+                // Ensure minimum weight
+                weight = Math.max(weight, 0.1);
             }
             
             return { question, weight };
         });
         
-        // Sort questions randomly but with weight influence
+        // Add some randomness to the selection process
         weightedQuestions.sort(() => Math.random() - 0.5);
         
         // Sort by weight (higher weights = higher probability)
