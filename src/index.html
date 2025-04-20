@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Key Creator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Answer Key Creator</h1>
+    
+    <div id="error-message" class="hidden"></div>
+    
+    <div id="loading" class="loading">Loading questions and translations</div>
+    
+    <div id="intro" class="category-filter hidden">
+        <h2>Create an Answer Key</h2>
+        <p>This tool will help you create a correct_answers.json file by going through all questions in their original order.</p>
+        
+        <div class="setting-row">
+            <label for="category-select">Filter by Category:</label>
+            <select id="category-select">
+                <option value="all">All Categories</option>
+                <!-- Categories will be loaded here -->
+            </select>
+        </div>
+        
+        <button id="start-btn" class="start-btn">Start Creating Answer Key</button>
+    </div>
+    
+    <div id="main-content" class="hidden">
+        <div class="progress">
+            Question <span id="current-question">1</span> of <span id="total-questions">0</span>
+        </div>
+        
+        <div class="completion-status">
+            Completion: <span id="completion-percent">0%</span>
+            <div class="status-bar">
+                <div id="status-progress" class="status-progress"></div>
+            </div>
+            <div class="translation-toggle">
+                <label for="translation-checkbox">
+                    Show Translations
+                    <span class="info-icon">i
+                        <span class="tooltip">Toggle to show or hide Russian translations of questions and answers.</span>
+                    </span>
+                </label>
+                <input type="checkbox" id="translation-checkbox" checked>
+            </div>
+            <button id="export-anytime-btn" class="download-btn">Export Current Progress</button>
+        </div>
+        
+        <div id="question-container" class="question-container">
+            <!-- Questions will be loaded here -->
+        </div>
+        
+        <div class="controls">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn">Next</button>
+            <button id="finish-btn" class="hidden">Finish</button>
+        </div>
+    </div>
+    
+    <div id="summary" class="hidden">
+        <h2>Answer Key Complete</h2>
+        
+        <div class="summary">
+            <p>You have created an answer key for <span id="total-answered">0</span> questions.</p>
+            <div id="category-summaries"></div>
+            <button id="download-btn" class="download-btn">Download Answer Key</button>
+        </div>
+        
+        <button id="restart-btn">Start Over</button>
+    </div>
+    
+    <div class="footer">
+        <p>This tool creates a correct_answers.json file in the format required for the exam application.</p>
+    </div>
+    
+    <!-- Embed data directly in the page -->
+    <script>
+        // This will be populated from the JSON files
+        const allQuestionsData = [];
+        const translations = {};
+        
+        // Load the data from the JSON files using script tags
+        function loadExamQuestions() {
+            const script = document.createElement('script');
+            script.src = '../src/data/exam_questions.json';
+            script.type = 'text/javascript';
+            script.onload = function() {
+                console.log('Exam questions loaded');
+                loadTranslations();
+            };
+            script.onerror = function() {
+                console.error('Failed to load exam questions');
+                document.getElementById('error-message').textContent = 'Failed to load exam questions. Please check the file path.';
+                document.getElementById('error-message').classList.remove('hidden');
+            };
+            document.head.appendChild(script);
+        }
+        
+        function loadTranslations() {
+            const script = document.createElement('script');
+            script.src = '../src/data/translations.json';
+            script.type = 'text/javascript';
+            script.onload = function() {
+                console.log('Translations loaded');
+            };
+            script.onerror = function() {
+                console.error('Failed to load translations');
+                document.getElementById('error-message').textContent = 'Failed to load translations. Please check the file path.';
+                document.getElementById('error-message').classList.remove('hidden');
+            };
+            document.head.appendChild(script);
+        }
+        
+        // Load the data when the page loads
+        document.addEventListener('DOMContentLoaded', loadExamQuestions);
+    </script>
+    
+    <!-- Load the application script -->
+    <script src="js/app.js"></script>
+</body>
+</html>

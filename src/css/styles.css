@@ -1,0 +1,253 @@
+/* 
+ * Answer Key Creator Application Styles
+ */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question-container {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.category {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
+
+.question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.answer-option {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.answer-option:hover {
+    background-color: #f0f0f0;
+}
+
+.answer-option input {
+    margin-right: 10px;
+}
+
+.answer-option label {
+    cursor: pointer;
+}
+
+.controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.progress {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.category-filter {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.setting-row {
+    margin-bottom: 10px;
+}
+
+.category-filter select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.start-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #2196F3;
+}
+
+.start-btn:hover {
+    background-color: #0b7dda;
+}
+
+.download-btn {
+    background-color: #ff9800;
+}
+
+.download-btn:hover {
+    background-color: #e68a00;
+}
+
+.hidden {
+    display: none;
+}
+
+.completion-status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.status-bar {
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.status-progress {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.summary {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.category-summary {
+    margin-bottom: 10px;
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.info-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    margin-left: 5px;
+    cursor: help;
+    position: relative;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 300px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -150px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.info-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.translation-toggle {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.translation-toggle label {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+#error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border-left: 4px solid #c62828;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+}
+
+.loading:after {
+    content: '.';
+    animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        color: rgba(0,0,0,0);
+        text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    40% {
+        color: #333;
+        text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    60% {
+        text-shadow:
+            .25em 0 0 #333,
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    80%, 100% {
+        text-shadow:
+            .25em 0 0 #333,
+            .5em 0 0 #333;
+    }
+}
