@@ -2,6 +2,8 @@
  * Script to generate a standalone HTML exam application
  * This script reads JSON data files and generates a complete HTML file
  * with embedded CSS and JavaScript
+ * 
+ * Version tracking is implemented to increment version number on each generation
  */
 
 const fs = require('fs');
@@ -11,6 +13,27 @@ const path = require('path');
 const dataDir = path.join(__dirname, 'src', 'data');
 const outputDir = path.join(__dirname, 'final');
 const outputFile = path.join(outputDir, 'exam_app_with_translations.html');
+const versionFile = path.join(__dirname, 'version.json');
+
+// Handle version tracking
+let appVersion = '1.0.0';
+try {
+  if (fs.existsSync(versionFile)) {
+    const versionData = JSON.parse(fs.readFileSync(versionFile, 'utf8'));
+    appVersion = versionData.version;
+    
+    // Increment version (patch number)
+    const versionParts = appVersion.split('.');
+    versionParts[2] = (parseInt(versionParts[2]) + 1).toString();
+    appVersion = versionParts.join('.');
+  }
+  
+  // Save updated version
+  fs.writeFileSync(versionFile, JSON.stringify({ version: appVersion }, null, 2));
+  console.log(`Generating app version: ${appVersion}`);
+} catch (e) {
+  console.error('Error handling version:', e);
+}
 
 // Ensure output directory exists
 if (!fs.existsSync(outputDir)) {
@@ -41,6 +64,20 @@ const htmlContent = `<!DOCTYPE html>
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        
+        .version {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+        
+        .app-info {
+            font-size: 12px;
+            color: #95a5a6;
+            margin-bottom: 15px;
+            text-align: right;
         }
         
         body {
@@ -177,6 +214,18 @@ const htmlContent = `<!DOCTYPE html>
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .controls button {
+            min-width: 100px;
+            margin: 5px;
+            flex-grow: 1;
+        }
+        
+        #finish-btn {
+            display: none;
+            background-color: #27ae60;
         }
         
         /* Results styles */
@@ -268,12 +317,14 @@ const htmlContent = `<!DOCTYPE html>
             }
             
             .controls {
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: center;
             }
             
             .controls button {
-                margin-bottom: 10px;
-                width: 100%;
+                margin: 5px;
+                flex-basis: calc(50% - 10px);
+                min-width: 0;
             }
             
             .question {
@@ -304,7 +355,8 @@ const htmlContent = `<!DOCTYPE html>
 </head>
 <body>
     <div class="container">
-        <h1>Maritime Radio Communication Exam</h1>
+        <h1>Maritime Radio Communication Exam <span class="version">v${appVersion}</span></h1>
+        <div class="app-info">Generated on: ${new Date().toLocaleString()}</div>
         
         <!-- Exam Settings -->
         <div id="exam-settings">
@@ -346,7 +398,7 @@ const htmlContent = `<!DOCTYPE html>
         <div class="controls hidden">
             <button id="prev-btn">Previous</button>
             <button id="next-btn">Next</button>
-            <button id="finish-btn" class="hidden">Finish Exam</button>
+            <button id="finish-btn">Finish Exam</button>
         </div>
         
         <!-- Results -->
@@ -379,6 +431,8 @@ const htmlContent = `<!DOCTYPE html>
         let questionCount = 20;
         let examStarted = false;
         let showTranslations = true;
+        let questionHistory = {};
+        const appVersion = '${appVersion}'; // App version from generator
         
         // Initialize the application when the DOM is loaded
         document.addEventListener('DOMContentLoaded', initializeApp);
@@ -387,28 +441,15 @@ const htmlContent = `<!DOCTYPE html>
             // Populate categories
             populateCategories();
             
+            // Load question history from localStorage
+            loadQuestionHistory();
+            
             // Add event listeners
             document.getElementById('start-btn').addEventListener('click', startExam);
-            document.getElementById('prev-btn').addEventListener('click', () => {
-                currentQuestionIndex--;
-                displayQuestion(currentQuestionIndex);
-            });
-            document.getElementById('next-btn').addEventListener('click', () => {
-                currentQuestionIndex++;
-                displayQuestion(currentQuestionIndex);
-            });
-            document.getElementById('finish-btn').addEventListener('click', () => {
-                showResults();
-            });
-            document.getElementById('restart-btn').addEventListener('click', () => {
-                // Show settings screen again
-                document.getElementById('exam-settings').style.display = 'block';
-                document.getElementById('question-container').classList.add('hidden');
-                document.getElementById('progress').classList.add('hidden');
-                document.querySelector('.controls').classList.add('hidden');
-                document.getElementById('results').classList.add('hidden');
-                examStarted = false;
-            });
+            document.getElementById('prev-btn').addEventListener('click', navigateToPrevious);
+            document.getElementById('next-btn').addEventListener('click', navigateToNext);
+            document.getElementById('finish-btn').addEventListener('click', showResults);
+            document.getElementById('restart-btn').addEventListener('click', restartExam);
             document.getElementById('export-btn').addEventListener('click', exportResultsAsPDF);
             
             // Add keyboard event listener
@@ -421,6 +462,73 @@ const htmlContent = `<!DOCTYPE html>
                     displayQuestion(currentQuestionIndex);
                 }
             });
+        }
+        
+        function navigateToPrevious() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion(currentQuestionIndex);
+            }
+        }
+        
+        function navigateToNext() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion(currentQuestionIndex);
+            }
+        }
+        
+        function restartExam() {
+            // Show settings screen again
+            document.getElementById('exam-settings').style.display = 'block';
+            document.getElementById('question-container').classList.add('hidden');
+            document.getElementById('progress').classList.add('hidden');
+            document.querySelector('.controls').classList.add('hidden');
+            document.getElementById('results').classList.add('hidden');
+            examStarted = false;
+        }
+        
+        function loadQuestionHistory() {
+            try {
+                const savedHistory = localStorage.getItem('examQuestionHistory');
+                if (savedHistory) {
+                    questionHistory = JSON.parse(savedHistory);
+                }
+            } catch (e) {
+                console.log('Could not load question history:', e);
+                questionHistory = {};
+            }
+        }
+        
+        function updateQuestionHistory() {
+            // Update history based on current exam results
+            questions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                const correctOption = correctAnswersMap[question.id];
+                const isCorrect = userAnswer === correctOption;
+                
+                // Initialize history for this question if it doesn't exist
+                if (!questionHistory[question.id]) {
+                    questionHistory[question.id] = { correct: 0, incorrect: 0, total: 0 };
+                }
+                
+                // Update counters
+                if (userAnswer) { // Only count answered questions
+                    questionHistory[question.id].total++;
+                    if (isCorrect) {
+                        questionHistory[question.id].correct++;
+                    } else {
+                        questionHistory[question.id].incorrect++;
+                    }
+                }
+            });
+            
+            // Save to localStorage
+            try {
+                localStorage.setItem('examQuestionHistory', JSON.stringify(questionHistory));
+            } catch (e) {
+                console.log('Could not save question history:', e);
+            }
         }
         
         function populateCategories() {
@@ -503,9 +611,50 @@ const htmlContent = `<!DOCTYPE html>
             controls.classList.remove('hidden');
         }
         
+        // Get random questions from the array with weighted probability based on previous answers
         function getRandomQuestions(allQuestions, count) {
-            const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
-            return shuffled.slice(0, count);
+            // Check if we have previous results in localStorage
+            let questionHistory = {};
+            try {
+                const savedHistory = localStorage.getItem('examQuestionHistory');
+                if (savedHistory) {
+                    questionHistory = JSON.parse(savedHistory);
+                }
+            } catch (e) {
+                console.log('Could not load question history:', e);
+            }
+            
+            // Assign weights to questions based on history
+            const weightedQuestions = allQuestions.map(question => {
+                const history = questionHistory[question.id] || { correct: 0, incorrect: 0, total: 0 };
+                
+                // Calculate weight - higher for incorrect answers, lower for correct ones
+                let weight = 1; // Default weight
+                
+                if (history.total > 0) {
+                    // If question was answered incorrectly more often, increase its weight
+                    if (history.incorrect > history.correct) {
+                        weight = 1.5 + (history.incorrect / history.total);
+                    } 
+                    // If question was answered correctly more often, decrease its weight
+                    else if (history.correct > history.incorrect) {
+                        weight = 0.5 - (history.correct / (2 * history.total));
+                        // Ensure minimum weight
+                        weight = Math.max(weight, 0.1);
+                    }
+                }
+                
+                return { question, weight };
+            });
+            
+            // Sort questions randomly but with weight influence
+            weightedQuestions.sort(() => Math.random() - 0.5);
+            
+            // Sort by weight (higher weights = higher probability)
+            weightedQuestions.sort((a, b) => b.weight - a.weight);
+            
+            // Take the top 'count' questions
+            return weightedQuestions.slice(0, count).map(item => item.question);
         }
         
         function displayQuestion(index) {
@@ -570,13 +719,13 @@ const htmlContent = `<!DOCTYPE html>
             // Previous button
             prevBtn.disabled = currentQuestionIndex === 0;
             
-            // Next button
+            // Next button and Finish button
             if (currentQuestionIndex === questions.length - 1) {
-                nextBtn.classList.add('hidden');
-                finishBtn.classList.remove('hidden');
+                nextBtn.style.display = 'none';
+                finishBtn.style.display = 'block';
             } else {
-                nextBtn.classList.remove('hidden');
-                finishBtn.classList.add('hidden');
+                nextBtn.style.display = 'block';
+                finishBtn.style.display = 'none';
             }
         }
         
@@ -612,6 +761,9 @@ const htmlContent = `<!DOCTYPE html>
             
             // Calculate the score
             const score = calculateScore();
+            
+            // Update question history in localStorage
+            updateQuestionHistory();
             
             // Hide questions and show results
             questionContainer.classList.add('hidden');
