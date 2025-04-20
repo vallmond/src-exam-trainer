@@ -2,7 +2,7 @@
   {
     "id": 1,
     "number": "1",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Zgodnie z kolejnością pierwszeństwa łączności:",
     "answers": [
       {
@@ -22,7 +22,7 @@
   {
     "id": 2,
     "number": "2",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Łączność publiczna to łączność:",
     "answers": [
       {
@@ -42,7 +42,7 @@
   {
     "id": 3,
     "number": "3",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Stacja nadbrzeżna to stacja:",
     "answers": [
       {
@@ -62,7 +62,7 @@
   {
     "id": 4,
     "number": "4",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Ratowniczy Ośrodek Koordynacyjny odpowiedzialny jest za:",
     "answers": [
       {
@@ -82,7 +82,7 @@
   {
     "id": 5,
     "number": "5",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Pasmo VHF obejmuje częstotliwości:",
     "answers": [
       {
@@ -102,7 +102,7 @@
   {
     "id": 6,
     "number": "6",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Fale z pasma VHF to inaczej fale:",
     "answers": [
       {
@@ -122,7 +122,7 @@
   {
     "id": 7,
     "number": "7",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Morski zakres V obejmuje częstotliwości:",
     "answers": [
       {
@@ -142,7 +142,7 @@
   {
     "id": 8,
     "number": "8",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Radiotelefoniczna stacja statkowa może być identyfikowana przez:",
     "answers": [
       {
@@ -162,7 +162,7 @@
   {
     "id": 9,
     "number": "9",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Simpleks to sposób pracy w kanale radiowym przy którym:",
     "answers": [
       {
@@ -182,7 +182,7 @@
   {
     "id": 10,
     "number": "10",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Semidupleks to sposób pracy w kanale radiowym przy którym:",
     "answers": [
       {
@@ -202,7 +202,7 @@
   {
     "id": 11,
     "number": "11",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Dupleks to sposób pracy w kanale radiowym przy którym:",
     "answers": [
       {
@@ -222,7 +222,7 @@
   {
     "id": 12,
     "number": "12",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał simpleksowy to kanał w którym:",
     "answers": [
       {
@@ -242,7 +242,7 @@
   {
     "id": 13,
     "number": "13",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał dupleksowy to kanał w którym:",
     "answers": [
       {
@@ -262,7 +262,7 @@
   {
     "id": 14,
     "number": "14",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 16 VHF jest kanałem:",
     "answers": [
       {
@@ -282,7 +282,7 @@
   {
     "id": 15,
     "number": "15",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 6 VHF jest kanałem:",
     "answers": [
       {
@@ -302,7 +302,7 @@
   {
     "id": 16,
     "number": "16",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 15 VHF jest kanałem:",
     "answers": [
       {
@@ -322,7 +322,7 @@
   {
     "id": 17,
     "number": "17",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 13 VHF jest kanałem:",
     "answers": [
       {
@@ -342,7 +342,7 @@
   {
     "id": 18,
     "number": "18",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 70 VHF jest kanałem:",
     "answers": [
       {
@@ -362,7 +362,7 @@
   {
     "id": 19,
     "number": "19",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, do wywołań ogólnych DSC można stosować kanał:",
     "answers": [
       {
@@ -382,7 +382,7 @@
   {
     "id": 20,
     "number": "20",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, do wywołań międzystatkowych DSC można stosować kanał:",
     "answers": [
       {
@@ -402,7 +402,7 @@
   {
     "id": 21,
     "number": "21",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Znak wywoławczy stacji statkowej to identyfikacja stosowana w łączności:",
     "answers": [
       {
@@ -422,7 +422,7 @@
   {
     "id": 22,
     "number": "22",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "MMSI to identyfikacja stosowana w łączności:",
     "answers": [
       {
@@ -442,7 +442,7 @@
   {
     "id": 23,
     "number": "23",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Znak wywoławczy stacji statkowej to identyfikacja przyznawana:",
     "answers": [
       {
@@ -462,7 +462,7 @@
   {
     "id": 24,
     "number": "24",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Obszar morza w którym zapewniona jest pewna łączność DSC i radiotelefoniczna,\nprzynajmniej z jedną stacją brzegową VHF to obszar:",
     "answers": [
       {
@@ -482,7 +482,7 @@
   {
     "id": 25,
     "number": "25",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Ratowniczy Ośrodek Koordynacyjny oznacza się skrótem:",
     "answers": [
       {
@@ -502,7 +502,7 @@
   {
     "id": 26,
     "number": "26",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Podcentrum Ratownicze oznacza się skrótem:",
     "answers": [
       {
@@ -522,7 +522,7 @@
   {
     "id": 27,
     "number": "27",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Stację nadbrzeżną zaangażowaną w akcję SAR oznacza się skrótem:",
     "answers": [
       {
@@ -542,7 +542,7 @@
   {
     "id": 28,
     "number": "28",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Jednostkę koordynującą poszukiwanie i ratowanie na miejscu akcji oznacza się skrótem:",
     "answers": [
       {
@@ -562,7 +562,7 @@
   {
     "id": 29,
     "number": "29",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Zalecanym kanałem VHF do łączności w akcjach SAR jest kanał:",
     "answers": [
       {
@@ -582,7 +582,7 @@
   {
     "id": 30,
     "number": "30",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Znak wywoławczy polskiej stacji statkowej może rozpoczynać się od jednego z\nprefiksów:",
     "answers": [
       {
@@ -602,7 +602,7 @@
   {
     "id": 31,
     "number": "31",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Alarmowanie w niebezpieczeństwie zawiera:",
     "answers": [
       {
@@ -622,7 +622,7 @@
   {
     "id": 32,
     "number": "32",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, do radiotelefonicznych wywołań ogólnych można stosować kanał:",
     "answers": [
       {
@@ -642,7 +642,7 @@
   {
     "id": 33,
     "number": "33",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Alarmowanie w niebezpieczeństwie DSC adresowane jest:",
     "answers": [
       {
@@ -662,7 +662,7 @@
   {
     "id": 34,
     "number": "34",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Operator stacji statkowej po odbiorze pośredniego alarmowania DSC nadanego przez\nstację nadbrzeżną powinien:",
     "answers": [
       {
@@ -682,7 +682,7 @@
   {
     "id": 35,
     "number": "35",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Operator stacji statkowej może nadać pośrednie alarmowanie w niebezpieczeństwie w\nsytuacji gdy:",
     "answers": [
       {
@@ -702,7 +702,7 @@
   {
     "id": 36,
     "number": "36",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, operator stacji statkowej może nadać pośrednie alarmowanie DSC po\nodbiorze alarmowania DSC:",
     "answers": [
       {
@@ -722,7 +722,7 @@
   {
     "id": 37,
     "number": "37",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, operator stacji statkowej może nadać potwierdzenie odbioru\nalarmowania DSC:",
     "answers": [
       {
@@ -742,7 +742,7 @@
   {
     "id": 38,
     "number": "38",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, operator stacji statkowej może nadać potwierdzenie odbioru\nalarmowania DSC za pomocą:",
     "answers": [
       {
@@ -762,7 +762,7 @@
   {
     "id": 39,
     "number": "39",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Operator stacji nadbrzeżnej może nadać potwierdzenie odbioru alarmowania DSC za\npomocą:",
     "answers": [
       {
@@ -782,7 +782,7 @@
   {
     "id": 40,
     "number": "40",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Przed każdym wywołaniem poprzedzającym korespondencję w niebezpieczeństwie\nnależy użyć sygnału niebezpieczeństwa:",
     "answers": [
       {
@@ -802,7 +802,7 @@
   {
     "id": 41,
     "number": "41",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Stację zakłócającą korespondencję w niebezpieczeństwie może uciszać:",
     "answers": [
       {
@@ -822,7 +822,7 @@
   {
     "id": 42,
     "number": "42",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Sygnałem uciszania stacji zakłócającej korespondencje w niebezpieczeństwie jest sygnał:",
     "answers": [
       {
@@ -842,7 +842,7 @@
   {
     "id": 43,
     "number": "43",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Informację o zakończeniu korespondencji w niebezpieczeństwie może nadać:",
     "answers": [
       {
@@ -862,7 +862,7 @@
   {
     "id": 44,
     "number": "44",
-    "category": "REGULAMINY I PODSTAWOWE TERMINY ANGLOJĘZYCZNE\nSTOSOWANE W SŁUŻBIE RADIOKOMUNIKACYJNEJ MORSKIEJ",
+    "category": "Regulaminy i Terminy",
     "question": "Sygnałem zakończenia korespondencji w niebezpieczeństwie jest sygnał:",
     "answers": [
       {
@@ -882,7 +882,7 @@
   {
     "id": 45,
     "number": "45",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Korespondencją na miejscu akcji ratunkowej kieruje:",
     "answers": [
       {
@@ -902,7 +902,7 @@
   {
     "id": 46,
     "number": "46",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Korespondencją koordynacyjną SAR kieruje:",
     "answers": [
       {
@@ -922,7 +922,7 @@
   {
     "id": 47,
     "number": "47",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Łączność pilną stosuje się dla uzyskania:",
     "answers": [
       {
@@ -942,7 +942,7 @@
   {
     "id": 48,
     "number": "48",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, wywołanie pilne DSC można nadać na kanale:",
     "answers": [
       {
@@ -962,7 +962,7 @@
   {
     "id": 49,
     "number": "49",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Wywołanie pilne DSC powinno zawierać kategorię:",
     "answers": [
       {
@@ -982,7 +982,7 @@
   {
     "id": 50,
     "number": "50",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Przy braku potwierdzenia odbioru wywołania pilnego DSC do jednej stacji, może być\nono powtórzone po:",
     "answers": [
       {
@@ -1002,7 +1002,7 @@
   {
     "id": 51,
     "number": "51",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Radiotelefonicznym sygnałem pilności jest sygnał:",
     "answers": [
       {
@@ -1022,7 +1022,7 @@
   {
     "id": 52,
     "number": "52",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "W radiotelefonii sygnał pilności wymawia się:",
     "answers": [
       {
@@ -1042,7 +1042,7 @@
   {
     "id": 53,
     "number": "53",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Łączność ostrzegawczą stosuje się dla:",
     "answers": [
       {
@@ -1062,7 +1062,7 @@
   {
     "id": 54,
     "number": "54",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, wywołanie ostrzegawcze DSC można nadać na kanale:",
     "answers": [
       {
@@ -1082,7 +1082,7 @@
   {
     "id": 55,
     "number": "55",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Wywołanie ostrzegawcze DSC powinno zawierać kategorie:",
     "answers": [
       {
@@ -1102,7 +1102,7 @@
   {
     "id": 56,
     "number": "56",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Radiotelefonicznym sygnałem ostrzegawczym jest sygnał:",
     "answers": [
       {
@@ -1122,7 +1122,7 @@
   {
     "id": 57,
     "number": "57",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "W radiotelefonii sygnał ostrzegawczy wymawia się:",
     "answers": [
       {
@@ -1142,7 +1142,7 @@
   {
     "id": 58,
     "number": "58",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Jeżeli urządzenie DSC nie jest podłączone do urządzeń nawigacyjnych, operator\npowinien wprowadzać do niego aktualną pozycję statku co najmniej:",
     "answers": [
       {
@@ -1162,7 +1162,7 @@
   {
     "id": 59,
     "number": "59",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, radiotelefoniczne wezwanie w niebezpieczeństwie powinno być nadane\nna kanale:",
     "answers": [
       {
@@ -1182,7 +1182,7 @@
   {
     "id": 60,
     "number": "60",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Wezwanie w niebezpieczeństwie nadane na kanale 16 VHF powinno rozpoczynać się od\nwywołania zawierającego sygnał niebezpieczeństwa MAYDAY wymówiony:",
     "answers": [
       {
@@ -1202,7 +1202,7 @@
   {
     "id": 61,
     "number": "61",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Korespondencja w niebezpieczeństwie nadana na kanale 16 VHF powinna rozpoczynać\nsię od sygnału niebezpieczeństwa MAYDAY wymówionego:",
     "answers": [
       {
@@ -1222,7 +1222,7 @@
   {
     "id": 62,
     "number": "62",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Potwierdzenie odbioru zawiadomienia w niebezpieczeństwie nadanego na kanale 16\nVHF powinno być nadane na kanale:",
     "answers": [
       {
@@ -1242,7 +1242,7 @@
   {
     "id": 63,
     "number": "63",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Potwierdzenie odbioru zawiadomienia w niebezpieczeństwie nadane na kanale 16 VHF\npowinno rozpoczynać się od sygnału niebezpieczeństwa MAYDAY wymówionego:",
     "answers": [
       {
@@ -1262,7 +1262,7 @@
   {
     "id": 64,
     "number": "64",
-    "category": "SEELONCE FEENEE",
+    "category": "Regulaminy i Terminy",
     "question": "Nadanie radiotelefonicznego zawiadomienia o niebezpieczeństwie przez stację w nim nie\nbędącą powinno być poprzedzone sygnałem:",
     "answers": [
       {
@@ -1282,7 +1282,7 @@
   {
     "id": 65,
     "number": "65",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Sygnał pilności PAN PAN należy stosować przed wywołaniem dotyczącym:",
     "answers": [
       {
@@ -1302,7 +1302,7 @@
   {
     "id": 66,
     "number": "66",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Jeżeli stacja statkowa VHF nie posiada urządzenia DSC, wywołanie pilne (PAN PAN)\npowinno być nadane na kanale:",
     "answers": [
       {
@@ -1322,7 +1322,7 @@
   {
     "id": 67,
     "number": "67",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Sygnał ostrzegawczy SECURITE należy stosować przed wywołaniem dotyczącym:",
     "answers": [
       {
@@ -1342,7 +1342,7 @@
   {
     "id": 68,
     "number": "68",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Jeżeli stacja statkowa VHF nie posiada urządzenia DSC, wywołanie ostrzegawcze\n(SECURITE) powinno być nadane na kanale:",
     "answers": [
       {
@@ -1362,7 +1362,7 @@
   {
     "id": 69,
     "number": "69",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 75 VHF jest kanałem:",
     "answers": [
       {
@@ -1382,7 +1382,7 @@
   {
     "id": 70,
     "number": "70",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 76 VHF jest kanałem:",
     "answers": [
       {
@@ -1402,7 +1402,7 @@
   {
     "id": 71,
     "number": "71",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 15 VHF jest kanałem:",
     "answers": [
       {
@@ -1422,7 +1422,7 @@
   {
     "id": 72,
     "number": "72",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 17 VHF jest kanałem:",
     "answers": [
       {
@@ -1442,7 +1442,7 @@
   {
     "id": 73,
     "number": "73",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 13 VHF w pierwszej kolejności jest kanałem:",
     "answers": [
       {
@@ -1462,7 +1462,7 @@
   {
     "id": 74,
     "number": "74",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 6 VHF w pierwszej kolejności jest kanałem:",
     "answers": [
       {
@@ -1482,7 +1482,7 @@
   {
     "id": 75,
     "number": "75",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 16 VHF w pierwszej kolejności jest kanałem:",
     "answers": [
       {
@@ -1502,7 +1502,7 @@
   {
     "id": 76,
     "number": "76",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanał 70 VHF jest kanałem:",
     "answers": [
       {
@@ -1522,7 +1522,7 @@
   {
     "id": 77,
     "number": "77",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Kanały „amerykańskie” (US):",
     "answers": [
       {
@@ -1542,7 +1542,7 @@
   {
     "id": 78,
     "number": "78",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Gdy jednostka jest w morzu, testowanie wewnętrzne urządzenia VHF DSC powinno być\nprzeprowadzone:",
     "answers": [
       {
@@ -1562,7 +1562,7 @@
   {
     "id": 79,
     "number": "79",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, testowanie urządzenia DSC polega na przeprowadzeniu testu:",
     "answers": [
       {
@@ -1582,7 +1582,7 @@
   {
     "id": 80,
     "number": "80",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Testowanie „zewnętrzne” urządzenia DSC w zakresie VHF powinno być\nprzeprowadzane:",
     "answers": [
       {
@@ -1602,7 +1602,7 @@
   {
     "id": 81,
     "number": "81",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "W zakresie VHF, radiotelefoniczne odwołanie fałszywego alarmowania DSC powinno\nbyć nadane na kanale:",
     "answers": [
       {
@@ -1622,7 +1622,7 @@
   {
     "id": 82,
     "number": "82",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Odwołanie fałszywego alarmowania nadanego za pomocą DSC powinno być skierowane:",
     "answers": [
       {
@@ -1642,7 +1642,7 @@
   {
     "id": 83,
     "number": "83",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Odwołanie fałszywego alarmowania nadanego za pomocą EPIRB powinno być\nskierowane do:",
     "answers": [
       {
@@ -1662,7 +1662,7 @@
   {
     "id": 84,
     "number": "84",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Odwołując fałszywe alarmowanie należy podać następujące informacje:",
     "answers": [
       {
@@ -1682,7 +1682,7 @@
   {
     "id": 85,
     "number": "85",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Dla radiotelefonów osobistych (przenośnych), wykorzystywanych w służbie\nradiokomunikacyjnej morskiej, posiadających DSC, nadaje się numer identyfikacyjny:",
     "answers": [
       {
@@ -1702,7 +1702,7 @@
   {
     "id": 86,
     "number": "86",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Nadając wywołanie publiczne DSC należy wybrać priorytet (kategorie):",
     "answers": [
       {
@@ -1722,7 +1722,7 @@
   {
     "id": 87,
     "number": "87",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Stacja statkowa VHF nadając wywołanie publiczne DSC do innej stacji statkowej\npowinna użyć kanału:",
     "answers": [
       {
@@ -1742,7 +1742,7 @@
   {
     "id": 88,
     "number": "88",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Stacja statkowa nadając wywołanie publiczne DSC do innej stacji statkowej:",
     "answers": [
       {
@@ -1762,7 +1762,7 @@
   {
     "id": 89,
     "number": "89",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Stacja statkowa nadając wywołanie publiczne DSC do stacji nadbrzeżnej:",
     "answers": [
       {
@@ -1782,7 +1782,7 @@
   {
     "id": 90,
     "number": "90",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Po przejściu na kanał roboczy, łączność publiczną inicjuje:",
     "answers": [
       {
@@ -1802,7 +1802,7 @@
   {
     "id": 91,
     "number": "91",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Stacja statkowa VHF nadając wywołanie publiczne do innej stacji statkowej może użyć\nkanału:",
     "answers": [
       {
@@ -1822,7 +1822,7 @@
   {
     "id": 92,
     "number": "92",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Stacja statkowa VHF nadając wywołanie publiczne do stacji nadbrzeżnej może użyć\nkanału:",
     "answers": [
       {
@@ -1842,7 +1842,7 @@
   {
     "id": 93,
     "number": "93",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Radiotelefoniczne wywołanie publiczne w zakresie VHF powinno mieć formę:",
     "answers": [
       {
@@ -1862,7 +1862,7 @@
   {
     "id": 94,
     "number": "94",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Radiotelefoniczna odpowiedź na wywołanie publiczne w zakresie VHF powinna mieć\nformę:",
     "answers": [
       {
@@ -1882,7 +1882,7 @@
   {
     "id": 95,
     "number": "95",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Wywołanie i odpowiedź na wywołanie na kanale 16 VHF nie powinny przekraczać:",
     "answers": [
       {
@@ -1902,7 +1902,7 @@
   {
     "id": 96,
     "number": "96",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Stacja statkowa VHF z DSC, gdy znajduje się w morzu, utrzymuje ciągły nasłuch\nradiowy na kanale:",
     "answers": [
       {
@@ -1922,7 +1922,7 @@
   {
     "id": 97,
     "number": "97",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "W łączności stacji statkowej ze stacją nadbrzeżną, o przebiegu korespondencji decyduje:",
     "answers": [
       {
@@ -1942,7 +1942,7 @@
   {
     "id": 98,
     "number": "98",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Wykaz korespondencji (traffic list) nadawany jest przez:",
     "answers": [
       {
@@ -1962,7 +1962,7 @@
   {
     "id": 99,
     "number": "99",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Jeżeli wywoływana stacja nie odpowiada na wywołanie publiczne DSC, kolejne można\npowtórzyć po:",
     "answers": [
       {
@@ -1982,7 +1982,7 @@
   {
     "id": 100,
     "number": "100",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Jeżeli wywoływana stacja nie odpowiada na radiotelefoniczne wywołanie publiczne,\nkolejne można powtórzyć po:",
     "answers": [
       {
@@ -2002,7 +2002,7 @@
   {
     "id": 101,
     "number": "101",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Jednostka pływająca może zrealizować radiotelefoniczną łączność publiczną z\nabonentem telekomunikacyjnej sieci lądowej:",
     "answers": [
       {
@@ -2022,7 +2022,7 @@
   {
     "id": 102,
     "number": "102",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Radiotelefoniczną łączność publiczną z telekomunikacyjną siecią lądową, prowadzi się\nna kanale:",
     "answers": [
       {
@@ -2042,7 +2042,7 @@
   {
     "id": 103,
     "number": "103",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Prowadząc łączność radiotelefoniczną, sygnałem zakończenia wypowiedzi jest sygnał:",
     "answers": [
       {
@@ -2062,7 +2062,7 @@
   {
     "id": 104,
     "number": "104",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Prowadząc łączność radiotelefoniczną, sygnałem zakończenia łączności jest sygnał:",
     "answers": [
       {
@@ -2082,7 +2082,7 @@
   {
     "id": 105,
     "number": "105",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Po przejściu na kanał roboczy, radiotelefoniczne wywołanie publiczne powinno mieć\nformę:",
     "answers": [
       {
@@ -2102,7 +2102,7 @@
   {
     "id": 106,
     "number": "106",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Stacja nadbrzeżna pytając stację statkową o jej położenie może użyć skrótu:",
     "answers": [
       {
@@ -2122,7 +2122,7 @@
   {
     "id": 107,
     "number": "107",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Publikacja ITU „Spis stacji nadbrzeżnych” zawiera podstawowe dane o:",
     "answers": [
       {
@@ -2142,7 +2142,7 @@
   {
     "id": 108,
     "number": "108",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Publikacja ITU „Spis stacji nadbrzeżnych” zawiera podstawowe dane o:",
     "answers": [
       {
@@ -2162,7 +2162,7 @@
   {
     "id": 109,
     "number": "109",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "W Polsce, dokument „Pozwolenie radiowe na stację statkową” wydaje:",
     "answers": [
       {
@@ -2182,7 +2182,7 @@
   {
     "id": 110,
     "number": "110",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Dokument „Pozwolenie radiowe na stację statkową” poświadcza o zgodności\nzainstalowanych na jednostce urządzeń radiowych z",
     "answers": [
       {
@@ -2202,7 +2202,7 @@
   {
     "id": 111,
     "number": "111",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "W Polsce, dokument „Karta bezpieczeństwa” jest przyznawany przez",
     "answers": [
       {
@@ -2222,7 +2222,7 @@
   {
     "id": 112,
     "number": "112",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "„Świadectwo operatora łączności bliskiego zasięgu (SRC)” upoważnia do obsługi\nurządzeń radiowych wykorzystujących częstotliwości i techniki stosowane w GMDSS na\nstatkach morskich niepodlegających Konwencji SOLAS:",
     "answers": [
       {
@@ -2242,7 +2242,7 @@
   {
     "id": 113,
     "number": "113",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "W „Dzienniku radiowym” należy odnotowywać",
     "answers": [
       {
@@ -2262,7 +2262,7 @@
   {
     "id": 114,
     "number": "114",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Regulaminy i Terminy",
     "question": "Zapewnienie tajemnicy korespondencji polega na tym, że:",
     "answers": [
       {
@@ -2282,7 +2282,7 @@
   {
     "id": 115,
     "number": "115",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Potrzebuję asysty.",
     "answers": [
       {
@@ -2302,7 +2302,7 @@
   {
     "id": 116,
     "number": "116",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Pożar w nadbudówce.",
     "answers": [
       {
@@ -2322,7 +2322,7 @@
   {
     "id": 117,
     "number": "117",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Nabieram wody.",
     "answers": [
       {
@@ -2342,7 +2342,7 @@
   {
     "id": 118,
     "number": "118",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Czy możecie udzielić pomocy?",
     "answers": [
       {
@@ -2362,7 +2362,7 @@
   {
     "id": 119,
     "number": "119",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Czy możesz podjąć rozbitków?",
     "answers": [
       {
@@ -2382,7 +2382,7 @@
   {
     "id": 120,
     "number": "120",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Widzialność jest zmniejszona z powodu mgły.",
     "answers": [
       {
@@ -2402,7 +2402,7 @@
   {
     "id": 121,
     "number": "121",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Podaj liczbę rannych.",
     "answers": [
       {
@@ -2422,7 +2422,7 @@
   {
     "id": 122,
     "number": "122",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Stan rozbitków jest dobry.",
     "answers": [
       {
@@ -2442,7 +2442,7 @@
   {
     "id": 123,
     "number": "123",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Przechodzę na kanał … UKF.",
     "answers": [
       {
@@ -2462,7 +2462,7 @@
   {
     "id": 124,
     "number": "124",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Śruba statku jest uszkodzona.",
     "answers": [
       {
@@ -2482,7 +2482,7 @@
   {
     "id": 125,
     "number": "125",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Zalecam ci przejść na kanał UKF",
     "answers": [
       {
@@ -2502,7 +2502,7 @@
   {
     "id": 126,
     "number": "126",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Dryfuję z prędkością 2 węzłów.",
     "answers": [
       {
@@ -2522,7 +2522,7 @@
   {
     "id": 127,
     "number": "127",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Brak zasilania.",
     "answers": [
       {
@@ -2542,7 +2542,7 @@
   {
     "id": 128,
     "number": "128",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Kiedy nadejdzie pomoc?",
     "answers": [
       {
@@ -2562,7 +2562,7 @@
   {
     "id": 129,
     "number": "129",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Mam kłopoty z silnikiem głównym.",
     "answers": [
       {
@@ -2582,7 +2582,7 @@
   {
     "id": 130,
     "number": "130",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Mam niebezpieczny przechył na lewą burtę.",
     "answers": [
       {
@@ -2602,7 +2602,7 @@
   {
     "id": 131,
     "number": "131",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Mam problemy z urządzeniem sterowym.",
     "answers": [
       {
@@ -2622,7 +2622,7 @@
   {
     "id": 132,
     "number": "132",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "I read you (dobrze).",
     "answers": [
       {
@@ -2642,7 +2642,7 @@
   {
     "id": 133,
     "number": "133",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Nie odpowiadam za swoje ruchy.",
     "answers": [
       {
@@ -2662,7 +2662,7 @@
   {
     "id": 134,
     "number": "134",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "How do you (odbierasz mnie)?",
     "answers": [
       {
@@ -2682,7 +2682,7 @@
   {
     "id": 135,
     "number": "135",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "I am sinking (po zalaniu).",
     "answers": [
       {
@@ -2702,7 +2702,7 @@
   {
     "id": 136,
     "number": "136",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Odebrałem twój sygnał Mayday.",
     "answers": [
       {
@@ -2722,7 +2722,7 @@
   {
     "id": 137,
     "number": "137",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Muszę opuścić statek po zderzeniu.",
     "answers": [
       {
@@ -2742,7 +2742,7 @@
   {
     "id": 138,
     "number": "138",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Utrzymuj kontakt radiowy na kanale.",
     "answers": [
       {
@@ -2762,7 +2762,7 @@
   {
     "id": 139,
     "number": "139",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Jakie jest wasze obecne maksymalne zanurzenie?",
     "answers": [
       {
@@ -2782,7 +2782,7 @@
   {
     "id": 140,
     "number": "140",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Nie mogę płynąć bez pomocy.",
     "answers": [
       {
@@ -2802,7 +2802,7 @@
   {
     "id": 141,
     "number": "141",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Załoga opuściła statek.",
     "answers": [
       {
@@ -2822,7 +2822,7 @@
   {
     "id": 142,
     "number": "142",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Mam poważne uszkodzenia przyrządów nawigacyjnych.",
     "answers": [
       {
@@ -2842,7 +2842,7 @@
   {
     "id": 143,
     "number": "143",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Utrzymuj nasłuch na kanale UKF.",
     "answers": [
       {
@@ -2862,7 +2862,7 @@
   {
     "id": 144,
     "number": "144",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Proszę o holownik i karetkę dla ofiar wypadku",
     "answers": [
       {
@@ -2882,7 +2882,7 @@
   {
     "id": 145,
     "number": "145",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Powiedz jeszcze raz proszę.",
     "answers": [
       {
@@ -2902,7 +2902,7 @@
   {
     "id": 146,
     "number": "146",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Przewidywane jest pogorszenie widzialności.",
     "answers": [
       {
@@ -2922,7 +2922,7 @@
   {
     "id": 147,
     "number": "147",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Stan rozbitków jest zły.",
     "answers": [
       {
@@ -2942,7 +2942,7 @@
   {
     "id": 148,
     "number": "148",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Mój radar jest uszkodzony.",
     "answers": [
       {
@@ -2962,7 +2962,7 @@
   {
     "id": 149,
     "number": "149",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Zderzyłem się z nieznanym obiektem.",
     "answers": [
       {
@@ -2982,7 +2982,7 @@
   {
     "id": 150,
     "number": "150",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Jakie masz problemy?",
     "answers": [
       {
@@ -3002,7 +3002,7 @@
   {
     "id": 151,
     "number": "151",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Widzialność jest zmniejszona z powodu rzadkiej mgły.",
     "answers": [
       {
@@ -3022,7 +3022,7 @@
   {
     "id": 152,
     "number": "152",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Muszę zejść z toru wodnego.",
     "answers": [
       {
@@ -3042,7 +3042,7 @@
   {
     "id": 153,
     "number": "153",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Koniec przekazu.",
     "answers": [
       {
@@ -3062,7 +3062,7 @@
   {
     "id": 154,
     "number": "154",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Mam przeciek poniżej linii wodnej.",
     "answers": [
       {
@@ -3082,7 +3082,7 @@
   {
     "id": 155,
     "number": "155",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Pożar opanowany.",
     "answers": [
       {
@@ -3102,7 +3102,7 @@
   {
     "id": 156,
     "number": "156",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Kiedy przybędziesz na pozycję statku w niebezpieczeństwie?",
     "answers": [
       {
@@ -3122,7 +3122,7 @@
   {
     "id": 157,
     "number": "157",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Odbieram ciebie słabo.",
     "answers": [
       {
@@ -3142,7 +3142,7 @@
   {
     "id": 158,
     "number": "158",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Osłońcie mnie od wiatru.",
     "answers": [
       {
@@ -3162,7 +3162,7 @@
   {
     "id": 159,
     "number": "159",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Musicie utrzymywać ciszę radiową na tym obszarze.",
     "answers": [
       {
@@ -3182,7 +3182,7 @@
   {
     "id": 160,
     "number": "160",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Z mego statku wypadł człowiek za burtę.",
     "answers": [
       {
@@ -3202,7 +3202,7 @@
   {
     "id": 161,
     "number": "161",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Manewruję z trudnością.",
     "answers": [
       {
@@ -3222,7 +3222,7 @@
   {
     "id": 162,
     "number": "162",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Błąd, poprawka.",
     "answers": [
       {
@@ -3242,7 +3242,7 @@
   {
     "id": 163,
     "number": "163",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Stanowicie przeszkodę dla ruchu.",
     "answers": [
       {
@@ -3262,7 +3262,7 @@
   {
     "id": 164,
     "number": "164",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Próbuję płynąć bez pomocy.",
     "answers": [
       {
@@ -3282,7 +3282,7 @@
   {
     "id": 165,
     "number": "165",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Jaka jest twoja wysokość nadwodna?",
     "answers": [
       {
@@ -3302,7 +3302,7 @@
   {
     "id": 166,
     "number": "166",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Czy możesz zejść z mielizny w czasie przypływu?",
     "answers": [
       {
@@ -3322,7 +3322,7 @@
   {
     "id": 167,
     "number": "167",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Czy jesteś w drodze?",
     "answers": [
       {
@@ -3342,7 +3342,7 @@
   {
     "id": 168,
     "number": "168",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Pława świetlna nie świeci.",
     "answers": [
       {
@@ -3362,7 +3362,7 @@
   {
     "id": 169,
     "number": "169",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Na torze wodnym znajdują się sieci rybackie.",
     "answers": [
       {
@@ -3382,7 +3382,7 @@
   {
     "id": 170,
     "number": "170",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Ogień rozprzestrzenia się.",
     "answers": [
       {
@@ -3402,7 +3402,7 @@
   {
     "id": 171,
     "number": "171",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Wasz sygnał zrozumiany, odbiór.",
     "answers": [
       {
@@ -3422,7 +3422,7 @@
   {
     "id": 172,
     "number": "172",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Jest odpływ.",
     "answers": [
       {
@@ -3442,7 +3442,7 @@
   {
     "id": 173,
     "number": "173",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Proszę o potwierdzenie odbioru wiadomości.",
     "answers": [
       {
@@ -3462,7 +3462,7 @@
   {
     "id": 174,
     "number": "174",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "English",
     "question": "Mam niebezpieczny przechył na prawą burtę.",
     "answers": [
       {
@@ -3482,7 +3482,7 @@
   {
     "id": 175,
     "number": "1",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Utworzony system GMDSS pozwala na:",
     "answers": [
       {
@@ -3502,7 +3502,7 @@
   {
     "id": 176,
     "number": "2",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "System GMDSS do alarmowania stosuje:",
     "answers": [
       {
@@ -3522,7 +3522,7 @@
   {
     "id": 177,
     "number": "3",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Koncepcja systemu GMDSS pozwala na organizację ratownictwa przez:",
     "answers": [
       {
@@ -3542,7 +3542,7 @@
   {
     "id": 178,
     "number": "4",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Definicja obszaru morza A1 to:",
     "answers": [
       {
@@ -3562,7 +3562,7 @@
   {
     "id": 179,
     "number": "5",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Średni zasięg łączności alarmowej za pomocą DSC w obszarze A1 wynosi około:",
     "answers": [
       {
@@ -3582,7 +3582,7 @@
   {
     "id": 180,
     "number": "6",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Nadawanie sygnałów alarmowych w GMDSS w obszarze A1 jest możliwe za pomocą:",
     "answers": [
       {
@@ -3602,7 +3602,7 @@
   {
     "id": 181,
     "number": "7",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Do nadawania sygnałów alarmowych w obszarze A1 stosowane są:",
     "answers": [
       {
@@ -3622,7 +3622,7 @@
   {
     "id": 182,
     "number": "8",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Realizacja komunikacji dla celów pilnych jest możliwa z wykorzystaniem systemów:",
     "answers": [
       {
@@ -3642,7 +3642,7 @@
   {
     "id": 183,
     "number": "9",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Realizacja komunikacji dla celów bezpieczeństwa jest możliwa z wykorzystaniem\nsystemów:",
     "answers": [
       {
@@ -3662,7 +3662,7 @@
   {
     "id": 184,
     "number": "10",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Informacje zawarte w sygnale alarmowym to:",
     "answers": [
       {
@@ -3682,7 +3682,7 @@
   {
     "id": 185,
     "number": "11",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Łączność koordynacyjna to łączność do:",
     "answers": [
       {
@@ -3702,7 +3702,7 @@
   {
     "id": 186,
     "number": "12",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Łączność na miejscu akcji jest utrzymywana z wykorzystaniem częstotliwości:",
     "answers": [
       {
@@ -3722,7 +3722,7 @@
   {
     "id": 187,
     "number": "13",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Lokalizacja rozbitków jest dokonywana za pomocą:",
     "answers": [
       {
@@ -3742,7 +3742,7 @@
   {
     "id": 188,
     "number": "14",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Uzyskanie namiaru na transponder radarowy SART uzyskuje się za pomocą radaru\npracującego na częstotliwościach pasma:",
     "answers": [
       {
@@ -3762,7 +3762,7 @@
   {
     "id": 189,
     "number": "15",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Rozpowszechnianie morskich informacji bezpieczeństwa dotyczy:",
     "answers": [
       {
@@ -3782,7 +3782,7 @@
   {
     "id": 190,
     "number": "16",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Realizacja łączności pomiędzy dwoma mostkami statków jest możliwa za pomocą:",
     "answers": [
       {
@@ -3802,7 +3802,7 @@
   {
     "id": 191,
     "number": "17",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W skład wyposażenia statku pływającego w obszarze A1 wchodzi:",
     "answers": [
       {
@@ -3822,7 +3822,7 @@
   {
     "id": 192,
     "number": "18",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "System cyfrowego selektywnego wywołania to system:",
     "answers": [
       {
@@ -3842,7 +3842,7 @@
   {
     "id": 193,
     "number": "19",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W DSC stosowana jest transmisja:",
     "answers": [
       {
@@ -3862,7 +3862,7 @@
   {
     "id": 194,
     "number": "20",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Do transmisji radiowej sygnału DSC w paśmie VHF stosuje się częstotliwość kanału:",
     "answers": [
       {
@@ -3882,7 +3882,7 @@
   {
     "id": 195,
     "number": "21",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Do transmisji radiowej sygnału DSC w paśmie VHF stosuje się:",
     "answers": [
       {
@@ -3902,7 +3902,7 @@
   {
     "id": 196,
     "number": "22",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Czas trwania całkowitego pojedynczego wywołania DSC w paśmie VHF wynosi:",
     "answers": [
       {
@@ -3922,7 +3922,7 @@
   {
     "id": 197,
     "number": "23",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Pole „kategorii” definiuje:",
     "answers": [
       {
@@ -3942,7 +3942,7 @@
   {
     "id": 198,
     "number": "24",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Wywołania alarmowe DSC nadawane na kanale 70 zawierają następujące\ndane/informacje:",
     "answers": [
       {
@@ -3962,7 +3962,7 @@
   {
     "id": 199,
     "number": "25",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Nadanie przez statek sygnału alarmowego w paśmie VHF fonicznie lub w DSC może\nbyć realizowane na:",
     "answers": [
       {
@@ -3982,7 +3982,7 @@
   {
     "id": 200,
     "number": "26",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Zasady potwierdzania odbioru wywołania w niebezpieczeństwie w paśmie VHF przez\nstację nadbrzeżną to:",
     "answers": [
       {
@@ -4002,7 +4002,7 @@
   {
     "id": 201,
     "number": "27",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Nadanie korespondencji typu pośrednictwo w niebezpieczeństwie przez statek w paśmie\nVHF polega na:",
     "answers": [
       {
@@ -4022,7 +4022,7 @@
   {
     "id": 202,
     "number": "28",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Przedstaw możliwości stosowania kanałów DSC w korespondencji publicznej w paśmie\nVHF.",
     "answers": [
       {
@@ -4042,7 +4042,7 @@
   {
     "id": 203,
     "number": "29",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Testowanie zewnętrzne aparatury DSC w paśmie VHF, zgodnie z przepisami ITU oraz\nKonwencji STCW, ma być realizowane:",
     "answers": [
       {
@@ -4062,7 +4062,7 @@
   {
     "id": 204,
     "number": "30",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "System NAVTEX służy do:",
     "answers": [
       {
@@ -4082,7 +4082,7 @@
   {
     "id": 205,
     "number": "31",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Stacje systemu NAVTEX pracują na częstotliwości:",
     "answers": [
       {
@@ -4102,7 +4102,7 @@
   {
     "id": 206,
     "number": "32",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Podstawową częstotliwością transmisji w systemie NAVTEX jest:",
     "answers": [
       {
@@ -4122,7 +4122,7 @@
   {
     "id": 207,
     "number": "33",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Zasięg stacji systemu NAVTEX wynosi:",
     "answers": [
       {
@@ -4142,7 +4142,7 @@
   {
     "id": 208,
     "number": "34",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Zasięg stacji systemu NAVTEX jest największy:",
     "answers": [
       {
@@ -4162,7 +4162,7 @@
   {
     "id": 209,
     "number": "35",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W jaki sposób dokonuje się w odbiorniku NAVTEX ustawienia stacji:",
     "answers": [
       {
@@ -4182,7 +4182,7 @@
   {
     "id": 210,
     "number": "36",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W jaki sposób dokonuje się w odbiorniku NAVTEX ustawienia rodzaju odbieranych\ninformacji:",
     "answers": [
       {
@@ -4202,7 +4202,7 @@
   {
     "id": 211,
     "number": "37",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "„ZCZC JA23” w nagłówku komunikatu odebranego ze stacji NAVTEX oznacza że:",
     "answers": [
       {
@@ -4222,7 +4222,7 @@
   {
     "id": 212,
     "number": "38",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "„ZCZC UB66” w nagłówku komunikatu odebranego ze stacji NAVTEX oznacza że:",
     "answers": [
       {
@@ -4242,7 +4242,7 @@
   {
     "id": 213,
     "number": "39",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Jakie komunikaty będą zawsze wyświetlane/drukowane przez odbiornik systemu\nNAVTEX:",
     "answers": [
       {
@@ -4262,7 +4262,7 @@
   {
     "id": 214,
     "number": "40",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Druga litera B w nagłówku komunikatu stacji NAVTEX (np. LB47) oznacza, że jest to:",
     "answers": [
       {
@@ -4282,7 +4282,7 @@
   {
     "id": 215,
     "number": "41",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Stacje systemu NAVTEX nadają komunikaty:",
     "answers": [
       {
@@ -4302,7 +4302,7 @@
   {
     "id": 216,
     "number": "42",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Sekwencja „NNN” w wydruku komunikatu odbiornika NAVTEX oznacza:",
     "answers": [
       {
@@ -4322,7 +4322,7 @@
   {
     "id": 217,
     "number": "43",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Sekwencja „NNNN” w wydruku komunikatu odbiornika NAVTEX oznacza:",
     "answers": [
       {
@@ -4342,7 +4342,7 @@
   {
     "id": 218,
     "number": "44",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Komunikaty transmitowane na częstotliwości 518 kHz nadawane są w języku:",
     "answers": [
       {
@@ -4362,7 +4362,7 @@
   {
     "id": 219,
     "number": "45",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "„ZCZC BB01” w nagłówku komunikatu odebranego ze stacji NAVTEX oznacza:",
     "answers": [
       {
@@ -4382,7 +4382,7 @@
   {
     "id": 220,
     "number": "46",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Odbiornik systemu NAVTEX wyświetla/drukuje:",
     "answers": [
       {
@@ -4402,7 +4402,7 @@
   {
     "id": 221,
     "number": "47",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Częstotliwość 490 kHz jest stosowana w systemie NAVTEX do:",
     "answers": [
       {
@@ -4422,7 +4422,7 @@
   {
     "id": 222,
     "number": "48",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W systemie NAVTEX sygnały transmitowane są:",
     "answers": [
       {
@@ -4442,7 +4442,7 @@
   {
     "id": 223,
     "number": "49",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W nocy zasięg odbioru sygnałów w systemie NAVTEX jest:",
     "answers": [
       {
@@ -4462,7 +4462,7 @@
   {
     "id": 224,
     "number": "50",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W rejonach tropikalnych zasięg odbioru sygnałów transmitowanych na częstotliwości\n518 kHz:",
     "answers": [
       {
@@ -4482,7 +4482,7 @@
   {
     "id": 225,
     "number": "51",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Nadanie komunikatowi NAVTEX numeru 00 (np. JD00) spowoduje:",
     "answers": [
       {
@@ -4502,7 +4502,7 @@
   {
     "id": 226,
     "number": "52",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Stacje NAVTEX powtarzają w kolejnych transmisjach komunikaty:",
     "answers": [
       {
@@ -4522,7 +4522,7 @@
   {
     "id": 227,
     "number": "53",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Informacje o rozmieszczeniu, zasięgach i czasach nadawania stacji NAVTEX można\nznaleźć w:",
     "answers": [
       {
@@ -4542,7 +4542,7 @@
   {
     "id": 228,
     "number": "54",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Zainstalowanie na statku odbiornika systemu NAVTEX wymaga zgody:",
     "answers": [
       {
@@ -4562,7 +4562,7 @@
   {
     "id": 229,
     "number": "55",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Koordynatorem odpowiedzialnym za gromadzenie i dystrybucję morskich informacji\nbezpieczeństwa w obszarze polskiej strefy ekonomicznej jest:",
     "answers": [
       {
@@ -4582,7 +4582,7 @@
   {
     "id": 230,
     "number": "56",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "Informacje o transmisjach morskich informacji bezpieczeństwa za pomocą innych\nsystemów niż NAVTEX znaleźć można w:",
     "answers": [
       {
@@ -4602,7 +4602,7 @@
   {
     "id": 231,
     "number": "57",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W systemie GMDSS stosuje się radiopławy:",
     "answers": [
       {
@@ -4622,7 +4622,7 @@
   {
     "id": 232,
     "number": "58",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W skład systemu COSPAS-SARSAT wchodzi blok satelitów poruszających się po\norbitach polarnych. Które z poniższych stwierdzeń jest prawdziwe:",
     "answers": [
       {
@@ -4642,7 +4642,7 @@
   {
     "id": 233,
     "number": "59",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W skład systemu COSPAS-SARSAT wchodzi blok satelitów poruszających się po\norbitach polarnych. Czas obiegu Ziemi przez satelitę poruszającego się po orbicie\npolarnej wynosi:",
     "answers": [
       {
@@ -4662,7 +4662,7 @@
   {
     "id": 234,
     "number": "60",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "GMDSS",
     "question": "W skład systemu COSPAS-SARSAT wchodzi blok satelitów poruszających się po\norbitach polarnych. Przelatujący satelita „widzi” z orbity radiopławę przez:",
     "answers": [
       {
@@ -4682,7 +4682,7 @@
   {
     "id": 235,
     "number": "61",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W skład systemu COSPAS-SARSAT wchodzi blok satelitów geostacjonarnych\nskładający się z:",
     "answers": [
       {
@@ -4702,7 +4702,7 @@
   {
     "id": 236,
     "number": "62",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Do określenia położenia radiopławy w systemie COSPAS-SARSAT wykorzystujemy:",
     "answers": [
       {
@@ -4722,7 +4722,7 @@
   {
     "id": 237,
     "number": "63",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Bateria litowa zasilająca radiopławę powinna zapewnić:",
     "answers": [
       {
@@ -4742,7 +4742,7 @@
   {
     "id": 238,
     "number": "64",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sygnał o częstotliwość 121,5 MHz nadawany przez radiopławę systemu COSPAS-\nSARSAT służy do:",
     "answers": [
       {
@@ -4762,7 +4762,7 @@
   {
     "id": 239,
     "number": "65",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Dokładność lokalizacji radiopławy w systemie COSPAS-SARSAT wynosi:",
     "answers": [
       {
@@ -4782,7 +4782,7 @@
   {
     "id": 240,
     "number": "66",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Które z poniższych zdań jest prawdziwe?",
     "answers": [
       {
@@ -4802,7 +4802,7 @@
   {
     "id": 241,
     "number": "67",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sygnały nadawane przez radiopławę na częstotliwości 406 MHz:",
     "answers": [
       {
@@ -4822,7 +4822,7 @@
   {
     "id": 242,
     "number": "68",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sygnały nadawane przez radiopławę na częstotliwości 406 MHz zawierają:",
     "answers": [
       {
@@ -4842,7 +4842,7 @@
   {
     "id": 243,
     "number": "69",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sygnały nadawane przez radiopławę na częstotliwości 406 MHz pozwalają na\nidentyfikację statku z którego pochodzi radiopława na podstawie zakodowanego:",
     "answers": [
       {
@@ -4862,7 +4862,7 @@
   {
     "id": 244,
     "number": "70",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Radiopława systemu COSPAS-SARSAT ma:",
     "answers": [
       {
@@ -4882,7 +4882,7 @@
   {
     "id": 245,
     "number": "71",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Radiopławy systemu COSPAS-SARSAT mogą być uruchomione:",
     "answers": [
       {
@@ -4902,7 +4902,7 @@
   {
     "id": 246,
     "number": "72",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W przypadku uruchomienia radiopławy systemu COSPAS-SARSAT, czas jaki upływa\nod jej uruchomienia do powiadomienia RCC wynosi:",
     "answers": [
       {
@@ -4922,7 +4922,7 @@
   {
     "id": 247,
     "number": "73",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Obieg informacji o alarmowaniu w systemie COSPAS-SARSAT przebiega wg\nschematu:",
     "answers": [
       {
@@ -4942,7 +4942,7 @@
   {
     "id": 248,
     "number": "74",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W celu dokonania rejestracji radiopławy należy:",
     "answers": [
       {
@@ -4962,7 +4962,7 @@
   {
     "id": 249,
     "number": "75",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Satelita biegunowy po odebraniu sygnałów z radiopławy 121,5 MHz:",
     "answers": [
       {
@@ -4982,7 +4982,7 @@
   {
     "id": 250,
     "number": "76",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Satelita biegunowy po odebraniu sygnałów z radiopławy 406 MHz:",
     "answers": [
       {
@@ -5002,7 +5002,7 @@
   {
     "id": 251,
     "number": "77",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Określenie pozycji radiopławy w systemie COSPAS-SARSAT następuje w:",
     "answers": [
       {
@@ -5022,7 +5022,7 @@
   {
     "id": 252,
     "number": "78",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Określenie pozycji radiopławy w oparciu o sygnały nadawane na częstotliwości 121,5\nMHz jest możliwe w systemie COSPAS-SARSAT:",
     "answers": [
       {
@@ -5042,7 +5042,7 @@
   {
     "id": 253,
     "number": "79",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Testowanie radiopławy polega na:",
     "answers": [
       {
@@ -5062,7 +5062,7 @@
   {
     "id": 254,
     "number": "80",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Które z poniższych zdań jest prawdziwe?",
     "answers": [
       {
@@ -5082,7 +5082,7 @@
   {
     "id": 255,
     "number": "81",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Które z poniższych zdań jest prawdziwe?",
     "answers": [
       {
@@ -5102,7 +5102,7 @@
   {
     "id": 256,
     "number": "82",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Numer identyfikacyjny w postaci 974XXYYYY zarezerwowany jest dla:",
     "answers": [
       {
@@ -5122,7 +5122,7 @@
   {
     "id": 257,
     "number": "83",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W przypadku uruchomienia radiopławy w sytuacji, gdy nie ma zagrożenia, należy:",
     "answers": [
       {
@@ -5142,7 +5142,7 @@
   {
     "id": 258,
     "number": "84",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Transponder radarowy służy do:",
     "answers": [
       {
@@ -5162,7 +5162,7 @@
   {
     "id": 259,
     "number": "85",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Transponder radarowy współpracuje z radarami:",
     "answers": [
       {
@@ -5182,7 +5182,7 @@
   {
     "id": 260,
     "number": "86",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Transponder radarowy nadaje swój sygnał:",
     "answers": [
       {
@@ -5202,7 +5202,7 @@
   {
     "id": 261,
     "number": "87",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Zasięg transpondera radarowego zależy:",
     "answers": [
       {
@@ -5222,7 +5222,7 @@
   {
     "id": 262,
     "number": "88",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Przy wysokości umieszczenia transpondera radarowego 1 m i antenie radaru statku\nwykrywającego na wysokości 10-15 m, zasięg będzie wynosił:",
     "answers": [
       {
@@ -5242,7 +5242,7 @@
   {
     "id": 263,
     "number": "89",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Maksymalny zasięg transpondera radarowego przy wykrywaniu z helikoptera wynosi:",
     "answers": [
       {
@@ -5262,7 +5262,7 @@
   {
     "id": 264,
     "number": "90",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Pojemność baterii transpondera radarowego powinna zapewnić pracę:",
     "answers": [
       {
@@ -5282,7 +5282,7 @@
   {
     "id": 265,
     "number": "91",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sygnał z transpondera radarowego widziany jest na ekranie radaru w postaci:",
     "answers": [
       {
@@ -5302,7 +5302,7 @@
   {
     "id": 266,
     "number": "92",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Transponder radarowy nadaje po pobudzeniu sygnał:",
     "answers": [
       {
@@ -5322,7 +5322,7 @@
   {
     "id": 267,
     "number": "93",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sygnał z transpondera radarowego widziany jest na ekranie radaru:",
     "answers": [
       {
@@ -5342,7 +5342,7 @@
   {
     "id": 268,
     "number": "94",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sygnał z transpondera radarowego widziany jest na ekranie radaru:",
     "answers": [
       {
@@ -5362,7 +5362,7 @@
   {
     "id": 269,
     "number": "95",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Pozycję rozbitków na ekranie radaru wyznacza:",
     "answers": [
       {
@@ -5382,7 +5382,7 @@
   {
     "id": 270,
     "number": "96",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Pozycję rozbitków na ekranie radaru wyznacza:",
     "answers": [
       {
@@ -5402,7 +5402,7 @@
   {
     "id": 271,
     "number": "97",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Transponder radarowy nadaje swój sygnał w paśmie 9,2 – 9,5 GHz:",
     "answers": [
       {
@@ -5422,7 +5422,7 @@
   {
     "id": 272,
     "number": "98",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Rozbitkowie mogą poznać, że sygnał z transpondera radarowego został wykryty:",
     "answers": [
       {
@@ -5442,7 +5442,7 @@
   {
     "id": 273,
     "number": "99",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Rozbitkowie mogą zwiększyć zasięg transpondera radarowego przez:",
     "answers": [
       {
@@ -5462,7 +5462,7 @@
   {
     "id": 274,
     "number": "100",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Przy wykrywaniu transpondera można wyeliminować zakłócenia od opadów przez:",
     "answers": [
       {
@@ -5482,7 +5482,7 @@
   {
     "id": 275,
     "number": "101",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W sytuacji, gdy na ekranie radaru widoczne są łuki, można przywrócić kropki przez:",
     "answers": [
       {
@@ -5502,7 +5502,7 @@
   {
     "id": 276,
     "number": "102",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W radiotelefonii używana jest fala nośna:",
     "answers": [
       {
@@ -5522,7 +5522,7 @@
   {
     "id": 277,
     "number": "103",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Amplituda fali nośnej to:",
     "answers": [
       {
@@ -5542,7 +5542,7 @@
   {
     "id": 278,
     "number": "104",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Częstotliwość fali nośnej zależy od jej:",
     "answers": [
       {
@@ -5562,7 +5562,7 @@
   {
     "id": 279,
     "number": "105",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Fala radiowa o częstotliwości 156 MHz ma długość:",
     "answers": [
       {
@@ -5582,7 +5582,7 @@
   {
     "id": 280,
     "number": "106",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Fala radiowa o długości 2 metrów ma częstotliwość:",
     "answers": [
       {
@@ -5602,7 +5602,7 @@
   {
     "id": 281,
     "number": "107",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Prędkość rozchodzenia się fal to:",
     "answers": [
       {
@@ -5622,7 +5622,7 @@
   {
     "id": 282,
     "number": "108",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W nadajnikach VHF radiotelefonów morskich stosowana jest modulacja:",
     "answers": [
       {
@@ -5642,7 +5642,7 @@
   {
     "id": 283,
     "number": "109",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Emisja G3E to emisja:",
     "answers": [
       {
@@ -5662,7 +5662,7 @@
   {
     "id": 284,
     "number": "110",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Maksymalna moc statkowych radiotelefonów VHF wynosi:",
     "answers": [
       {
@@ -5682,7 +5682,7 @@
   {
     "id": 285,
     "number": "111",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Zmiana mocy radiotelefonu ma wpływ na:",
     "answers": [
       {
@@ -5702,7 +5702,7 @@
   {
     "id": 286,
     "number": "112",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Funkcja podwójnego nasłuchu w radiotelefonie VHF pozwala na:",
     "answers": [
       {
@@ -5722,7 +5722,7 @@
   {
     "id": 287,
     "number": "113",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Przełączenie kanałów międzynarodowych na amerykańskie:",
     "answers": [
       {
@@ -5742,7 +5742,7 @@
   {
     "id": 288,
     "number": "114",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Funkcja blokady szumów odcina szumy i zakłócenia od głośnika poprzez:",
     "answers": [
       {
@@ -5762,7 +5762,7 @@
   {
     "id": 289,
     "number": "115",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Długość anteny prętowej nadajnika jest przede wszystkim uzależniona od:",
     "answers": [
       {
@@ -5782,7 +5782,7 @@
   {
     "id": 290,
     "number": "116",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Regulacja głośności odbiornika VHF odbywa się przez:",
     "answers": [
       {
@@ -5802,7 +5802,7 @@
   {
     "id": 291,
     "number": "117",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W akumulatorach kwasowych elektrolitem jest:",
     "answers": [
       {
@@ -5822,7 +5822,7 @@
   {
     "id": 292,
     "number": "118",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W trakcie ładowania akumulatorów kwasowych wydzielane są gazy. Jest to:",
     "answers": [
       {
@@ -5842,7 +5842,7 @@
   {
     "id": 293,
     "number": "119",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Na zaciskach kwasowego akumulatora statkowego o napięciu znamionowym 24 V\nzmierzone napięcie wynosi 21 V. Oznacza to, że:",
     "answers": [
       {
@@ -5862,7 +5862,7 @@
   {
     "id": 294,
     "number": "120",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Akumulatorów kwasowych nie wolno wyładowywać poniżej dopuszczalnego napięcia\nkońcowego które wynosi:",
     "answers": [
       {
@@ -5882,7 +5882,7 @@
   {
     "id": 295,
     "number": "121",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Gęstość elektrolitu w akumulatorach kwasowych jest miarą naładowania akumulatora.\nZmierzona gęstość elektrolitu zwykłego akumulatora kwasowego w temperaturze 20º C\nwynosi 1,28 g/cm³. Oznacza to, że:",
     "answers": [
       {
@@ -5902,7 +5902,7 @@
   {
     "id": 296,
     "number": "122",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Gęstość elektrolitu w akumulatorach kwasowych jest miarą naładowania akumulatora.\nZmierzona gęstość elektrolitu zwykłego akumulatora kwasowego w temperaturze 20º C\nwynosi 1,10 g/cm³. Oznacza to, że:",
     "answers": [
       {
@@ -5922,7 +5922,7 @@
   {
     "id": 297,
     "number": "123",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Wraz ze spadkiem temperatury pojemność akumulatorów kwasowych:",
     "answers": [
       {
@@ -5942,7 +5942,7 @@
   {
     "id": 298,
     "number": "124",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Gęstość elektrolitu całkowicie naładowanego akumulatora kwasowego w tropiku jest:",
     "answers": [
       {
@@ -5962,7 +5962,7 @@
   {
     "id": 299,
     "number": "125",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Akumulatory kwasowe w przypadku wyłączenia z eksploatacji powinny być\nprzechowywane w stanie:",
     "answers": [
       {
@@ -5982,7 +5982,7 @@
   {
     "id": 300,
     "number": "126",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W trakcie eksploatacji akumulatorów kwasowych zachodzi konieczność uzupełniania\nelektrolitu. Uzupełnianie elektrolitu polega na dolewaniu do poszczególnych cel\nakumulatora:",
     "answers": [
       {
@@ -6002,7 +6002,7 @@
   {
     "id": 301,
     "number": "127",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W trakcie niewłaściwej eksploatacji akumulatorów kwasowych następuje ich\nzasiarczenie. Które z poniższych zjawisk świadczą o zasiarczeniu akumulatora:",
     "answers": [
       {
@@ -6022,7 +6022,7 @@
   {
     "id": 302,
     "number": "128",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Transponder AIS SART współpracuje z:",
     "answers": [
       {
@@ -6042,7 +6042,7 @@
   {
     "id": 303,
     "number": "129",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Jak jest minimalny zasięg wykrycia transpondera AIS SART?",
     "answers": [
       {
@@ -6062,7 +6062,7 @@
   {
     "id": 304,
     "number": "130",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Co oznaczają cyfry 09 w numerze identyfikacyjnym transpondera AIS SART\n970091129?",
     "answers": [
       {
@@ -6082,7 +6082,7 @@
   {
     "id": 305,
     "number": "131",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Jak jest minimalny zasięg wykrycia transpondera AIS SART przez samolot na wysokości\n1000 m?",
     "answers": [
       {
@@ -6102,7 +6102,7 @@
   {
     "id": 306,
     "number": "132",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Które z poniższych informacji są zakodowane w transponderze AIS SART?",
     "answers": [
       {
@@ -6122,7 +6122,7 @@
   {
     "id": 307,
     "number": "133",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Które ze zdań jest prawdziwe?",
     "answers": [
       {
@@ -6142,7 +6142,7 @@
   {
     "id": 308,
     "number": "970",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "134. Jaki symbol został ustalony przez IMO dla wskazania transpondera AIS SART na mapie\nelektronicznej?",
     "answers": [
       {
@@ -6162,7 +6162,7 @@
   {
     "id": 309,
     "number": "135",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Baterie przeznaczone do zasilania przenośnych radiotelefonów awaryjnych VHF:",
     "answers": [
       {
@@ -6182,7 +6182,7 @@
   {
     "id": 310,
     "number": "136",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Baterie przeznaczone do zasilania awaryjnych transponderów radarowych (SART):",
     "answers": [
       {
@@ -6202,7 +6202,7 @@
   {
     "id": 311,
     "number": "137",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Baterie przeznaczone do zasilania radiopław awaryjnych:",
     "answers": [
       {
@@ -6222,7 +6222,7 @@
   {
     "id": 312,
     "number": "138",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Który z wymienionych wzorów określa zależność pomiędzy prędkością propagacji fali\n(c [m/s]), jej częstotliwością (f [Hz]) i długością (λ [m]):",
     "answers": [
       {
@@ -6242,7 +6242,7 @@
   {
     "id": 313,
     "number": "139",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Prędkość rozchodzenia się fali elektromagnetycznej w wolnej przestrzeni wynosi:",
     "answers": [
       {
@@ -6262,7 +6262,7 @@
   {
     "id": 314,
     "number": "140",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W czasie 5 µs fala elektromagnetyczna przebywa dystans:",
     "answers": [
       {
@@ -6282,7 +6282,7 @@
   {
     "id": 315,
     "number": "141",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Jaka jest długość fali w wolnej przestrzeni, jeżeli jej częstotliwość wynosi 150 MHz:",
     "answers": [
       {
@@ -6302,7 +6302,7 @@
   {
     "id": 316,
     "number": "142",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Od jakich czynników zależy zasięg łączności na falach VHF:",
     "answers": [
       {
@@ -6322,7 +6322,7 @@
   {
     "id": 317,
     "number": "143",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Jeżeli antena nadajnika radiotelefonu VHF znajduje się na maszcie o wysokości 100\nmetrów to zasięg stacji wynosi:",
     "answers": [
       {
@@ -6342,7 +6342,7 @@
   {
     "id": 318,
     "number": "144",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Jeżeli antena nadajnika radiotelefonu VHF znajduje się na maszcie o wysokości 64\nmetrów to zasięg stacji wynosi:",
     "answers": [
       {
@@ -6362,7 +6362,7 @@
   {
     "id": 319,
     "number": "145",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Jeżeli antena nadajnika radiotelefonu VHF znajduje się na maszcie o wysokości 100\nmetrów, zaś antena odbiornika usytuowana jest na wysokości 25 m to zasięg odbioru\nwynosi:",
     "answers": [
       {
@@ -6382,7 +6382,7 @@
   {
     "id": 320,
     "number": "146",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W statkowych radiotelefonach VHF stosowane są:",
     "answers": [
       {
@@ -6402,7 +6402,7 @@
   {
     "id": 321,
     "number": "147",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Antenę radiotelefonu VHF należy zamontować:",
     "answers": [
       {
@@ -6422,7 +6422,7 @@
   {
     "id": 322,
     "number": "148",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Zbyt bliskie ustawienie anteny radiotelefonu VHF w pobliżu metalowych konstrukcji\nmoże spowodować:",
     "answers": [
       {
@@ -6442,7 +6442,7 @@
   {
     "id": 323,
     "number": "149",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "W odbiornikach NAVTEX są stosowane:",
     "answers": [
       {
@@ -6462,7 +6462,7 @@
   {
     "id": 324,
     "number": "150",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Dookólną charakterystykę promieniowania (w płaszczyźnie poziomej) mają anteny:",
     "answers": [
       {
@@ -6482,7 +6482,7 @@
   {
     "id": 325,
     "number": "1",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Włącz i przygotuj do pracy radiotelefon VHF dla łączności pokładowej.",
     "answers": [
       {
@@ -6502,7 +6502,7 @@
   {
     "id": 326,
     "number": "2",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Włącz i przygotuj do pracy radiotelefon VHF dla łączności alarmowej.",
     "answers": [
       {
@@ -6522,7 +6522,7 @@
   {
     "id": 327,
     "number": "3",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Dokonaj redukcji mocy radiotelefonu VHF.",
     "answers": [
       {
@@ -6542,7 +6542,7 @@
   {
     "id": 328,
     "number": "4",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Ustaw podwójny nasłuch w radiotelefonie VHF na kanałach 14 i 16.",
     "answers": [
       {
@@ -6562,7 +6562,7 @@
   {
     "id": 329,
     "number": "5",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Ustaw intensywność podświetlenia wyświetlacza i przycisków w radiotelefonie VHF.",
     "answers": [
       {
@@ -6582,7 +6582,7 @@
   {
     "id": 330,
     "number": "6",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sprawdź, które kanały są wpisane do pamięci skanowania radiotelefonu.",
     "answers": [
       {
@@ -6602,7 +6602,7 @@
   {
     "id": 331,
     "number": "7",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Dodaj kanały 6,13 i 16 do listy skaningowej w radiotelefonie VHF.",
     "answers": [
       {
@@ -6620,21 +6620,9 @@
     ]
   },
   {
-    "id": 332,
-    "number": "16",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
-    "question": "B. Wciśnij przycisk funkcyjny SCAN, w ciągu 10 sekund, za pomocą przycisków CH,\nwybierz kolejno kanały: 6, 13 i 16, wciśnij przycisk ENT.",
-    "answers": [
-      {
-        "option": "C",
-        "text": "W ciągu 10 sekund, za pomocą przycisków CH, wybierz kolejno kanały: 6, 13 i 16,\nnaciśnij przycisk funkcyjny SCAN."
-      }
-    ]
-  },
-  {
     "id": 333,
     "number": "8",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj ostrzeżenie nawigacyjne przy użyciu radiotelefonu VHF.",
     "answers": [
       {
@@ -6654,7 +6642,7 @@
   {
     "id": 334,
     "number": "9",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj komunikat alarmowy, przy użyciu radiotelefonu VHF.",
     "answers": [
       {
@@ -6674,7 +6662,7 @@
   {
     "id": 335,
     "number": "10",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj komunikat, w sytuacji wypadnięcia człowieka za burtę, przy użyciu radiotelefonu\nVHF.",
     "answers": [
       {
@@ -6694,7 +6682,7 @@
   {
     "id": 336,
     "number": "11",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Potwierdź odbiór alarmu przy użyciu radiotelefonu VHF.",
     "answers": [
       {
@@ -6714,7 +6702,7 @@
   {
     "id": 337,
     "number": "12",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Wywołaj inny statek, przy użyciu radiotelefonu VHF i przeprowadź z nim zwykłą\nkorespondencję publiczną.",
     "answers": [
       {
@@ -6734,7 +6722,7 @@
   {
     "id": 338,
     "number": "13",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj pośrednie alarmowanie za inny statek, będący w niebezpieczeństwie.",
     "answers": [
       {
@@ -6754,7 +6742,7 @@
   {
     "id": 339,
     "number": "14",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Wprowadź pozycję geograficzną oraz aktualny czas.",
     "answers": [
       {
@@ -6774,7 +6762,7 @@
   {
     "id": 340,
     "number": "15",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Wprowadź do rejestru radiotelefonu numer MMSI duńskiej stacji brzegowej Lyngby.",
     "answers": [
       {
@@ -6794,7 +6782,7 @@
   {
     "id": 341,
     "number": "16",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Usuń z rejestru radiotelefonu numer MMSI stacji brzegowej Lyngby.",
     "answers": [
       {
@@ -6814,7 +6802,7 @@
   {
     "id": 342,
     "number": "17",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj wywołanie testujące DSC.",
     "answers": [
       {
@@ -6834,7 +6822,7 @@
   {
     "id": 343,
     "number": "18",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj regularne wywołanie alarmowe DSC.",
     "answers": [
       {
@@ -6854,7 +6842,7 @@
   {
     "id": 344,
     "number": "19",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj wywołanie alarmowe DSC o zalaniu jednostki wodą.",
     "answers": [
       {
@@ -6874,7 +6862,7 @@
   {
     "id": 345,
     "number": "20",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj w DSC zapowiedź prośby o pomoc medyczną do innych statków.",
     "answers": [
       {
@@ -6894,7 +6882,7 @@
   {
     "id": 346,
     "number": "21",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj w DSC wywołanie zwykłe w korespondencji publicznej do innego statku.",
     "answers": [
       {
@@ -6914,7 +6902,7 @@
   {
     "id": 347,
     "number": "22",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Nadaj w DSC wywołanie do stacji brzegowej w celu przeprowadzenia rozmowy z\noperatorem.",
     "answers": [
       {
@@ -6934,7 +6922,7 @@
   {
     "id": 348,
     "number": "23",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Sposób postępowania z radiopławą EPIRB, będąc na tratwie ratunkowej.",
     "answers": [
       {
@@ -6954,7 +6942,7 @@
   {
     "id": 349,
     "number": "24",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Przetestuj radiopławę EPIRB.",
     "answers": [
       {
@@ -6974,7 +6962,7 @@
   {
     "id": 350,
     "number": "25",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Uruchom transponder radarowy, będąc na tratwie ratunkowej.",
     "answers": [
       {
@@ -6994,7 +6982,7 @@
   {
     "id": 351,
     "number": "26",
-    "category": "MAYDAY RELAY MAYDAY RELAY MAYDAY RELAY",
+    "category": "Obsługa",
     "question": "Przetestuj transponder radarowy.",
     "answers": [
       {
