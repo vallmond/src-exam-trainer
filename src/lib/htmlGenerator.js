@@ -245,6 +245,42 @@ function generateStyles() {
         margin-right: 5px;
     }
     
+    /* Radio alphabet styles */
+    .alphabet-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .alphabet-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease;
+    }
+    
+    .alphabet-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    .alphabet-letter {
+        font-size: 24px;
+        font-weight: bold;
+        color: #3498db;
+        margin-bottom: 5px;
+    }
+    
+    .alphabet-code {
+        font-size: 14px;
+        color: #2c3e50;
+    }
+    
     /* Make question rows clickable */
     .question-row {
         cursor: pointer;
@@ -522,6 +558,7 @@ function generateHtmlStructure(appVersion) {
             <div class="button-group">
                 <button id="start-btn">Start Exam</button>
                 <button id="stats-btn">View Statistics</button>
+                <button id="show-alphabet-btn">Radio Alphabet</button>
             </div>
         </div>
         
@@ -559,6 +596,15 @@ function generateHtmlStructure(appVersion) {
             <div id="statistics-container"></div>
             <div class="controls">
                 <button id="back-to-main-btn">Back to Main</button>
+            </div>
+        </div>
+        
+        <!-- Radio Alphabet Reference -->
+        <div id="radio-alphabet" class="hidden">
+            <h2>Radio Phonetic Alphabet</h2>
+            <div id="alphabet-container" class="alphabet-grid"></div>
+            <div class="controls">
+                <button id="back-from-alphabet-btn">Back</button>
             </div>
         </div>
     </div>

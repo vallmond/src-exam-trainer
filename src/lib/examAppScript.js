@@ -12,11 +12,14 @@
  * @returns {string} JavaScript code as a string
  */
 function generateExamScript(data, appVersion) {
+  const { generateRadioAlphabetCode } = require('./radioAlphabet');
   return `
     // Embedded data
     const allQuestionsData = ${JSON.stringify(data.questionsData)};
     const correctAnswersMap = ${JSON.stringify(data.correctAnswersMap)};
     const translations = ${JSON.stringify(data.translationsData)};
+    
+    ${generateRadioAlphabetCode()}
     
     // Global variables
     let allQuestions = allQuestionsData;
@@ -37,6 +40,9 @@ function generateExamScript(data, appVersion) {
         // Populate categories
         populateCategories();
         
+        // Initialize radio alphabet
+        initializeRadioAlphabet();
+        
         // Load question history from localStorage
         loadQuestionHistory();
         
@@ -49,6 +55,8 @@ function generateExamScript(data, appVersion) {
         document.getElementById('export-btn').addEventListener('click', exportResultsAsPDF);
         document.getElementById('stats-btn').addEventListener('click', showStatistics);
         document.getElementById('back-to-main-btn').addEventListener('click', backToMain);
+        document.getElementById('show-alphabet-btn').addEventListener('click', showRadioAlphabet);
+        document.getElementById('back-from-alphabet-btn').addEventListener('click', hideRadioAlphabet);
         
         // Add keyboard event listener
         document.addEventListener('keydown', handleKeyboardInput);
@@ -91,6 +99,12 @@ function generateExamScript(data, appVersion) {
         // Go back to the main screen
         document.getElementById('exam-settings').style.display = 'block';
         document.getElementById('statistics').classList.add('hidden');
+    }
+    
+    function hideRadioAlphabet() {
+        // Hide radio alphabet and show exam settings
+        document.getElementById('radio-alphabet').classList.add('hidden');
+        document.getElementById('exam-settings').style.display = 'block';
     }
     
     function loadQuestionHistory() {
