@@ -280,6 +280,60 @@
         color: #2c3e50;
     }
     
+    /* Message examples styles */
+    .message-category {
+        margin-bottom: 25px;
+    }
+    
+    .message-category h3 {
+        color: #2980b9;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    
+    .message-examples-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+    }
+    
+    .message-example {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease;
+    }
+    
+    .message-example:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    .message-title {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    
+    .message-content {
+        background-color: #e8f4fc;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: monospace;
+        margin-bottom: 8px;
+        color: #34495e;
+        font-weight: bold;
+    }
+    
+    .message-description {
+        font-size: 14px;
+        color: #7f8c8d;
+        font-style: italic;
+    }
+    
     /* Make question rows clickable */
     .question-row {
         cursor: pointer;
@@ -498,8 +552,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Maritime Radio Communication Exam <span class="version">v1.0.19</span></h1>
-        <div class="app-info">Generated on: 4/21/2025, 8:59:01 PM</div>
+        <h1>Maritime Radio Communication Exam <span class="version">v1.0.24</span></h1>
+        <div class="app-info">Generated on: 4/21/2025, 9:15:07 PM</div>
         
         <!-- Exam Settings -->
         <div id="exam-settings">
@@ -528,6 +582,7 @@
                 <button id="start-btn">Start Exam</button>
                 <button id="stats-btn">View Statistics</button>
                 <button id="show-alphabet-btn">Radio Alphabet</button>
+                <button id="show-messages-btn">Message Examples</button>
             </div>
         </div>
         
@@ -574,6 +629,15 @@
             <div id="alphabet-container" class="alphabet-grid"></div>
             <div class="controls">
                 <button id="back-from-alphabet-btn">Back</button>
+            </div>
+        </div>
+        
+        <!-- Message Examples -->
+        <div id="message-examples" class="hidden">
+            <h2>Radio Message Examples</h2>
+            <div id="message-examples-container"></div>
+            <div class="controls">
+                <button id="back-from-messages-btn">Back</button>
             </div>
         </div>
     </div>
@@ -653,6 +717,50 @@
     }
   
     
+    
+    // Radio message examples data
+    const messageExamples = [{"category":"Distress (MAYDAY)","examples":[{"title":"🚨 1. MAYDAY – Fire on board","message":"📻 Distress Call:\nMAYDAY, MAYDAY, MAYDAY\nThis is Motor Yacht Stella, Stella, Stella\nMAYDAY\nMotor Yacht Stella\nPosition: 51 degrees 45 minutes North, 004 degrees 20 minutes West\nWe have a fire in the engine room\n5 persons on board\nWe are fighting the fire but require immediate assistance\nOver.\n\n📻 Coastguard Reply:\nMotor Yacht Stella, Motor Yacht Stella, this is Solent Coastguard\nMAYDAY received\nWe have your position\nRescue services are on the way\nStand by on channel 16 and switch to channel 67 for further communication\nOver.","description":"Example of a distress call for a vessel with fire on board and the coastguard response"}]},{"category":"Urgency (PAN-PAN)","examples":[{"title":"⚠️ 2. PAN-PAN – Man overboard","message":"📻 Urgency Call:\nPAN-PAN, PAN-PAN, PAN-PAN\nAll stations, all stations, all stations\nThis is Sailing Yacht Aurora, Aurora, Aurora\nPosition: 52 degrees 00 minutes North, 001 degrees 30 minutes East\nWe have a man overboard, male, wearing a red lifejacket\nSearching the area, need assistance from nearby vessels\nOver.\n\n📻 Reply from Nearby Vessel:\nSailing Yacht Aurora, this is Motor Vessel Horizon\nWe are 2 nautical miles from your position\nAltering course to assist in search\nEstimated time of arrival 10 minutes\nOver.","description":"Urgency call for man overboard situation with response from a nearby vessel"},{"title":"⚠️ 3. PAN-PAN – Steering failure","message":"📻 Urgency Call:\nPAN-PAN, PAN-PAN, PAN-PAN\nAll stations, all stations, all stations\nThis is Fishing Vessel Coral Bay, Coral Bay, Coral Bay\nPosition: 53 degrees 15 minutes North, 005 degrees 05 minutes West\nWe have complete steering failure\nDrifting in moderate seas, engine functioning\nRequesting tow or escort to nearest safe harbor\nOver.\n\n📻 Coastguard Reply:\nFishing Vessel Coral Bay, this is Holyhead Coastguard\nPAN-PAN message received\nWe are alerting a lifeboat to your position\nKeep listening on channel 16, switch to channel 67 for updates\nOver.","description":"Urgency call for vessel with steering failure and coastguard response"},{"title":"⚠️ 4. PAN-PAN – Medical emergency","message":"📻 Urgency Call:\nPAN-PAN, PAN-PAN, PAN-PAN\nAll stations, all stations, all stations\nThis is Sailing Yacht Moonlight, Moonlight, Moonlight\nPosition: 50 degrees 20 minutes North, 001 degrees 45 minutes West\nWe have a crew member with a suspected broken arm\nConscious, in pain, stable condition\nRequesting medical advice or evacuation\nOver.\n\n📻 Coastguard Reply:\nSailing Yacht Moonlight, this is Solent Coastguard\nPAN-PAN received\nWe are connecting you with medical radio consultation\nMaintain this channel for further instructions\nOver.","description":"Urgency call for medical emergency with coastguard response"},{"title":"⚠️ 5. PAN-PAN – Anchor dragging","message":"📻 Urgency Call:\nPAN-PAN, PAN-PAN, PAN-PAN\nAll stations, all stations, all stations\nThis is Motor Vessel Seaglass, Seaglass, Seaglass\nAnchored at 49 degrees 57 minutes North, 003 degrees 01 minutes West\nAnchor is dragging, vessel moving towards shallow water\nEngine running, trying to regain control\nAssistance may be required\nOver.\n\n📻 Nearby Vessel Reply:\nMotor Vessel Seaglass, this is Yacht Neptune nearby\nWe are standing by if you need help or tow\nWe're 0.5 miles south of your position\nOver.","description":"Urgency call for vessel with dragging anchor and response from nearby vessel"}]},{"category":"Safety (SECURITÉ)","examples":[{"title":"📢 6. SECURITÉ – Floating debris warning","message":"📻 Safety Call:\nSECURITÉ, SECURITÉ, SECURITÉ\nAll stations, all stations, all stations\nThis is Sailing Vessel Windrunner, Windrunner, Windrunner\nPosition: 51 degrees 12 minutes North, 001 degrees 25 minutes East\nLarge floating container spotted, approx. 10 meters long\nDanger to navigation, drifting east\nAll vessels advised to navigate with caution\nOver.\n\n📻 Coastguard Reply:\nSailing Vessel Windrunner, this is Dover Coastguard\nSECURITÉ message received and acknowledged\nWe will broadcast navigational warning to all vessels\nThank you for your report\nOver.","description":"Safety call warning about floating debris and coastguard response"},{"title":"📢 7. SECURITÉ – Weather warning","message":"📻 Safety Broadcast (from Coastguard):\nSECURITÉ, SECURITÉ, SECURITÉ\nAll stations, all stations, all stations\nThis is Falmouth Coastguard\nGale warning in effect for sea area Plymouth\nSouthwest winds expected Force 8, increasing Force 9 later\nAll vessels are advised to take precautions\nTime of issue: 1600 UTC\nOut.","description":"Safety broadcast from coastguard about severe weather conditions"}]}];
+    
+    // Message examples functions
+    function showMessageExamples() {
+      document.getElementById('exam-settings').style.display = 'none';
+      document.getElementById('message-examples').classList.remove('hidden');
+    }
+    
+    function initializeMessageExamples() {
+      const container = document.getElementById('message-examples-container');
+      let html = '';
+      
+      messageExamples.forEach(category => {
+        html += '<div class="message-category">';
+        html += '<h3>' + category.category + '</h3>';
+        html += '<div class="message-examples-list">';
+        
+        category.examples.forEach(example => {
+          html += '<div class="message-example">';
+          html += '<div class="message-title">' + example.title + '</div>';
+          
+          // Replace newlines with <br> tags for proper HTML display
+          const formattedMessage = example.message.replace(/\n/g, '<br>');
+          html += '<div class="message-content">' + formattedMessage + '</div>';
+          
+          html += '<div class="message-description">' + example.description + '</div>';
+          html += '</div>';
+        });
+        
+        html += '</div>';
+        html += '</div>';
+      });
+      
+      container.innerHTML = html;
+    }
+    
+    function hideMessageExamples() {
+      document.getElementById('message-examples').classList.add('hidden');
+      document.getElementById('exam-settings').style.display = 'block';
+    }
+  
+    
     // Global variables
     let allQuestions = allQuestionsData;
     let questions = [];
@@ -663,7 +771,7 @@
     let examStarted = false;
     let showTranslations = true;
     let questionHistory = {};
-    const appVersion = '1.0.19'; // App version from generator
+    const appVersion = '1.0.24'; // App version from generator
     
     // Initialize the application when the DOM is loaded
     document.addEventListener('DOMContentLoaded', initializeApp);
@@ -674,6 +782,9 @@
         
         // Initialize radio alphabet
         initializeRadioAlphabet();
+        
+        // Initialize message examples
+        initializeMessageExamples();
         
         // Load question history from localStorage
         loadQuestionHistory();
@@ -689,6 +800,8 @@
         document.getElementById('back-to-main-btn').addEventListener('click', backToMain);
         document.getElementById('show-alphabet-btn').addEventListener('click', showRadioAlphabet);
         document.getElementById('back-from-alphabet-btn').addEventListener('click', hideRadioAlphabet);
+        document.getElementById('show-messages-btn').addEventListener('click', showMessageExamples);
+        document.getElementById('back-from-messages-btn').addEventListener('click', hideMessageExamples);
         
         // Add keyboard event listener
         document.addEventListener('keydown', handleKeyboardInput);
@@ -736,6 +849,12 @@
     function hideRadioAlphabet() {
         // Hide radio alphabet and show exam settings
         document.getElementById('radio-alphabet').classList.add('hidden');
+        document.getElementById('exam-settings').style.display = 'block';
+    }
+    
+    function hideMessageExamples() {
+        // Hide message examples and show exam settings
+        document.getElementById('message-examples').classList.add('hidden');
         document.getElementById('exam-settings').style.display = 'block';
     }
     

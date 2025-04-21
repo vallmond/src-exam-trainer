@@ -281,6 +281,60 @@ function generateStyles() {
         color: #2c3e50;
     }
     
+    /* Message examples styles */
+    .message-category {
+        margin-bottom: 25px;
+    }
+    
+    .message-category h3 {
+        color: #2980b9;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    
+    .message-examples-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+    }
+    
+    .message-example {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease;
+    }
+    
+    .message-example:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    .message-title {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    
+    .message-content {
+        background-color: #e8f4fc;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: monospace;
+        margin-bottom: 8px;
+        color: #34495e;
+        font-weight: bold;
+    }
+    
+    .message-description {
+        font-size: 14px;
+        color: #7f8c8d;
+        font-style: italic;
+    }
+    
     /* Make question rows clickable */
     .question-row {
         cursor: pointer;
@@ -559,6 +613,7 @@ function generateHtmlStructure(appVersion) {
                 <button id="start-btn">Start Exam</button>
                 <button id="stats-btn">View Statistics</button>
                 <button id="show-alphabet-btn">Radio Alphabet</button>
+                <button id="show-messages-btn">Message Examples</button>
             </div>
         </div>
         
@@ -605,6 +660,15 @@ function generateHtmlStructure(appVersion) {
             <div id="alphabet-container" class="alphabet-grid"></div>
             <div class="controls">
                 <button id="back-from-alphabet-btn">Back</button>
+            </div>
+        </div>
+        
+        <!-- Message Examples -->
+        <div id="message-examples" class="hidden">
+            <h2>Radio Message Examples</h2>
+            <div id="message-examples-container"></div>
+            <div class="controls">
+                <button id="back-from-messages-btn">Back</button>
             </div>
         </div>
     </div>

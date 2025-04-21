@@ -13,6 +13,7 @@
  */
 function generateExamScript(data, appVersion) {
   const { generateRadioAlphabetCode } = require('./radioAlphabet');
+  const { generateMessageExamplesCode } = require('./messageExamples');
   return `
     // Embedded data
     const allQuestionsData = ${JSON.stringify(data.questionsData)};
@@ -20,6 +21,8 @@ function generateExamScript(data, appVersion) {
     const translations = ${JSON.stringify(data.translationsData)};
     
     ${generateRadioAlphabetCode()}
+    
+    ${generateMessageExamplesCode()}
     
     // Global variables
     let allQuestions = allQuestionsData;
@@ -43,6 +46,9 @@ function generateExamScript(data, appVersion) {
         // Initialize radio alphabet
         initializeRadioAlphabet();
         
+        // Initialize message examples
+        initializeMessageExamples();
+        
         // Load question history from localStorage
         loadQuestionHistory();
         
@@ -57,6 +63,8 @@ function generateExamScript(data, appVersion) {
         document.getElementById('back-to-main-btn').addEventListener('click', backToMain);
         document.getElementById('show-alphabet-btn').addEventListener('click', showRadioAlphabet);
         document.getElementById('back-from-alphabet-btn').addEventListener('click', hideRadioAlphabet);
+        document.getElementById('show-messages-btn').addEventListener('click', showMessageExamples);
+        document.getElementById('back-from-messages-btn').addEventListener('click', hideMessageExamples);
         
         // Add keyboard event listener
         document.addEventListener('keydown', handleKeyboardInput);
@@ -104,6 +112,12 @@ function generateExamScript(data, appVersion) {
     function hideRadioAlphabet() {
         // Hide radio alphabet and show exam settings
         document.getElementById('radio-alphabet').classList.add('hidden');
+        document.getElementById('exam-settings').style.display = 'block';
+    }
+    
+    function hideMessageExamples() {
+        // Hide message examples and show exam settings
+        document.getElementById('message-examples').classList.add('hidden');
         document.getElementById('exam-settings').style.display = 'block';
     }
     
