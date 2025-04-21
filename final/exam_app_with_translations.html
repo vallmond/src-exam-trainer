@@ -183,6 +183,143 @@
         color: #e74c3c;
     }
     
+    /* Modal styles */
+    .modal {
+        display: flex;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal.hidden {
+        display: none;
+    }
+    
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+    
+    .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #aaa;
+    }
+    
+    .close-modal:hover {
+        color: #333;
+    }
+    
+    .modal-answer {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 4px;
+        border-left: 3px solid transparent;
+    }
+    
+    .modal-answer.correct-answer {
+        background-color: #d5f5e3;
+        border-left-color: #2ecc71;
+    }
+    
+    .answer-option-label {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+    
+    /* Make question rows clickable */
+    .question-row {
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    .question-row:hover {
+        background-color: #e8f4fc !important;
+    }
+    
+    /* Expandable questions styles */
+    .expandable-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .expand-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        font-size: 16px;
+        margin-left: 10px;
+        flex-shrink: 0;
+    }
+    
+    .answers-row.hidden {
+        display: none;
+    }
+    
+    .answers-row td {
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+    
+    .answer-container {
+        padding: 10px 20px;
+    }
+    
+    .answer-item {
+        padding: 8px;
+        margin-bottom: 5px;
+        border-left: 3px solid transparent;
+    }
+    
+    .answer-item.correct-answer {
+        background-color: #d5f5e3;
+        border-left-color: #2ecc71;
+    }
+    
+    .expand-controls {
+        margin: 20px 0;
+        text-align: right;
+    }
+    
+    .expand-btn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    
+    .expand-btn:hover {
+        background-color: #2980b9;
+    }
+    
     /* Progress bar styles */
     .progress-bar {
         height: 10px;
@@ -325,8 +462,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Maritime Radio Communication Exam <span class="version">v1.0.11</span></h1>
-        <div class="app-info">Generated on: 4/20/2025, 8:09:18 PM</div>
+        <h1>Maritime Radio Communication Exam <span class="version">v1.0.18</span></h1>
+        <div class="app-info">Generated on: 4/21/2025, 11:28:14 AM</div>
         
         <!-- Exam Settings -->
         <div id="exam-settings">
@@ -416,7 +553,7 @@
     let examStarted = false;
     let showTranslations = true;
     let questionHistory = {};
-    const appVersion = '1.0.11'; // App version from generator
+    const appVersion = '1.0.18'; // App version from generator
     
     // Initialize the application when the DOM is loaded
     document.addEventListener('DOMContentLoaded', initializeApp);
@@ -574,9 +711,12 @@
             ? allQuestions 
             : allQuestions.filter(q => q.category.split('\n')[0] === selectedCategory);
         
-        // Shuffle and get the requested number of random questions (or all if less than requested)
+        // Get exactly the requested number of questions (or all if less than requested)
         const count = Math.min(filteredQuestions.length, questionCount);
-        questions = getRandomQuestions(filteredQuestions, count);
+        questions = getRandomQuestions(filteredQuestions, questionCount);
+        
+        // Verify we have the correct number of questions
+        console.log('Requested ' + questionCount + ' questions, got ' + questions.length);
         
         // Initialize user answers array with empty values
         userAnswers = Array(questions.length).fill(null);
@@ -608,67 +748,124 @@
     function getRandomQuestions(allQuestions, count) {
         // Check if we have previous results in localStorage
         let questionHistory = {};
+        let lastExamData = { questions: [], incorrectAnswers: [] };
+        
         try {
             const savedHistory = localStorage.getItem('examQuestionHistory');
             if (savedHistory) {
                 questionHistory = JSON.parse(savedHistory);
             }
+            
+            // Get data from the last exam session
+            const savedLastExam = localStorage.getItem('lastExamData');
+            if (savedLastExam) {
+                lastExamData = JSON.parse(savedLastExam);
+            }
         } catch (e) {
             console.log('Could not load question history:', e);
         }
         
-        // Assign weights to questions based on history
-        const weightedQuestions = allQuestions.map(question => {
+        // Create a set of question IDs that were answered incorrectly in the last session
+        const recentlyIncorrectIds = new Set(lastExamData.incorrectAnswers);
+        
+        // Divide questions into three groups:
+        // 1. Questions that were answered incorrectly in the last session (exclude these)
+        // 2. Questions that have never been answered
+        // 3. Questions that have been answered before but not incorrectly in the last session
+        const excludedQuestions = [];
+        const newQuestions = [];
+        const previouslyAnsweredQuestions = [];
+        
+        allQuestions.forEach(question => {
             const history = questionHistory[question.id] || { correct: 0, incorrect: 0, total: 0 };
             
-            // Calculate weight based on question history
-            let weight = 1; // Default weight for questions with no history
-            
-            if (history.total > 0) {
-                // Calculate success rate (percentage of correct answers)
-                const successRate = history.correct / history.total;
-                
-                // Calculate recency factor (how recently the question was answered incorrectly)
-                // This will be higher if the question was recently answered incorrectly
-                const recentlyIncorrect = history.incorrect > 0;
-                const recencyFactor = recentlyIncorrect ? 1.5 : 1;
-                
-                // Calculate mastery level
-                // A question is considered mastered if it has been answered correctly at least 3 times
-                // and has a success rate of at least 80%
-                const isMastered = history.correct >= 3 && successRate >= 0.8;
-                
-                if (isMastered) {
-                    // Mastered questions get lower weight
-                    weight = 0.3;
-                } else if (history.incorrect > history.correct) {
-                    // Questions with more incorrect than correct answers get higher weight
-                    // The more incorrect answers, the higher the weight
-                    weight = 2.0 + (history.incorrect / history.total);
-                } else if (history.correct > history.incorrect && !isMastered) {
-                    // Questions that are being learned but not yet mastered
-                    // get a moderate weight that decreases as success rate increases
-                    weight = 1.0 - (successRate * 0.5);
-                }
-                
-                // Apply recency factor to give higher weight to recently incorrect questions
-                weight *= recencyFactor;
-                
-                // Ensure minimum weight
-                weight = Math.max(weight, 0.1);
+            if (recentlyIncorrectIds.has(question.id)) {
+                // Questions answered incorrectly in the last session
+                excludedQuestions.push(question);
+            } else if (history.total === 0) {
+                // Questions never answered before
+                newQuestions.push(question);
+            } else {
+                // Questions answered before but not incorrectly in the last session
+                previouslyAnsweredQuestions.push(question);
             }
+        });
+        
+        // Calculate weights for previously answered questions
+        const weightedQuestions = previouslyAnsweredQuestions.map(question => {
+            const history = questionHistory[question.id];
+            
+            // Calculate weight based on question history
+            let weight = 1; // Default weight
+            
+            // Calculate success rate (percentage of correct answers)
+            const successRate = history.correct / history.total;
+            
+            // Calculate mastery level
+            // A question is considered mastered if it has been answered correctly at least 3 times
+            // and has a success rate of at least 80%
+            const isMastered = history.correct >= 3 && successRate >= 0.8;
+            
+            if (isMastered) {
+                // Mastered questions get lower weight
+                weight = 0.3;
+            } else if (history.incorrect > history.correct) {
+                // Questions with more incorrect than correct answers get higher weight
+                // The more incorrect answers, the higher the weight
+                weight = 2.0 + (history.incorrect / history.total);
+            } else if (history.correct > history.incorrect && !isMastered) {
+                // Questions that are being learned but not yet mastered
+                // get a moderate weight that decreases as success rate increases
+                weight = 1.0 - (successRate * 0.5);
+            }
+            
+            // Ensure minimum weight
+            weight = Math.max(weight, 0.1);
             
             return { question, weight };
         });
         
-        // Add some randomness to the selection process
+        // Add some randomness to the weighted questions
         weightedQuestions.sort(() => Math.random() - 0.5);
         
         // Sort by weight (higher weights = higher probability)
         weightedQuestions.sort((a, b) => b.weight - a.weight);
         
-        // Take the top 'count' questions
-        return weightedQuestions.slice(0, count).map(item => item.question);
+        // Simple approach: If we have enough available questions (excluding incorrect ones from last session),
+        // use them. Otherwise, include some from the excluded list to meet the count.
+        let selectedQuestions = [];
+        
+        // First, try to get questions from non-excluded pool
+        const availablePool = [...newQuestions, ...previouslyAnsweredQuestions];
+        
+        // If we don't have enough questions, include some from excluded list
+        if (availablePool.length < count && excludedQuestions.length > 0) {
+            // Shuffle excluded questions
+            excludedQuestions.sort(() => Math.random() - 0.5);
+            // Add enough to reach the requested count
+            const neededFromExcluded = Math.min(count - availablePool.length, excludedQuestions.length);
+            selectedQuestions = [...availablePool, ...excludedQuestions.slice(0, neededFromExcluded)];
+        } else {
+            selectedQuestions = [...availablePool];
+        }
+        
+        // Shuffle all selected questions
+        selectedQuestions.sort(() => Math.random() - 0.5);
+        
+        // Take exactly the requested count (or all if less)
+        selectedQuestions = selectedQuestions.slice(0, count);
+        
+        // Store the current exam questions for the next session
+        window.setTimeout(() => {
+            localStorage.setItem('lastExamData', JSON.stringify({
+                questions: selectedQuestions.map(q => q.id),
+                incorrectAnswers: []
+            }));
+        }, 0);
+        
+        console.log('Requested ' + count + ' questions, selected ' + selectedQuestions.length + ' questions');
+        
+        return selectedQuestions;
     }
     
     function displayQuestion(index) {
@@ -778,6 +975,27 @@
         
         // Update question history in localStorage
         updateQuestionHistory();
+        
+        // Track incorrectly answered questions for the next session
+        const incorrectAnswers = [];
+        questions.forEach((question, index) => {
+            const userAnswer = userAnswers[index];
+            if (userAnswer) {
+                const correctOption = correctAnswersMap[question.id];
+                if (userAnswer !== correctOption) {
+                    incorrectAnswers.push(question.id);
+                }
+            }
+        });
+        
+        // Update the last exam data with incorrect answers
+        try {
+            const lastExamData = JSON.parse(localStorage.getItem('lastExamData')) || { questions: [] };
+            lastExamData.incorrectAnswers = incorrectAnswers;
+            localStorage.setItem('lastExamData', JSON.stringify(lastExamData));
+        } catch (e) {
+            console.log('Could not update last exam data:', e);
+        }
         
         // Hide questions and show results
         questionContainer.classList.add('hidden');
@@ -936,7 +1154,12 @@
         generateStatistics();
     }
     
+    // Global object to store question data for rows
+    let questionRowData = {};
+    
     function generateStatistics() {
+        // Reset question row data
+        questionRowData = {};
         const statisticsContainer = document.getElementById('statistics-container');
         
         // Group questions by category
@@ -975,6 +1198,10 @@
             + '<p>Total Questions: ' + totalQuestions + '</p>'
             + '<p>Questions Attempted: ' + answeredQuestions + ' (' + Math.round((answeredQuestions / totalQuestions) * 100) + '%)</p>'
             + '<p>Questions Mastered: ' + masteredQuestions + ' (' + Math.round((masteredQuestions / totalQuestions) * 100) + '%)</p>'
+            + '</div>'
+            + '<div class="expand-controls">'
+            + '<button id="expand-all-btn" class="expand-btn">Expand All Answers</button>'
+            + '<button id="collapse-all-btn" class="expand-btn hidden">Collapse All Answers</button>'
             + '</div>';
         
         // Generate statistics for each category
@@ -985,10 +1212,10 @@
             html += '<table class="statistics-table">'
                 + '<thead>'
                 + '<tr>'
-                + '<th>Question</th>'
-                + '<th>Attempts</th>'
-                + '<th>Correct</th>'
-                + '<th>Success Rate</th>'
+                + '<th width="60%">Question</th>'
+                + '<th width="10%">Attempts</th>'
+                + '<th width="10%">Correct</th>'
+                + '<th width="20%">Success Rate</th>'
                 + '</tr>'
                 + '</thead>'
                 + '<tbody>';
@@ -1011,19 +1238,129 @@
                     }
                 }
                 
-                html += '<tr>'
-                    + '<td>' + question.question + '</td>'
+                // Create unique IDs for the question row and answer section
+                const rowId = 'question-row-' + question.id;
+                const answersId = 'answers-' + question.id;
+                
+                // Get the correct answer option
+                const correctOption = correctAnswersMap[question.id];
+                
+                // Create the main row with the question
+                html += '<tr id="' + rowId + '" class="question-row" data-answers-id="' + answersId + '">'
+                    + '<td><div class="expandable-question">' + question.question 
+                    + '<span class="expand-icon">+</span></div></td>'
                     + '<td>' + attempts + '</td>'
                     + '<td>' + correct + '</td>'
                     + '<td class="' + successRateClass + '">' + successRate + '%</td>'
                     + '</tr>';
+                
+                // Create the hidden answers row
+                html += '<tr id="' + answersId + '" class="answers-row hidden">'
+                    + '<td colspan="4">'
+                    + '<div class="answer-container">';
+                
+                // Add each answer option with correct answer highlighted
+                question.answers.forEach(answer => {
+                    const isCorrect = answer.option === correctOption;
+                    const answerClass = isCorrect ? 'correct-answer' : '';
+                    const correctMark = isCorrect ? ' ✓' : '';
+                    
+                    html += '<div class="answer-item ' + answerClass + '">'
+                        + '<span class="answer-option-label">' + answer.option + '.</span> '
+                        + answer.text
+                        + correctMark
+                        + '</div>';
+                });
+                
+                html += '</div></td></tr>';
+                
+                // Store the question data in a separate object to avoid JSON encoding issues
+                window.setTimeout(() => {
+                    questionRowData[rowId] = {
+                        id: question.id,
+                        question: question.question,
+                        answers: question.answers,
+                        correctOption: correctAnswersMap[question.id]
+                    };
+                }, 0);
             });
             
             html += '</tbody></table></div>';
         });
         
         statisticsContainer.innerHTML = html;
+        
+        // Add modal for showing correct answers
+        if (!document.getElementById('answer-modal')) {
+            const modalHtml = '<div id="answer-modal" class="modal hidden">'
+                + '<div class="modal-content">'
+                + '<span class="close-modal">&times;</span>'
+                + '<h3 id="modal-question"></h3>'
+                + '<div id="modal-answers"></div>'
+                + '</div>'
+                + '</div>';
+            
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+            
+            // Add event listener to close the modal
+            document.querySelector('.close-modal').addEventListener('click', () => {
+                document.getElementById('answer-modal').classList.add('hidden');
+            });
+            
+            // Close modal when clicking outside of it
+            window.addEventListener('click', (event) => {
+                const modal = document.getElementById('answer-modal');
+                if (event.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        }
+        
+        // Add click event listeners to expandable questions
+        const questionRows = document.querySelectorAll('.question-row');
+        questionRows.forEach(row => {
+            row.addEventListener('click', (e) => {
+                const answersId = row.getAttribute('data-answers-id');
+                const answersRow = document.getElementById(answersId);
+                const expandIcon = row.querySelector('.expand-icon');
+                
+                // Toggle the answers visibility
+                if (answersRow.classList.contains('hidden')) {
+                    answersRow.classList.remove('hidden');
+                    expandIcon.textContent = '-';
+                } else {
+                    answersRow.classList.add('hidden');
+                    expandIcon.textContent = '+';
+                }
+            });
+        });
+        
+        // Add event listener for expand all button
+        document.getElementById('expand-all-btn').addEventListener('click', () => {
+            const answersRows = document.querySelectorAll('.answers-row');
+            const expandIcons = document.querySelectorAll('.expand-icon');
+            
+            answersRows.forEach(row => row.classList.remove('hidden'));
+            expandIcons.forEach(icon => icon.textContent = '-');
+            
+            document.getElementById('expand-all-btn').classList.add('hidden');
+            document.getElementById('collapse-all-btn').classList.remove('hidden');
+        });
+        
+        // Add event listener for collapse all button
+        document.getElementById('collapse-all-btn').addEventListener('click', () => {
+            const answersRows = document.querySelectorAll('.answers-row');
+            const expandIcons = document.querySelectorAll('.expand-icon');
+            
+            answersRows.forEach(row => row.classList.add('hidden'));
+            expandIcons.forEach(icon => icon.textContent = '+');
+            
+            document.getElementById('collapse-all-btn').classList.add('hidden');
+            document.getElementById('expand-all-btn').classList.remove('hidden');
+        });
     }
+    
+
   
     </script>
 </body>
