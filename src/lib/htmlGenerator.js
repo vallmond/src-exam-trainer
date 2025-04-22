@@ -286,53 +286,57 @@ function generateStyles() {
         margin-bottom: 25px;
     }
     
-    .message-category h3 {
-        color: #2980b9;
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 5px;
-        margin-bottom: 15px;
+    #message-examples-container {
+        margin-top: 20px;
+    }
+    
+    .message-category {
+        margin-bottom: 30px;
     }
     
     .message-examples-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 15px;
+        gap: 20px;
     }
     
     .message-example {
-        background-color: #f8f9fa;
+        border: 1px solid #ddd;
         border-radius: 8px;
         padding: 15px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        transition: transform 0.2s ease;
-    }
-    
-    .message-example:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        background-color: #f9f9f9;
     }
     
     .message-title {
         font-weight: bold;
+        margin-bottom: 10px;
         color: #2c3e50;
-        margin-bottom: 8px;
         font-size: 16px;
     }
     
     .message-content {
-        background-color: #e8f4fc;
+        white-space: pre-line;
+        font-family: monospace;
+        background-color: #f5f5f5;
         padding: 10px;
         border-radius: 4px;
-        font-family: monospace;
-        margin-bottom: 8px;
-        color: #34495e;
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .keyword-highlight {
+        background-color: #ffeaa7;
+        color: #d35400;
         font-weight: bold;
+        padding: 0 2px;
+        border-radius: 3px;
     }
     
     .message-description {
-        font-size: 14px;
-        color: #7f8c8d;
         font-style: italic;
+        color: #7f8c8d;
+        font-size: 14px;
     }
     
     /* Make question rows clickable */

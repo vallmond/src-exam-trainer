@@ -12,9 +12,19 @@ function generateMessageExamplesCode() {
       category: 'Distress (MAYDAY)',
       examples: [
         {
-          title: '🚨 1. MAYDAY – Fire on board',
-          message: "📻 Distress Call:\nMAYDAY, MAYDAY, MAYDAY\nThis is Motor Yacht Stella, Stella, Stella\nMAYDAY\nMotor Yacht Stella\nPosition: 51 degrees 45 minutes North, 004 degrees 20 minutes West\nWe have a fire in the engine room\n5 persons on board\nWe are fighting the fire but require immediate assistance\nOver.\n\n📻 Coastguard Reply:\nMotor Yacht Stella, Motor Yacht Stella, this is Solent Coastguard\nMAYDAY received\nWe have your position\nRescue services are on the way\nStand by on channel 16 and switch to channel 67 for further communication\nOver.",
-          description: 'Example of a distress call for a vessel with fire on board and the coastguard response'
+          title: '🚨 1. MAYDAY – Fire in the engine room',
+          message: "📻 Distress Call (Yacht Stella):\nMAYDAY, MAYDAY, MAYDAY\nThis is Motor Yacht Stella, callsign MX1234, MMSI 235123456\nMAYDAY\nMotor Yacht Stella, callsign MX1234, MMSI 235123456\nMy position is 51 degrees 45 minutes North, 004 degrees 20 minutes West\nAt time 1530 UTC\nWe have a fire in the engine room\nThere are 5 persons on board\nWe are fighting the fire but require immediate assistance\nOver.\n\n📻 Response (Coastguard):\nMAYDAY\nMotor Yacht Stella, Motor Yacht Stella, this is Milford Haven Coastguard\nreceived\nMAYDAY\nYour position 51 degrees 45 minutes North, 004 degrees 20 minutes West at 1530 UTC is acknowledged\nWe are launching rescue services to your location now\nMaintain watch on channel 16 and switch to channel 67 for further instructions\nOver.",
+          description: 'Example of a distress call for a vessel with fire in the engine room and the coastguard response'
+        },
+        {
+          title: '🚨 2. MAYDAY – Taking on water',
+          message: "📻 Distress Call (Sailing Yacht Ocean Spirit):\nMAYDAY, MAYDAY, MAYDAY\nThis is Sailing Yacht Ocean Spirit, callsign ZY7890, MMSI 244987321\nMAYDAY\nSailing Yacht Ocean Spirit, callsign ZY7890, MMSI 244987321\nMy position is 52 degrees 30 minutes North, 003 degrees 15 minutes East\nAt time 1015 UTC\nWe are taking on water and cannot stop the flooding\nThere are 4 persons on board\nWe are preparing to abandon ship\nRequire immediate assistance\nOver.\n\n📻 Response (Coastguard):\nMAYDAY\nSailing Yacht Ocean Spirit, Sailing Yacht Ocean Spirit, this is Netherlands Coastguard\nreceived\nMAYDAY\nYour position 52 degrees 30 minutes North, 003 degrees 15 minutes East at 1015 UTC is acknowledged\nRescue helicopter and lifeboat are en route to your position\nEstimated time of arrival is 20 minutes\nMaintain watch on channel 16 and keep this channel clear for emergency traffic\nOver.",
+          description: 'Example of a distress call for a vessel taking on water and preparing to abandon ship'
+        },
+        {
+          title: '🚨 3. MAYDAY – Complete distress communication sequence',
+          message: "📌 MAYDAY Distress Call (from \"Sailing Yacht Endeavor\")\nDistress Call (from Sailing Yacht Endeavor)\nMAYDAY, MAYDAY, MAYDAY\nThis is Sailing Yacht Endeavor, Sailing Yacht Endeavor, Sailing Yacht Endeavor\ncallsign ZT9876, MMSI 123456789\nMAYDAY\nSailing Yacht Endeavor, callsign ZT9876, MMSI 123456789\nMy position is 47 degrees 45 minutes North, 005 degrees 25 minutes West\nAt time 1345 UTC\nWe are taking on water and cannot stop the flooding\nThere are 6 persons on board\nWe are preparing to abandon ship\nRequire immediate assistance\nOver.\n\n📌 Response to MAYDAY (from Coastguard)\nFirst Acknowledgment (from Coastguard)\nMAYDAY\nSailing Yacht Endeavor, Sailing Yacht Endeavor\nThis is United Kingdom Coastguard\nRECEIVED\nMAYDAY\nSailing Yacht Endeavor, callsign ZT9876, MMSI 123456789\nYour position 47 degrees 45 minutes North, 005 degrees 25 minutes West at 1345 UTC is acknowledged\nWe are launching rescue operations immediately\nETA 15 minutes\nPlease switch to channel 67 for further instructions\nOver.\n\n📌 SEELONCE FEENEE Message (from Coastguard)\nMAYDAY\nALL STATIONS, ALL STATIONS, ALL STATIONS\nThis is United Kingdom Coastguard, United Kingdom Coastguard, United Kingdom Coastguard\ncallsign UKCG123\nTime of message: 1405 UTC\nMMSI 123456789\nSEELONCE FEENEE.",
+          description: 'Complete distress communication sequence including initial MAYDAY call, coastguard acknowledgment, and SEELONCE FEENEE message'
         }
       ]
     },
@@ -87,7 +97,15 @@ function generateMessageExamplesCode() {
           html += '<div class="message-title">' + example.title + '</div>';
           
           // Replace newlines with <br> tags for proper HTML display
-          const formattedMessage = example.message.replace(/\\n/g, '<br>');
+          let formattedMessage = example.message.replace(/\\n/g, '<br>');
+          
+          // Highlight keywords
+          const keywords = ['MAYDAY', 'PAN-PAN', 'SECURITÉ', 'SEELONCE FEENEE', 'This is', 'callsign', 'MMSI', 'Over', 'At time', 'received', 'RECEIVED'];
+          keywords.forEach(keyword => {
+            const regex = new RegExp(keyword, 'g');
+            formattedMessage = formattedMessage.replace(regex, '<span class="keyword-highlight">' + keyword + '</span>');
+          });
+          
           html += '<div class="message-content">' + formattedMessage + '</div>';
           
           html += '<div class="message-description">' + example.description + '</div>';
