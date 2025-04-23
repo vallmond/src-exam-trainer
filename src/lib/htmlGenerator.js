@@ -245,6 +245,49 @@ function generateStyles() {
         margin-right: 5px;
     }
     
+    /* Filter controls styles */
+    .filter-controls {
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .filter-btn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .filter-btn:hover {
+        background-color: #2980b9;
+    }
+    
+    .filter-btn.active {
+        background-color: #2c3e50;
+        font-weight: bold;
+    }
+    
+    /* Back button styles */
+    .back-btn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px 0 20px;
+        display: block;
+        transition: background-color 0.3s;
+    }
+    
+    .back-btn:hover {
+        background-color: #2980b9;
+    }
+    
     /* Radio alphabet styles */
     .alphabet-grid {
         display: grid;

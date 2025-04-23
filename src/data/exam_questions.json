@@ -4682,7 +4682,7 @@
   {
     "id": 235,
     "number": "61",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W skład systemu COSPAS-SARSAT wchodzi blok satelitów geostacjonarnych\nskładający się z:",
     "answers": [
       {
@@ -4702,7 +4702,7 @@
   {
     "id": 236,
     "number": "62",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Do określenia położenia radiopławy w systemie COSPAS-SARSAT wykorzystujemy:",
     "answers": [
       {
@@ -4722,7 +4722,7 @@
   {
     "id": 237,
     "number": "63",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Bateria litowa zasilająca radiopławę powinna zapewnić:",
     "answers": [
       {
@@ -4742,7 +4742,7 @@
   {
     "id": 238,
     "number": "64",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Sygnał o częstotliwość 121,5 MHz nadawany przez radiopławę systemu COSPAS-\nSARSAT służy do:",
     "answers": [
       {
@@ -4762,7 +4762,7 @@
   {
     "id": 239,
     "number": "65",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Dokładność lokalizacji radiopławy w systemie COSPAS-SARSAT wynosi:",
     "answers": [
       {
@@ -4782,7 +4782,7 @@
   {
     "id": 240,
     "number": "66",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Które z poniższych zdań jest prawdziwe?",
     "answers": [
       {
@@ -4802,7 +4802,7 @@
   {
     "id": 241,
     "number": "67",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Sygnały nadawane przez radiopławę na częstotliwości 406 MHz:",
     "answers": [
       {
@@ -4822,7 +4822,7 @@
   {
     "id": 242,
     "number": "68",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Sygnały nadawane przez radiopławę na częstotliwości 406 MHz zawierają:",
     "answers": [
       {
@@ -4842,7 +4842,7 @@
   {
     "id": 243,
     "number": "69",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Sygnały nadawane przez radiopławę na częstotliwości 406 MHz pozwalają na\nidentyfikację statku z którego pochodzi radiopława na podstawie zakodowanego:",
     "answers": [
       {
@@ -4862,7 +4862,7 @@
   {
     "id": 244,
     "number": "70",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Radiopława systemu COSPAS-SARSAT ma:",
     "answers": [
       {
@@ -4882,7 +4882,7 @@
   {
     "id": 245,
     "number": "71",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Radiopławy systemu COSPAS-SARSAT mogą być uruchomione:",
     "answers": [
       {
@@ -4902,7 +4902,7 @@
   {
     "id": 246,
     "number": "72",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W przypadku uruchomienia radiopławy systemu COSPAS-SARSAT, czas jaki upływa\nod jej uruchomienia do powiadomienia RCC wynosi:",
     "answers": [
       {
@@ -4922,7 +4922,7 @@
   {
     "id": 247,
     "number": "73",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Obieg informacji o alarmowaniu w systemie COSPAS-SARSAT przebiega wg\nschematu:",
     "answers": [
       {
@@ -4942,7 +4942,7 @@
   {
     "id": 248,
     "number": "74",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W celu dokonania rejestracji radiopławy należy:",
     "answers": [
       {
@@ -4962,7 +4962,7 @@
   {
     "id": 249,
     "number": "75",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Satelita biegunowy po odebraniu sygnałów z radiopławy 121,5 MHz:",
     "answers": [
       {
@@ -4982,7 +4982,7 @@
   {
     "id": 250,
     "number": "76",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Satelita biegunowy po odebraniu sygnałów z radiopławy 406 MHz:",
     "answers": [
       {
@@ -5002,7 +5002,7 @@
   {
     "id": 251,
     "number": "77",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Określenie pozycji radiopławy w systemie COSPAS-SARSAT następuje w:",
     "answers": [
       {
@@ -5022,7 +5022,7 @@
   {
     "id": 252,
     "number": "78",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Określenie pozycji radiopławy w oparciu o sygnały nadawane na częstotliwości 121,5\nMHz jest możliwe w systemie COSPAS-SARSAT:",
     "answers": [
       {
@@ -5042,7 +5042,7 @@
   {
     "id": 253,
     "number": "79",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Testowanie radiopławy polega na:",
     "answers": [
       {
@@ -5062,7 +5062,7 @@
   {
     "id": 254,
     "number": "80",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Które z poniższych zdań jest prawdziwe?",
     "answers": [
       {
@@ -5082,7 +5082,7 @@
   {
     "id": 255,
     "number": "81",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Które z poniższych zdań jest prawdziwe?",
     "answers": [
       {
@@ -5102,7 +5102,7 @@
   {
     "id": 256,
     "number": "82",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Numer identyfikacyjny w postaci 974XXYYYY zarezerwowany jest dla:",
     "answers": [
       {
@@ -5122,7 +5122,7 @@
   {
     "id": 257,
     "number": "83",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W przypadku uruchomienia radiopławy w sytuacji, gdy nie ma zagrożenia, należy:",
     "answers": [
       {
@@ -5142,7 +5142,7 @@
   {
     "id": 258,
     "number": "84",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Transponder radarowy służy do:",
     "answers": [
       {
@@ -5162,7 +5162,7 @@
   {
     "id": 259,
     "number": "85",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Transponder radarowy współpracuje z radarami:",
     "answers": [
       {
@@ -5182,7 +5182,7 @@
   {
     "id": 260,
     "number": "86",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Transponder radarowy nadaje swój sygnał:",
     "answers": [
       {
@@ -5202,7 +5202,7 @@
   {
     "id": 261,
     "number": "87",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Zasięg transpondera radarowego zależy:",
     "answers": [
       {
@@ -5222,7 +5222,7 @@
   {
     "id": 262,
     "number": "88",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Przy wysokości umieszczenia transpondera radarowego 1 m i antenie radaru statku\nwykrywającego na wysokości 10-15 m, zasięg będzie wynosił:",
     "answers": [
       {
@@ -5242,7 +5242,7 @@
   {
     "id": 263,
     "number": "89",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Maksymalny zasięg transpondera radarowego przy wykrywaniu z helikoptera wynosi:",
     "answers": [
       {
@@ -5262,7 +5262,7 @@
   {
     "id": 264,
     "number": "90",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Pojemność baterii transpondera radarowego powinna zapewnić pracę:",
     "answers": [
       {
@@ -5282,7 +5282,7 @@
   {
     "id": 265,
     "number": "91",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Sygnał z transpondera radarowego widziany jest na ekranie radaru w postaci:",
     "answers": [
       {
@@ -5302,7 +5302,7 @@
   {
     "id": 266,
     "number": "92",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Transponder radarowy nadaje po pobudzeniu sygnał:",
     "answers": [
       {
@@ -5322,7 +5322,7 @@
   {
     "id": 267,
     "number": "93",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Sygnał z transpondera radarowego widziany jest na ekranie radaru:",
     "answers": [
       {
@@ -5342,7 +5342,7 @@
   {
     "id": 268,
     "number": "94",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Sygnał z transpondera radarowego widziany jest na ekranie radaru:",
     "answers": [
       {
@@ -5362,7 +5362,7 @@
   {
     "id": 269,
     "number": "95",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Pozycję rozbitków na ekranie radaru wyznacza:",
     "answers": [
       {
@@ -5382,7 +5382,7 @@
   {
     "id": 270,
     "number": "96",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Pozycję rozbitków na ekranie radaru wyznacza:",
     "answers": [
       {
@@ -5402,7 +5402,7 @@
   {
     "id": 271,
     "number": "97",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Transponder radarowy nadaje swój sygnał w paśmie 9,2 – 9,5 GHz:",
     "answers": [
       {
@@ -5422,7 +5422,7 @@
   {
     "id": 272,
     "number": "98",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Rozbitkowie mogą poznać, że sygnał z transpondera radarowego został wykryty:",
     "answers": [
       {
@@ -5442,7 +5442,7 @@
   {
     "id": 273,
     "number": "99",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Rozbitkowie mogą zwiększyć zasięg transpondera radarowego przez:",
     "answers": [
       {
@@ -5462,7 +5462,7 @@
   {
     "id": 274,
     "number": "100",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Przy wykrywaniu transpondera można wyeliminować zakłócenia od opadów przez:",
     "answers": [
       {
@@ -5482,7 +5482,7 @@
   {
     "id": 275,
     "number": "101",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W sytuacji, gdy na ekranie radaru widoczne są łuki, można przywrócić kropki przez:",
     "answers": [
       {
@@ -5502,7 +5502,7 @@
   {
     "id": 276,
     "number": "102",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W radiotelefonii używana jest fala nośna:",
     "answers": [
       {
@@ -5522,7 +5522,7 @@
   {
     "id": 277,
     "number": "103",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Amplituda fali nośnej to:",
     "answers": [
       {
@@ -5542,7 +5542,7 @@
   {
     "id": 278,
     "number": "104",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Częstotliwość fali nośnej zależy od jej:",
     "answers": [
       {
@@ -5562,7 +5562,7 @@
   {
     "id": 279,
     "number": "105",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Fala radiowa o częstotliwości 156 MHz ma długość:",
     "answers": [
       {
@@ -5582,7 +5582,7 @@
   {
     "id": 280,
     "number": "106",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Fala radiowa o długości 2 metrów ma częstotliwość:",
     "answers": [
       {
@@ -5602,7 +5602,7 @@
   {
     "id": 281,
     "number": "107",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Prędkość rozchodzenia się fal to:",
     "answers": [
       {
@@ -5622,7 +5622,7 @@
   {
     "id": 282,
     "number": "108",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W nadajnikach VHF radiotelefonów morskich stosowana jest modulacja:",
     "answers": [
       {
@@ -5642,7 +5642,7 @@
   {
     "id": 283,
     "number": "109",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Emisja G3E to emisja:",
     "answers": [
       {
@@ -5662,7 +5662,7 @@
   {
     "id": 284,
     "number": "110",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Maksymalna moc statkowych radiotelefonów VHF wynosi:",
     "answers": [
       {
@@ -5682,7 +5682,7 @@
   {
     "id": 285,
     "number": "111",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Zmiana mocy radiotelefonu ma wpływ na:",
     "answers": [
       {
@@ -5702,7 +5702,7 @@
   {
     "id": 286,
     "number": "112",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Funkcja podwójnego nasłuchu w radiotelefonie VHF pozwala na:",
     "answers": [
       {
@@ -5722,7 +5722,7 @@
   {
     "id": 287,
     "number": "113",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Przełączenie kanałów międzynarodowych na amerykańskie:",
     "answers": [
       {
@@ -5742,7 +5742,7 @@
   {
     "id": 288,
     "number": "114",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Funkcja blokady szumów odcina szumy i zakłócenia od głośnika poprzez:",
     "answers": [
       {
@@ -5762,7 +5762,7 @@
   {
     "id": 289,
     "number": "115",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Długość anteny prętowej nadajnika jest przede wszystkim uzależniona od:",
     "answers": [
       {
@@ -5782,7 +5782,7 @@
   {
     "id": 290,
     "number": "116",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Regulacja głośności odbiornika VHF odbywa się przez:",
     "answers": [
       {
@@ -5802,7 +5802,7 @@
   {
     "id": 291,
     "number": "117",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W akumulatorach kwasowych elektrolitem jest:",
     "answers": [
       {
@@ -5822,7 +5822,7 @@
   {
     "id": 292,
     "number": "118",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W trakcie ładowania akumulatorów kwasowych wydzielane są gazy. Jest to:",
     "answers": [
       {
@@ -5842,7 +5842,7 @@
   {
     "id": 293,
     "number": "119",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Na zaciskach kwasowego akumulatora statkowego o napięciu znamionowym 24 V\nzmierzone napięcie wynosi 21 V. Oznacza to, że:",
     "answers": [
       {
@@ -5862,7 +5862,7 @@
   {
     "id": 294,
     "number": "120",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Akumulatorów kwasowych nie wolno wyładowywać poniżej dopuszczalnego napięcia\nkońcowego które wynosi:",
     "answers": [
       {
@@ -5882,7 +5882,7 @@
   {
     "id": 295,
     "number": "121",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Gęstość elektrolitu w akumulatorach kwasowych jest miarą naładowania akumulatora.\nZmierzona gęstość elektrolitu zwykłego akumulatora kwasowego w temperaturze 20º C\nwynosi 1,28 g/cm³. Oznacza to, że:",
     "answers": [
       {
@@ -5902,7 +5902,7 @@
   {
     "id": 296,
     "number": "122",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Gęstość elektrolitu w akumulatorach kwasowych jest miarą naładowania akumulatora.\nZmierzona gęstość elektrolitu zwykłego akumulatora kwasowego w temperaturze 20º C\nwynosi 1,10 g/cm³. Oznacza to, że:",
     "answers": [
       {
@@ -5922,7 +5922,7 @@
   {
     "id": 297,
     "number": "123",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Wraz ze spadkiem temperatury pojemność akumulatorów kwasowych:",
     "answers": [
       {
@@ -5942,7 +5942,7 @@
   {
     "id": 298,
     "number": "124",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Gęstość elektrolitu całkowicie naładowanego akumulatora kwasowego w tropiku jest:",
     "answers": [
       {
@@ -5962,7 +5962,7 @@
   {
     "id": 299,
     "number": "125",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Akumulatory kwasowe w przypadku wyłączenia z eksploatacji powinny być\nprzechowywane w stanie:",
     "answers": [
       {
@@ -5982,7 +5982,7 @@
   {
     "id": 300,
     "number": "126",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W trakcie eksploatacji akumulatorów kwasowych zachodzi konieczność uzupełniania\nelektrolitu. Uzupełnianie elektrolitu polega na dolewaniu do poszczególnych cel\nakumulatora:",
     "answers": [
       {
@@ -6002,7 +6002,7 @@
   {
     "id": 301,
     "number": "127",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W trakcie niewłaściwej eksploatacji akumulatorów kwasowych następuje ich\nzasiarczenie. Które z poniższych zjawisk świadczą o zasiarczeniu akumulatora:",
     "answers": [
       {
@@ -6022,7 +6022,7 @@
   {
     "id": 302,
     "number": "128",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Transponder AIS SART współpracuje z:",
     "answers": [
       {
@@ -6042,7 +6042,7 @@
   {
     "id": 303,
     "number": "129",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Jak jest minimalny zasięg wykrycia transpondera AIS SART?",
     "answers": [
       {
@@ -6062,7 +6062,7 @@
   {
     "id": 304,
     "number": "130",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Co oznaczają cyfry 09 w numerze identyfikacyjnym transpondera AIS SART\n970091129?",
     "answers": [
       {
@@ -6082,7 +6082,7 @@
   {
     "id": 305,
     "number": "131",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Jak jest minimalny zasięg wykrycia transpondera AIS SART przez samolot na wysokości\n1000 m?",
     "answers": [
       {
@@ -6102,7 +6102,7 @@
   {
     "id": 306,
     "number": "132",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Które z poniższych informacji są zakodowane w transponderze AIS SART?",
     "answers": [
       {
@@ -6122,7 +6122,7 @@
   {
     "id": 307,
     "number": "133",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Które ze zdań jest prawdziwe?",
     "answers": [
       {
@@ -6141,9 +6141,9 @@
   },
   {
     "id": 308,
-    "number": "970",
-    "category": "Obsługa",
-    "question": "134. Jaki symbol został ustalony przez IMO dla wskazania transpondera AIS SART na mapie\nelektronicznej?",
+    "number": "134",
+    "category": "GMDSS",
+    "question": "Jaki symbol został ustalony przez IMO dla wskazania transpondera AIS SART na mapie\nelektronicznej?",
     "answers": [
       {
         "option": "A",
@@ -6162,7 +6162,7 @@
   {
     "id": 309,
     "number": "135",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Baterie przeznaczone do zasilania przenośnych radiotelefonów awaryjnych VHF:",
     "answers": [
       {
@@ -6182,7 +6182,7 @@
   {
     "id": 310,
     "number": "136",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Baterie przeznaczone do zasilania awaryjnych transponderów radarowych (SART):",
     "answers": [
       {
@@ -6202,7 +6202,7 @@
   {
     "id": 311,
     "number": "137",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Baterie przeznaczone do zasilania radiopław awaryjnych:",
     "answers": [
       {
@@ -6222,7 +6222,7 @@
   {
     "id": 312,
     "number": "138",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Który z wymienionych wzorów określa zależność pomiędzy prędkością propagacji fali\n(c [m/s]), jej częstotliwością (f [Hz]) i długością (λ [m]):",
     "answers": [
       {
@@ -6242,7 +6242,7 @@
   {
     "id": 313,
     "number": "139",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Prędkość rozchodzenia się fali elektromagnetycznej w wolnej przestrzeni wynosi:",
     "answers": [
       {
@@ -6262,7 +6262,7 @@
   {
     "id": 314,
     "number": "140",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W czasie 5 µs fala elektromagnetyczna przebywa dystans:",
     "answers": [
       {
@@ -6282,7 +6282,7 @@
   {
     "id": 315,
     "number": "141",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Jaka jest długość fali w wolnej przestrzeni, jeżeli jej częstotliwość wynosi 150 MHz:",
     "answers": [
       {
@@ -6302,7 +6302,7 @@
   {
     "id": 316,
     "number": "142",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Od jakich czynników zależy zasięg łączności na falach VHF:",
     "answers": [
       {
@@ -6322,7 +6322,7 @@
   {
     "id": 317,
     "number": "143",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Jeżeli antena nadajnika radiotelefonu VHF znajduje się na maszcie o wysokości 100\nmetrów to zasięg stacji wynosi:",
     "answers": [
       {
@@ -6342,7 +6342,7 @@
   {
     "id": 318,
     "number": "144",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Jeżeli antena nadajnika radiotelefonu VHF znajduje się na maszcie o wysokości 64\nmetrów to zasięg stacji wynosi:",
     "answers": [
       {
@@ -6362,7 +6362,7 @@
   {
     "id": 319,
     "number": "145",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Jeżeli antena nadajnika radiotelefonu VHF znajduje się na maszcie o wysokości 100\nmetrów, zaś antena odbiornika usytuowana jest na wysokości 25 m to zasięg odbioru\nwynosi:",
     "answers": [
       {
@@ -6382,7 +6382,7 @@
   {
     "id": 320,
     "number": "146",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W statkowych radiotelefonach VHF stosowane są:",
     "answers": [
       {
@@ -6402,7 +6402,7 @@
   {
     "id": 321,
     "number": "147",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Antenę radiotelefonu VHF należy zamontować:",
     "answers": [
       {
@@ -6422,7 +6422,7 @@
   {
     "id": 322,
     "number": "148",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Zbyt bliskie ustawienie anteny radiotelefonu VHF w pobliżu metalowych konstrukcji\nmoże spowodować:",
     "answers": [
       {
@@ -6442,7 +6442,7 @@
   {
     "id": 323,
     "number": "149",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "W odbiornikach NAVTEX są stosowane:",
     "answers": [
       {
@@ -6462,7 +6462,7 @@
   {
     "id": 324,
     "number": "150",
-    "category": "Obsługa",
+    "category": "GMDSS",
     "question": "Dookólną charakterystykę promieniowania (w płaszczyźnie poziomej) mają anteny:",
     "answers": [
       {
@@ -6587,15 +6587,15 @@
     "answers": [
       {
         "option": "A",
-        "text": "Do pamięci skanowania wpisane są kanały oznaczone na wyświetlaczu symbolem .\nWciśnij i przytrzymaj przez 3 sekundy przycisk funkcyjny ."
+        "text": "Do pamięci skanowania wpisane są kanały oznaczone na wyświetlaczu symbolem *.\nWciśnij i przytrzymaj przez 3 sekundy przycisk funkcyjny *."
       },
       {
         "option": "B",
-        "text": "Do pamięci skanowania wpisane są kanały oznaczone na wyświetlaczu symbolem .\nNaciśnij jednocześnie przyciski funkcyjne SCAN i ."
+        "text": "Do pamięci skanowania wpisane są kanały oznaczone na wyświetlaczu symbolem *.\nNaciśnij jednocześnie przyciski funkcyjne SCAN i *."
       },
       {
         "option": "C",
-        "text": "Do pamięci skanowania wpisane są kanały oznaczone na wyświetlaczu symbolem .\nZa pomocą przycisków CH sprawdź, który kanał oznaczony jest na wyświetlaczu\nsymbolem ."
+        "text": "Do pamięci skanowania wpisane są kanały oznaczone na wyświetlaczu symbolem *.\nZa pomocą przycisków CH sprawdź, który kanał oznaczony jest na wyświetlaczu\nsymbolem *."
       }
     ]
   },
@@ -6607,7 +6607,7 @@
     "answers": [
       {
         "option": "A",
-        "text": "Za pomocą przycisków CH ustaw kanał 6, wciśnij przycisk funkcyjny , powtórz\nto samo dla kanału 13 i kanału 16."
+        "text": "Za pomocą przycisków CH ustaw kanał 6, wciśnij przycisk funkcyjny *, powtórz\nto samo dla kanału 13 i kanału 16."
       },
       {
         "option": "B",

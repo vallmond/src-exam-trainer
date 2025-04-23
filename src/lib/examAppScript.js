@@ -103,16 +103,47 @@ function generateExamScript(data, appVersion) {
         examStarted = false;
     }
     
+    // Helper function to add back button to a page
+    function addBackButton(containerId, buttonId) {
+        const container = document.getElementById(containerId);
+        if (!document.getElementById(buttonId)) {
+            const backBtn = document.createElement('button');
+            backBtn.id = buttonId;
+            backBtn.className = 'back-btn';
+            backBtn.textContent = '← Back to Main Menu';
+            backBtn.addEventListener('click', showMainMenu);
+            container.insertBefore(backBtn, container.firstChild);
+        }
+    }
+    
     function backToMain() {
         // Go back to the main screen
         document.getElementById('exam-settings').style.display = 'block';
         document.getElementById('statistics').classList.add('hidden');
     }
     
+    function showRadioAlphabet() {
+        // Hide main screen and show radio alphabet
+        document.getElementById('exam-settings').style.display = 'none';
+        document.getElementById('radio-alphabet').classList.remove('hidden');
+        
+        // Add back button to radio alphabet page
+        addBackButton('radio-alphabet', 'back-btn-alphabet');
+    }
+    
     function hideRadioAlphabet() {
         // Hide radio alphabet and show exam settings
         document.getElementById('radio-alphabet').classList.add('hidden');
         document.getElementById('exam-settings').style.display = 'block';
+    }
+    
+    function showMessageExamples() {
+        // Hide main screen and show message examples
+        document.getElementById('exam-settings').style.display = 'none';
+        document.getElementById('message-examples').classList.remove('hidden');
+        
+        // Add back button to message examples page
+        addBackButton('message-examples', 'back-btn-messages');
     }
     
     function hideMessageExamples() {
@@ -569,6 +600,9 @@ function generateExamScript(data, appVersion) {
         });
         
         resultsContainer.innerHTML = html;
+        
+        // Add back button to results page
+        addBackButton('results', 'back-btn-results');
     }
     
     function handleKeyboardInput(e) {
@@ -653,6 +687,9 @@ function generateExamScript(data, appVersion) {
         document.getElementById('results').classList.add('hidden');
         document.getElementById('statistics').classList.remove('hidden');
         
+        // Add back button to statistics page
+        addBackButton('statistics', 'back-btn-statistics');
+        
         // Generate statistics content
         generateStatistics();
     }
@@ -702,6 +739,11 @@ function generateExamScript(data, appVersion) {
             + '<p>Questions Attempted: ' + answeredQuestions + ' (' + Math.round((answeredQuestions / totalQuestions) * 100) + '%)</p>'
             + '<p>Questions Mastered: ' + masteredQuestions + ' (' + Math.round((masteredQuestions / totalQuestions) * 100) + '%)</p>'
             + '</div>'
+            + '<div class="filter-controls">'
+            + '<button id="show-all-btn" class="filter-btn active">Show All Questions</button>'
+            + '<button id="show-unattempted-btn" class="filter-btn">Show Unattempted Questions</button>'
+            + '<button id="show-errors-btn" class="filter-btn">Show Questions with Errors</button>'
+            + '</div>'
             + '<div class="expand-controls">'
             + '<button id="expand-all-btn" class="expand-btn">Expand All Answers</button>'
             + '<button id="collapse-all-btn" class="expand-btn hidden">Collapse All Answers</button>'
@@ -750,7 +792,7 @@ function generateExamScript(data, appVersion) {
                 
                 // Create the main row with the question
                 html += '<tr id="' + rowId + '" class="question-row" data-answers-id="' + answersId + '">'
-                    + '<td><div class="expandable-question">' + question.question 
+                    + '<td><div class="expandable-question">' + question.number + '. ' + question.question 
                     + '<span class="expand-icon">+</span></div></td>'
                     + '<td>' + attempts + '</td>'
                     + '<td>' + correct + '</td>'
@@ -792,6 +834,28 @@ function generateExamScript(data, appVersion) {
         });
         
         statisticsContainer.innerHTML = html;
+        
+        // Add filter functionality
+        document.getElementById('show-all-btn').addEventListener('click', function() {
+            setActiveFilterButton(this);
+            applyQuestionFilter('all');
+        });
+        
+        document.getElementById('show-unattempted-btn').addEventListener('click', function() {
+            setActiveFilterButton(this);
+            applyQuestionFilter('unattempted');
+        });
+        
+        document.getElementById('show-errors-btn').addEventListener('click', function() {
+            setActiveFilterButton(this);
+            applyQuestionFilter('errors');
+        });
+        
+        function setActiveFilterButton(activeButton) {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            activeButton.classList.add('active');
+        }
         
         // Add modal for showing correct answers
         if (!document.getElementById('answer-modal')) {
@@ -861,6 +925,85 @@ function generateExamScript(data, appVersion) {
             document.getElementById('collapse-all-btn').classList.add('hidden');
             document.getElementById('expand-all-btn').classList.remove('hidden');
         });
+    }
+    
+    // Function to apply question filters
+    function applyQuestionFilter(filterType) {
+        const questionRows = document.querySelectorAll('.question-row');
+        
+        // Load question history once for all questions
+        let history = {};
+        try {
+            const savedHistory = localStorage.getItem('examQuestionHistory');
+            if (savedHistory) {
+                history = JSON.parse(savedHistory);
+            }
+        } catch (e) {
+            console.log('Could not load question history:', e);
+        }
+        
+        // Track which categories have visible questions
+        const categoriesWithVisibleQuestions = new Set();
+        
+        // First pass: determine which questions should be visible
+        questionRows.forEach(row => {
+            const rowId = row.id;
+            const questionData = questionRowData[rowId];
+            const questionId = questionData?.id;
+            
+            const questionHistory = history[questionId] || { correct: 0, incorrect: 0, total: 0 };
+            const attempts = questionHistory.total;
+            const correct = questionHistory.correct;
+            const hasErrors = attempts > 0 && correct < attempts;
+            
+            let shouldShow = false;
+            
+            // Apply filter
+            if (filterType === 'all') {
+                shouldShow = true;
+            } else if (filterType === 'unattempted' && attempts === 0) {
+                shouldShow = true;
+            } else if (filterType === 'errors' && hasErrors) {
+                shouldShow = true;
+            }
+            
+            // Show or hide the question row
+            if (shouldShow) {
+                row.style.display = '';
+                // Track which category this question belongs to
+                const categorySection = row.closest('.statistics-category');
+                if (categorySection) {
+                    categoriesWithVisibleQuestions.add(categorySection);
+                }
+            } else {
+                row.style.display = 'none';
+            }
+            
+            // Hide the answers row if it was visible
+            const answersId = row.getAttribute('data-answers-id');
+            const answersRow = document.getElementById(answersId);
+            if (answersRow) {
+                answersRow.classList.add('hidden');
+                const expandIcon = row.querySelector('.expand-icon');
+                if (expandIcon) {
+                    expandIcon.textContent = '+';
+                }
+            }
+        });
+        
+        // Second pass: show or hide categories based on whether they have visible questions
+        const categories = document.querySelectorAll('.statistics-category');
+        categories.forEach(category => {
+            if (filterType === 'all' || categoriesWithVisibleQuestions.has(category)) {
+                category.style.display = '';
+            } else {
+                category.style.display = 'none';
+            }
+        });
+        
+        // Reset expand/collapse buttons
+        document.getElementById('collapse-all-btn').classList.add('hidden');
+        document.getElementById('expand-all-btn').classList.remove('hidden');
     }
     
 
