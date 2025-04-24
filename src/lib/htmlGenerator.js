@@ -695,7 +695,9 @@ function generateHtmlStructure(appVersion) {
         <!-- Statistics -->
         <div id="statistics" class="hidden">
             <h2>Question Statistics</h2>
-            <div id="statistics-container"></div>
+            <div id="statistics-container">
+                <!-- Statistics content will be generated dynamically -->
+            </div>
             <div class="controls">
                 <button id="back-to-main-btn">Back to Main</button>
             </div>

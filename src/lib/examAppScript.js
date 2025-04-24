@@ -111,7 +111,7 @@ function generateExamScript(data, appVersion) {
             backBtn.id = buttonId;
             backBtn.className = 'back-btn';
             backBtn.textContent = '← Back to Main Menu';
-            backBtn.addEventListener('click', showMainMenu);
+            backBtn.addEventListener('click', backToMain);
             container.insertBefore(backBtn, container.firstChild);
         }
     }
@@ -120,6 +120,9 @@ function generateExamScript(data, appVersion) {
         // Go back to the main screen
         document.getElementById('exam-settings').style.display = 'block';
         document.getElementById('statistics').classList.add('hidden');
+        document.getElementById('results').classList.add('hidden');
+        document.getElementById('radio-alphabet').classList.add('hidden');
+        document.getElementById('message-examples').classList.add('hidden');
     }
     
     function showRadioAlphabet() {
@@ -685,6 +688,8 @@ function generateExamScript(data, appVersion) {
         // Hide main screen and show statistics
         document.getElementById('exam-settings').style.display = 'none';
         document.getElementById('results').classList.add('hidden');
+        document.getElementById('radio-alphabet').classList.add('hidden');
+        document.getElementById('message-examples').classList.add('hidden');
         document.getElementById('statistics').classList.remove('hidden');
         
         // Add back button to statistics page
@@ -692,6 +697,12 @@ function generateExamScript(data, appVersion) {
         
         // Generate statistics content
         generateStatistics();
+        
+        // Make sure the statistics container is visible
+        const statisticsContainer = document.getElementById('statistics-container');
+        if (statisticsContainer) {
+            statisticsContainer.style.display = 'block';
+        }
     }
     
     // Global object to store question data for rows
@@ -836,20 +847,30 @@ function generateExamScript(data, appVersion) {
         statisticsContainer.innerHTML = html;
         
         // Add filter functionality
-        document.getElementById('show-all-btn').addEventListener('click', function() {
-            setActiveFilterButton(this);
-            applyQuestionFilter('all');
-        });
+        const showAllBtn = document.getElementById('show-all-btn');
+        const showUnattemptedBtn = document.getElementById('show-unattempted-btn');
+        const showErrorsBtn = document.getElementById('show-errors-btn');
         
-        document.getElementById('show-unattempted-btn').addEventListener('click', function() {
-            setActiveFilterButton(this);
-            applyQuestionFilter('unattempted');
-        });
+        if (showAllBtn) {
+            showAllBtn.addEventListener('click', function() {
+                setActiveFilterButton(this);
+                applyQuestionFilter('all');
+            });
+        }
         
-        document.getElementById('show-errors-btn').addEventListener('click', function() {
-            setActiveFilterButton(this);
-            applyQuestionFilter('errors');
-        });
+        if (showUnattemptedBtn) {
+            showUnattemptedBtn.addEventListener('click', function() {
+                setActiveFilterButton(this);
+                applyQuestionFilter('unattempted');
+            });
+        }
+        
+        if (showErrorsBtn) {
+            showErrorsBtn.addEventListener('click', function() {
+                setActiveFilterButton(this);
+                applyQuestionFilter('errors');
+            });
+        }
         
         function setActiveFilterButton(activeButton) {
             const filterButtons = document.querySelectorAll('.filter-btn');
@@ -885,50 +906,65 @@ function generateExamScript(data, appVersion) {
         
         // Add click event listeners to expandable questions
         const questionRows = document.querySelectorAll('.question-row');
-        questionRows.forEach(row => {
-            row.addEventListener('click', (e) => {
-                const answersId = row.getAttribute('data-answers-id');
-                const answersRow = document.getElementById(answersId);
-                const expandIcon = row.querySelector('.expand-icon');
-                
-                // Toggle the answers visibility
-                if (answersRow.classList.contains('hidden')) {
-                    answersRow.classList.remove('hidden');
-                    expandIcon.textContent = '-';
-                } else {
-                    answersRow.classList.add('hidden');
-                    expandIcon.textContent = '+';
+        if (questionRows.length > 0) {
+            questionRows.forEach(row => {
+                const expandableQuestion = row.querySelector('.expandable-question');
+                if (expandableQuestion) {
+                    expandableQuestion.addEventListener('click', function() {
+                        const answersId = row.getAttribute('data-answers-id');
+                        const answersRow = document.getElementById(answersId);
+                        const expandIcon = this.querySelector('.expand-icon');
+                        
+                        if (answersRow && expandIcon) {
+                            if (answersRow.classList.contains('hidden')) {
+                                answersRow.classList.remove('hidden');
+                                expandIcon.textContent = '-';
+                            } else {
+                                answersRow.classList.add('hidden');
+                                expandIcon.textContent = '+';
+                            }
+                        }
+                    });
                 }
             });
-        });
+        } else {
+            console.log('No question rows found');
+        }
         
         // Add event listener for expand all button
-        document.getElementById('expand-all-btn').addEventListener('click', () => {
-            const answersRows = document.querySelectorAll('.answers-row');
-            const expandIcons = document.querySelectorAll('.expand-icon');
-            
-            answersRows.forEach(row => row.classList.remove('hidden'));
-            expandIcons.forEach(icon => icon.textContent = '-');
-            
-            document.getElementById('expand-all-btn').classList.add('hidden');
-            document.getElementById('collapse-all-btn').classList.remove('hidden');
-        });
+        const expandAllBtn = document.getElementById('expand-all-btn');
+        if (expandAllBtn) {
+            expandAllBtn.addEventListener('click', () => {
+                const answersRows = document.querySelectorAll('.answers-row');
+                const expandIcons = document.querySelectorAll('.expand-icon');
+                
+                answersRows.forEach(row => row.classList.remove('hidden'));
+                expandIcons.forEach(icon => icon.textContent = '-');
+                
+                document.getElementById('expand-all-btn').classList.add('hidden');
+                document.getElementById('collapse-all-btn').classList.remove('hidden');
+            });
+        }
         
         // Add event listener for collapse all button
-        document.getElementById('collapse-all-btn').addEventListener('click', () => {
-            const answersRows = document.querySelectorAll('.answers-row');
-            const expandIcons = document.querySelectorAll('.expand-icon');
-            
-            answersRows.forEach(row => row.classList.add('hidden'));
-            expandIcons.forEach(icon => icon.textContent = '+');
-            
-            document.getElementById('collapse-all-btn').classList.add('hidden');
-            document.getElementById('expand-all-btn').classList.remove('hidden');
-        });
+        const collapseAllBtn = document.getElementById('collapse-all-btn');
+        if (collapseAllBtn) {
+            collapseAllBtn.addEventListener('click', () => {
+                const answersRows = document.querySelectorAll('.answers-row');
+                const expandIcons = document.querySelectorAll('.expand-icon');
+                
+                answersRows.forEach(row => row.classList.add('hidden'));
+                expandIcons.forEach(icon => icon.textContent = '+');
+                
+                document.getElementById('collapse-all-btn').classList.add('hidden');
+                document.getElementById('expand-all-btn').classList.remove('hidden');
+            });
+        }
     }
     
     // Function to apply question filters
     function applyQuestionFilter(filterType) {
+        console.log('Applying filter:', filterType);
         const questionRows = document.querySelectorAll('.question-row');
         
         // Load question history once for all questions
@@ -950,6 +986,11 @@ function generateExamScript(data, appVersion) {
             const rowId = row.id;
             const questionData = questionRowData[rowId];
             const questionId = questionData?.id;
+            
+            if (!questionId) {
+                console.log('No question ID for row:', rowId);
+                return;
+            }
             
             const questionHistory = history[questionId] || { correct: 0, incorrect: 0, total: 0 };
             const attempts = questionHistory.total;
@@ -1002,8 +1043,10 @@ function generateExamScript(data, appVersion) {
         });
         
         // Reset expand/collapse buttons
-        document.getElementById('collapse-all-btn').classList.add('hidden');
-        document.getElementById('expand-all-btn').classList.remove('hidden');
+        const collapseBtn = document.getElementById('collapse-all-btn');
+        const expandBtn = document.getElementById('expand-all-btn');
+        if (collapseBtn) collapseBtn.classList.add('hidden');
+        if (expandBtn) expandBtn.classList.remove('hidden');
     }
     
 
