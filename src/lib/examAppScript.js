@@ -13,7 +13,7 @@
  */
 function generateExamScript(data, appVersion) {
   const { generateRadioAlphabetCode } = require('./radioAlphabet');
-  const { generateMessageExamplesCode } = require('./messageExamples');
+  const { generateMessageExamplesCode } = require('../components/messageExamples');
   return `
     // Embedded data
     const allQuestionsData = ${JSON.stringify(data.questionsData)};

@@ -1,0 +1,207 @@
+distress call
+---------------
+template    
+    ```
+    MAYDAY, MAYDAY, MAYDAY
+
+    THIS IS (nazwa statku powtórzona 3 razy)
+
+    MAYDAY
+
+    THIS IS (numer MMSI, nazwa i sygnał wywoławczy (Call sign) stacji w niebezpieczeństwie)
+
+    MY POSITION IS (współrzędne geograficzne lub namiar i odległość od określonego punktu) AT (czas UTC określenia pozycji )
+
+    Rodzaj zagrożenia
+
+    Rodzaj oczekiwanej pomocy
+
+    Inne informacje potrzebne w akcji ratunkowej (np. liczba osób na burcie, warunki pogodowe itp.)
+
+    OVER
+    ```
+
+cancel distress
+---------------
+template
+    ```
+    ALL STATIONS, ALL STATIONS, ALL STATIONS
+
+    THIS IS (numer MMSI, nazwa, Call sign naszego statku)
+
+    POSITION (współrzędne geograficzne) AT (czas UTC określenia pozycji)
+
+    CANCEL MY DISTRESS ALERT OF (data i czas UTC nadanie fałszywego alarmu)
+
+    OVER
+    ```
+example
+    ```
+    ALL STATIONS, ALL STATIONS, ALL STATIONS
+
+    THIS IS 278054321, Spinaker, Spinaker, Spinaker, call sign Sierra 5 Lima 1 2
+
+    POSITION 450(four five degrees) 36'(three six minutes) North 0130(zero one three degrees) 32'(three two minutes) East AT 0550 UTC
+
+    CANCEL MY DISTRESS ALERT OF 21 November at 0545 UTC
+
+    OVER
+    ```
+
+
+mayday relay
+---------------
+template
+    ```
+    MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY
+
+    THIS IS (numer MMSI, nazwa i Call sign statku przekazującego alarm)
+
+    RECEIVED THE FOLLOWING MAYDAY FROM (numer MMSI, nazwa i Call sign statku w niebezpieczeństwie)
+
+    (komunikat odebrany ze statku w niebezpieczeństwie)
+
+    OVER
+    ```
+
+
+mayday received
+---------------
+template
+    ```
+    MAYDAY
+
+    (numer MMSI, nazwa i Call sign statku w niebezpieczeństwie)
+
+    THIS IS (numer, nazwa i Call sign własnego statku)
+
+    RECEIVED MAYDAY
+    ```
+
+
+mayday finished
+---------------
+Context:
+    SEELONCE MAYDAY - może zostać nadany przez stację w niebezpieczeństwie lub stację koordynującą akcję ratunkową.
+    SEELONCE DISTRESS - może zostać nadany przez każdą stację.
+    W celu zawieszenia ciszy radiowej stacja koordynująca nada następującą procedurę/zwrot:
+    PRUDONCE - oznacza, że przez określony czas CH 16 nie będzie używany do łączności alarmowej, a więc można go zastosować do innych wywołań.
+    W celu zakończenia ciszy radiowej stacja koordynująca nada następującą procedurę/zwrot:
+    SEELONCE FEENEE - oznacza, że łączność w niebezpieczeństwie została zakończona. Po takim komunikacie można wykonywać wywołania na CH 16.
+
+template
+    ```
+    MAYDAY
+
+    ALL STATIONS, ALL STATIONS, ALL STATIONS
+
+    THIS IS (nazwa stacji w niebezpieczeństwie powtórzona 3 razy)
+
+    (data i czas UTC)
+
+    (numer MMSI, nazwa i Call sign stacji w niebezpieczeństwie)
+
+    (odpowiedni zwrot)
+
+    OUT
+    ```
+
+Urgency call
+---------------
+template
+
+    ```
+    PAN PAN, PAN PAN, PAN PAN
+
+    ALL STATIONS, ALL STATIONS, ALL STATIONS lub
+    (Nazwa stacji, którą wywołujemy powtórzona trzykrotnie)
+
+    THIS IS (numer MMSI, nazwa i Call sign naszego statku)
+
+    POSITION
+
+    (opis sytuacji, przyczyna, dla której wywołujemy, spodziewana pomoc itp.)
+
+    OVER
+    ```
+
+example
+    ```    
+    PAN PAN, PAN PAN, PAN PAN
+
+    ALL STATIONS, ALL STATIONS, ALL STATIONS
+
+    THIS IS 278054321, Spinaker, Spinaker, Spinaker, call sign Sierra 5 Lima 1 2
+
+    POSITION 450(four five degrees) 36'(three six minutes) North 0130(zero one three degrees) 32'(three two minutes)
+
+    Medivac
+
+    Injured crewman requires medical evacuation
+
+    Steaming towards Trieste speed 6 knots
+
+    OVER
+    ```
+
+safety call
+---------------
+template
+    ```
+    SECURITE, SECURITE, SECURITE
+
+    ALL STATIONS, ALL STATIONS, ALL STATIONS lub
+    (Nazwa stacji, którą wywołujemy powtórzona trzykrotnie)
+
+    THIS IS (numer MMSI, nazwa i Call sign naszego statku)
+
+    (treść wiadomości)
+
+    OVER
+    ```
+
+example
+    ```
+    SECURITE, SECURITE, SECURITE
+
+    ALL STATIONS, ALL STATIONS, ALL STATIONS
+
+    THIS IS 278054321, Spinaker, Spinaker, Spinaker, call sign Sierra 5 Lima 1 2
+
+    Navigation warning 0845 UTC
+
+    Position 450(four five degrees) 36'(three six minutes) North 0130(zero one three degrees) 32'(three two minutes)
+
+    Sighted 3 20 foot cargo containers partially submerged
+
+    Danger to navigation
+
+    OUT
+    ```
+
+routine call
+---------------
+template
+    ```
+    (Nazwa stacji, którą wywołujemy powtórzona trzykrotnie)
+
+    THIS IS (numer MMSI, nazwa i Call sign naszego statku)
+
+    (treść wiadomości)
+
+    OVER
+    ```
+
+example
+    ```
+    Lyngby Radio Lyngby Radio Lyngby Radio
+
+    THIS IS 278054321, Spinaker, Spinaker, Spinaker, code sign Sierra 5 Lima 1 2
+
+    Request link call to subscriber +44 1253 779123
+
+    OVER
+    ```
+
+
+
