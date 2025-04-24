@@ -41,7 +41,7 @@ example
 
     THIS IS 278054321, Spinaker, Spinaker, Spinaker, call sign Sierra 5 Lima 1 2
 
-    POSITION 450(four five degrees) 36'(three six minutes) North 0130(zero one three degrees) 32'(three two minutes) East AT 0550 UTC
+    POSITION 45°(four five degrees) 36'(three six minutes) North 013°(zero one three degrees) 32'(three two minutes) East AT 0550 UTC
 
     CANCEL MY DISTRESS ALERT OF 21 November at 0545 UTC
 
@@ -76,6 +76,25 @@ template
     THIS IS (numer, nazwa i Call sign własnego statku)
 
     RECEIVED MAYDAY
+    
+    (Any additional information ... i.e. your position, speed, range, bearing, assistance to offer etc.)
+
+    OVER
+    ```
+
+example
+    ```
+    MAYDAY
+
+    278054321, Spinaker, Spinaker, Spinaker, call sign Sierra 5 Lima 1 2
+
+    THIS IS 257893456, M/V SEA GUARDIAN, Call sign SP5678
+
+    RECEIVED MAYDAY
+
+    We are currently at position 54°21.5'N 018°39.2'E, proceeding towards your last known position at 12 knots. Distance 6 nautical miles, bearing 045 degrees. Estimated time of arrival: 30 minutes. Ready to provide immediate assistance and medical support.
+
+    OVER
     ```
 
 
@@ -114,9 +133,9 @@ template
     PAN PAN, PAN PAN, PAN PAN
 
     ALL STATIONS, ALL STATIONS, ALL STATIONS lub
+    THIS IS 
     (Nazwa stacji, którą wywołujemy powtórzona trzykrotnie)
-
-    THIS IS (numer MMSI, nazwa i Call sign naszego statku)
+    (numer MMSI i Call sign naszego statku)
 
     POSITION
 
@@ -133,7 +152,7 @@ example
 
     THIS IS 278054321, Spinaker, Spinaker, Spinaker, call sign Sierra 5 Lima 1 2
 
-    POSITION 450(four five degrees) 36'(three six minutes) North 0130(zero one three degrees) 32'(three two minutes)
+    POSITION 45°(four five degrees) 36'(three six minutes) North 013°(zero one three degrees) 32'(three two minutes)
 
     Medivac
 
@@ -170,7 +189,7 @@ example
 
     Navigation warning 0845 UTC
 
-    Position 450(four five degrees) 36'(three six minutes) North 0130(zero one three degrees) 32'(three two minutes)
+    Position 45°(four five degrees) 36'(three six minutes) North 013°(zero one three degrees) 32'(three two minutes)
 
     Sighted 3 20 foot cargo containers partially submerged
 

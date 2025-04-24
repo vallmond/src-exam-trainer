@@ -23,7 +23,7 @@ function generateMessageExamplesCode() {
             { type: 'spacer', template: '', example: '' },
             { type: 'vessel_id', template: 'THIS IS (numer MMSI, nazwa i sygnał wywoławczy (Call sign) stacji w niebezpieczeństwie)', example: 'THIS IS 278054321, Spinaker, call sign Sierra 5 Lima 1 2' },
             { type: 'spacer', template: '', example: '' },
-            { type: 'position', template: 'MY POSITION IS (współrzędne geograficzne lub namiar i odległość od określonego punktu) AT (czas UTC określenia pozycji)', example: 'MY POSITION IS 450(four five degrees) 36\'(three six minutes) North 0130(zero one three degrees) 32\'(three two minutes) East AT 0545 UTC' },
+            { type: 'position', template: 'MY POSITION IS (współrzędne geograficzne lub namiar i odległość od określonego punktu) AT (czas UTC określenia pozycji)', example: 'MY POSITION IS 45°(four five degrees) 36\'(three six minutes) North 013°(zero one three degrees) 32\'(three two minutes) East AT 0545 UTC' },
             { type: 'spacer', template: '', example: '' },
             { type: 'danger', template: '(Rodzaj zagrożenia)', example: 'The mast has broken and the engine is not strong enough to prevent us from grounding on a rocky shore' },
             { type: 'spacer', template: '', example: '' },
@@ -59,9 +59,13 @@ function generateMessageExamplesCode() {
             { type: 'spacer', template: '', example: '' },
             { type: 'vessel_id', template: '(numer MMSI, nazwa i Call sign statku w niebezpieczeństwie)', example: '278054321, Spinaker, call sign Sierra 5 Lima 1 2' },
             { type: 'spacer', template: '', example: '' },
-            { type: 'rescue_id', template: 'THIS IS (numer, nazwa i Call sign własnego statku)', example: 'THIS IS 235123456, Coast Guard Rescue, call sign Charlie Golf Romeo' },
+            { type: 'rescue_id', template: 'THIS IS (numer, nazwa i Call sign własnego statku)', example: 'THIS IS 257893456, M/V SEA GUARDIAN, Call sign SP5678' },
             { type: 'spacer', template: '', example: '' },
-            { type: 'keyword', template: 'RECEIVED MAYDAY', example: 'RECEIVED MAYDAY' }
+            { type: 'keyword', template: 'RECEIVED MAYDAY', example: 'RECEIVED MAYDAY' },
+            { type: 'spacer', template: '', example: '' },
+            { type: 'additional_info', template: '(Any additional information ... i.e. your position, speed, range, bearing, assistance to offer etc.)', example: 'We are currently at position 54°21.5\'N 018°39.2\'E, proceeding towards your last known position at 12 knots. Distance 6 nautical miles, bearing 045 degrees. Estimated time of arrival: 30 minutes. Ready to provide immediate assistance and medical support.' },
+            { type: 'spacer', template: '', example: '' },
+            { type: 'ending', template: 'OVER', example: 'OVER' }
           ],
           description: 'Template for acknowledging receipt of a distress call'
         },
@@ -73,7 +77,7 @@ function generateMessageExamplesCode() {
             { type: 'spacer', template: '', example: '' },
             { type: 'vessel_id', template: 'THIS IS (numer MMSI, nazwa, Call sign naszego statku)', example: 'THIS IS 278054321, Spinaker, Spinaker, Spinaker, call sign Sierra 5 Lima 1 2' },
             { type: 'spacer', template: '', example: '' },
-            { type: 'position', template: 'POSITION (współrzędne geograficzne) AT (czas UTC określenia pozycji)', example: 'POSITION 450(four five degrees) 36\'(three six minutes) North 0130(zero one three degrees) 32\'(three two minutes) East AT 0550 UTC' },
+            { type: 'position', template: 'POSITION (współrzędne geograficzne) AT (czas UTC określenia pozycji)', example: 'POSITION 45°(four five degrees) 36\'(three six minutes) North 013°(zero one three degrees) 32\'(three two minutes) East AT 0550 UTC' },
             { type: 'spacer', template: '', example: '' },
             { type: 'cancel_alert', template: 'CANCEL MY DISTRESS ALERT OF (data i czas UTC nadanie fałszywego alarmu)', example: 'CANCEL MY DISTRESS ALERT OF 21 November at 0545 UTC' },
             { type: 'spacer', template: '', example: '' },
@@ -120,7 +124,7 @@ function generateMessageExamplesCode() {
             { type: 'spacer', template: '', example: '' },
             { type: 'vessel_id', template: '(numer MMSI i Call sign naszego statku)', example: '278054321, call sign Sierra 5 Lima 1 2' },
             { type: 'spacer', template: '', example: '' },
-            { type: 'position', template: 'POSITION', example: 'POSITION 450(four five degrees) 36\'(three six minutes) North 0130(zero one three degrees) 32\'(three two minutes)' },
+            { type: 'position', template: 'POSITION', example: 'POSITION 45°(four five degrees) 36\'(three six minutes) North 013°(zero one three degrees) 32\'(three two minutes)' },
             { type: 'spacer', template: '', example: '' },
             { type: 'situation_keyword', template: '', example: 'Medivac' },
             { type: 'spacer', template: '', example: '' },
@@ -149,7 +153,7 @@ function generateMessageExamplesCode() {
             { type: 'spacer', template: '', example: '' },
             { type: 'time_info', template: '', example: 'Navigation warning 0845 UTC' },
             { type: 'spacer', template: '', example: '' },
-            { type: 'message', template: '(position message)', example: 'Position 450(four five degrees) 36\'(three six minutes) North<br>0130(zero one three degrees) 32\'(three two minutes)' },
+            { type: 'message', template: '(position message)', example: 'Position 45°(four five degrees) 36\'(three six minutes) North<br>013°(zero one three degrees) 32\'(three two minutes)' },
             { type: 'spacer', template: '', example: '' },
             { type: 'safety_info', template: '(treść wiadomości)', example: 'Sighted 3 20 foot cargo containers partially submerged' },
             { type: 'spacer', template: '', example: '' },
@@ -276,11 +280,13 @@ function generateMessageExamplesCode() {
         // Show example, hide template
         exampleDiv.classList.remove('hidden');
         templateDiv.classList.add('hidden');
+        messageTypeDiv.classList.add('example-mode');
         button.textContent = 'Show Template';
       } else {
         // Show template, hide example
         exampleDiv.classList.add('hidden');
         templateDiv.classList.remove('hidden');
+        messageTypeDiv.classList.remove('example-mode');
         button.textContent = 'Show Example';
       }
     }
@@ -299,6 +305,12 @@ function generateMessageExamplesCode() {
         border: 1px solid #ddd;
         border-radius: 8px;
         background-color: #f9f9f9;
+        transition: background-color 0.3s ease;
+      }
+      
+      .message-type.example-mode {
+        background-color: #fff8e1;
+        border-color: #ffecb3;
       }
       
       .message-title {
@@ -308,10 +320,18 @@ function generateMessageExamplesCode() {
         color: #2c3e50;
       }
       
+      .example-mode .message-title {
+        color: #5d4037;
+      }
+      
       .message-description {
         font-style: italic;
         margin-bottom: 15px;
         color: #7f8c8d;
+      }
+      
+      .example-mode .message-description {
+        color: #795548;
       }
       
       .template-content, .example-content {
@@ -322,6 +342,12 @@ function generateMessageExamplesCode() {
         border-radius: 5px;
         border: 1px solid #eee;
         margin-bottom: 10px;
+      }
+      
+      .example-mode .example-content {
+        background-color: #fffde7;
+        border-color: #fff9c4;
+        color: #5d4037;
       }
       
       .template-line, .example-line {
@@ -337,6 +363,10 @@ function generateMessageExamplesCode() {
         color: #e74c3c;
       }
       
+      .example-mode .keyword {
+        color: #d32f2f;
+      }
+      
       .show-example-btn {
         background-color: #3498db;
         color: white;
@@ -345,10 +375,19 @@ function generateMessageExamplesCode() {
         border-radius: 4px;
         cursor: pointer;
         margin-top: 10px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .example-mode .show-example-btn {
+        background-color: #ff9800;
       }
       
       .show-example-btn:hover {
         background-color: #2980b9;
+      }
+      
+      .example-mode .show-example-btn:hover {
+        background-color: #f57c00;
       }
       
       .hidden {
